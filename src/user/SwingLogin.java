@@ -1,11 +1,13 @@
 package user;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,10 +16,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class SwingLogin extends JFrame implements ActionListener {
-	private JPanel loginPanel, registerPanel;
-	private JLabel labelLogin, labelRegister, labelUser, labelPass, labelRePass;
+	private static final long serialVersionUID = 1L;
+	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
+	private JLabel labelLogin, labelRegister, labelUser, labelPass, labelRePass, labelM1;
 	private JTextField user, pass, repass, reguser, regpass;
-	private JButton createUser, login, register, loginInReG;
+	private JButton createUser, login, register, loginInReG, inDS, addUser, delUser, hien;
 	private LoginSystem loginsystem;
 
 	public SwingLogin() throws HeadlessException {
@@ -90,10 +93,34 @@ public class SwingLogin extends JFrame implements ActionListener {
 		registerPanel.add(panel7);
 		registerPanel.add(panel8);
 		registerPanel.add(panel9);
+		//UI MANAGEMENT
+		panelM1 = new JPanel();
+		panelM1.setSize(300, 200);
+		panelM1.setBorder(BorderFactory.createLineBorder(Color.black));
+		labelM1 = new JLabel();
+		panelM1.add(labelM1);
+		panelM3 = new JPanel();
+		inDS = new JButton("In danh sach");
+		inDS.addActionListener(this
+				);
+		addUser = new JButton("Them User");
+		addUser.addActionListener(this);
+		delUser = new JButton("Xoa User");
+		delUser.addActionListener(this);
+		hien = new JButton("Hien app");
+		hien.addActionListener(this);
+		panelM3.add(inDS);
+		panelM3.add(addUser);
+		panelM3.add(delUser);
+		panelM3.add(hien);
+		panelMN = new JPanel();
+		panelMN.setLayout(new GridLayout(0, 1, 10, 10));
+		panelMN.add(panelM1);
+		panelMN.add(panelM3);
 		setVisible(true);
 		// Data
 		loginsystem = new LoginSystem();
-		loginsystem.addUser(new User<String, String>("root", "0000"), false);
+		loginsystem.addUser(new User<String, String>("root", ""), false);
 		loginsystem.addUser(new User<String, String>("giang", "0077"), false);
 		loginsystem.addUser(new User<String, String>("hitler", "1945"), false);
 	}
@@ -116,7 +143,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 			String password = pass.getText();
 			if (loginsystem.authenticate(username, password)) {
 				JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
-				new ConvertCtoF();
+				if(username.equals("root")) {
+					getContentPane().remove(loginPanel);
+					getContentPane().remove(registerPanel);
+					getContentPane().add(panelMN);
+					revalidate();
+					repaint();
+				} else {
+					setVisible(false);
+					new MidTerm().setVisible(true);
+				}
 			} else {
 				JOptionPane.showMessageDialog(this, "WRONG INFOMATION");
 			}
@@ -128,6 +164,33 @@ public class SwingLogin extends JFrame implements ActionListener {
 				return;
 			}
 			loginsystem.addUser(new User<String, String>(username, password), true);
+		} else if(e.getSource() == inDS) {
+			StringBuilder sb = new StringBuilder("<html><b>User List:</b><br>");
+			for (User<String, String> u : loginsystem.getUserList()) {
+				sb.append(u.getUser()).append(" - ").append(u.getPass()).append("<br>");
+			}
+			sb.append("</html>");
+			labelM1.setText(sb.toString());
+		} else if(e.getSource() == addUser) {
+			String username = JOptionPane.showInputDialog(this, "Enter username:");
+			//Fix if username is null or empty
+			if(username == null || username.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(this, "Vui Long nhap dung ky tu");
+				return;
+			}
+			String password = JOptionPane.showInputDialog(this, "Enter password:");
+			if (password == null || password.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(this, "Vui lòng nhập password hợp lệ.");
+				return;
+			}
+			loginsystem.addUser(new User<String, String>(username, password), true);
+			inDS.doClick();
+		} else if(e.getSource() == delUser) {
+			String username = JOptionPane.showInputDialog(this, "Enter username to delete:");
+			loginsystem.deleteUser(username);
+			inDS.doClick();
+		} else if(e.getSource() == hien) {
+			new MidTerm().setVisible(true);
 		}
 	}
 

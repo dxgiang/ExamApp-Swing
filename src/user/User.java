@@ -29,5 +29,9 @@ public class User<K, V> {
 	public void setPass(V pass) {
 		this.pass = pass;
 	}
+
+	public String printList() {
+		return (user + "          " + pass + "\n");
+	}
 	
 }
