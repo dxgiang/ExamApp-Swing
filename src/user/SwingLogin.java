@@ -175,12 +175,12 @@ public class SwingLogin extends JFrame implements ActionListener {
 			String username = JOptionPane.showInputDialog(this, "Enter username:");
 			//Fix if username is null or empty
 			if(username == null || username.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(this, "Vui Long nhap dung ky tu");
+				JOptionPane.showMessageDialog(this, "Please enter characters");
 				return;
 			}
 			String password = JOptionPane.showInputDialog(this, "Enter password:");
 			if (password == null || password.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(this, "Vui lòng nhập password hợp lệ.");
+				JOptionPane.showMessageDialog(this, "Please enter characters");
 				return;
 			}
 			loginsystem.addUser(new User<String, String>(username, password), true);
