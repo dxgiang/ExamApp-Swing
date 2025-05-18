@@ -1,0 +1,107 @@
+package exam;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class ExamTest extends JFrame {
+	//Attributes
+	private static final long serialVersionUID = 1L;
+	private JPanel panelStart, panelExamTest;
+	private JLabel labelStart, labelQues;
+	private JButton start, ans1, ans2, ans3, ans4;
+	private int index = 0;
+	private double score = 0;
+	private List<Question> listQuestion;
+	// Constructor
+	public ExamTest() {
+		setTitle("Thi");
+		setSize(500, 300);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		// Data
+		listQuestion = new ArrayList<Question>();
+		listQuestion.add(new Question("1 + 1 = ?", "A. 2", "B. 4", "C. 8", "D. 100", 1));
+		listQuestion.add(new Question("256 - 256 = ?", "A. 1", "B. 0", "C. 5", "D. 9", 2));
+		listQuestion.add(new Question("4 x 0 = ?", "A. 1", "B. 2", "C. X", "D. 99", 3));
+		listQuestion.add(new Question("1 x 0 = ?", "A. 4", "B. 5", "C. 6", "D. 0", 4));
+
+		//
+		panelStart = new JPanel();
+		labelStart = new JLabel("              Press the button to start the test");
+		panelStart.setLayout(new BorderLayout());
+		start = new JButton("===Start===");
+		panelStart.add(labelStart, BorderLayout.WEST);
+		panelStart.add(start, BorderLayout.LINE_END);
+		getContentPane().add(panelStart);
+		//
+		panelExamTest = new JPanel();
+		labelQues = new JLabel();
+		panelExamTest.setLayout(new GridLayout(5, 1, 10, 10));
+		ans1 = new JButton();
+		ans2 = new JButton();
+		ans3 = new JButton();
+		ans4 = new JButton();
+		panelExamTest.add(labelQues);
+		panelExamTest.add(ans1);
+		panelExamTest.add(ans2);
+		panelExamTest.add(ans3);
+		panelExamTest.add(ans4);
+		panelExamTest.setVisible(false);
+		// Add action listener
+		start.addActionListener(e -> {
+			panelStart.setVisible(false);
+			getContentPane().add(panelExamTest, BorderLayout.CENTER);
+			panelExamTest.setVisible(true);
+			showQuestion();
+		});
+		ans1.addActionListener(e -> processQuestion(1));
+		ans2.addActionListener(e -> processQuestion(2));
+		ans3.addActionListener(e -> processQuestion(3));
+		ans4.addActionListener(e -> processQuestion(4));
+	}
+	// Getter and Setter
+	public double getScore() {
+		return score;
+	}
+	public void setScore(double score) {
+		this.score = score;
+	}
+	//Methods
+	private void processQuestion(int luaChon) {
+		if (index < listQuestion.size()) {
+			Question ch = listQuestion.get(index);
+			if (luaChon == ch.getIndexRightAns()) {
+				score += 2.5;
+			}
+			index++;
+			showQuestion();
+		}
+	}
+	private void showQuestion() {
+		if (index < listQuestion.size()) {
+			Question ch = listQuestion.get(index);
+			labelQues.setText("Question " + (index + 1) + ": " + ch.getQuestion());
+			ans1.setText(ch.getAns1());
+			ans2.setText(ch.getAns2());
+			ans3.setText(ch.getAns3());
+			ans4.setText(ch.getAns4());
+		} else {
+			// Kết thúc
+			JOptionPane.showMessageDialog(this, "You have completed the test. Score: "+ score + "/10.0.");
+			this.dispose(); 
+		}
+	}
+	// Main
+	public static void main(String[] args) {
+		new ExamTest().setVisible(true);
+	}
+}
