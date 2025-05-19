@@ -43,6 +43,14 @@ public class LoginSystem extends JFrame {
 		}
 		return false;
 	}
+	public boolean wrongPass(String username, String password) {
+		for (User<String, String> user : list) {
+			if (user.getUser().equals(username) && user.getPass().equals(password) == false) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public void printList() {
 		System.out.println("user          password");

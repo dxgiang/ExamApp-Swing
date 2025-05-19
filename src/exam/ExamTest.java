@@ -1,6 +1,7 @@
 package exam;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,17 +40,25 @@ public class ExamTest extends JFrame {
 		labelStart = new JLabel("              Press the button to start the test");
 		panelStart.setLayout(new BorderLayout());
 		start = new JButton("===Start===");
+		start.setBackground(Color.ORANGE);
 		panelStart.add(labelStart, BorderLayout.WEST);
 		panelStart.add(start, BorderLayout.LINE_END);
+		panelStart.setBackground(Color.GREEN);
 		getContentPane().add(panelStart);
+		
 		//
 		panelExamTest = new JPanel();
+		panelExamTest.setBackground(Color.CYAN);
 		labelQues = new JLabel();
 		panelExamTest.setLayout(new GridLayout(5, 1, 10, 10));
 		ans1 = new JButton();
+		ans1.setBackground(Color.YELLOW);
 		ans2 = new JButton();
+		ans2.setBackground(Color.YELLOW);
 		ans3 = new JButton();
+		ans3.setBackground(Color.YELLOW);
 		ans4 = new JButton();
+		ans4.setBackground(Color.YELLOW);
 		panelExamTest.add(labelQues);
 		panelExamTest.add(ans1);
 		panelExamTest.add(ans2);

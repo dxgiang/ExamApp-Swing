@@ -29,6 +29,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, logout;
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
+	private int countWrong = 0;
+
 	// Constructor
 	public SwingLogin() throws HeadlessException {
 		super();
@@ -83,18 +85,21 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel5.setBackground(Color.yellow);
 		labelUser = new JLabel("Username");
 		reguser = new JTextField(15);
+		reguser.addActionListener(this);
 		JPanel panel6 = new JPanel();
 		panel6.add(labelUser);
 		panel6.add(reguser);
 		panel6.setBackground(Color.yellow);
 		labelPass = new JLabel("Password");
 		regpass = new JPasswordField(15);
+		regpass.addActionListener(this);
 		JPanel panel7 = new JPanel();
 		panel7.add(labelPass);
 		panel7.add(regpass);
 		panel7.setBackground(Color.yellow);
 		labelRePass = new JLabel("Re - Password");
 		repass = new JPasswordField(15);
+		repass.addActionListener(this);
 		JPanel panel8 = new JPanel();
 		panel8.add(labelRePass);
 		panel8.add(repass);
@@ -159,6 +164,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		loginsystem.addUser(new User<String, String>("giang", "0077", 0.0), false);
 		loginsystem.addUser(new User<String, String>("hitler", "1945", 0.0), false);
 	}
+
 	// ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -205,9 +211,20 @@ public class SwingLogin extends JFrame implements ActionListener {
 					});
 				}
 			} else {
-				JOptionPane.showMessageDialog(this, "WRONG INFOMATION");
+				if (loginsystem.wrongPass(username, password)) {
+					JOptionPane.showMessageDialog(this, "WRONG PASSWORD");
+					countWrong++;
+					if (countWrong == 5) {
+						JOptionPane.showMessageDialog(this,
+								"YOU HAVE ENTERED WRONG PASSWORD 5 TIMES. APPLICATION WILL BE FREEZED FEW SECOND!");
+						wait(5000);
+					}
+				} else {
+					JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+				}
 			}
-		} else if (e.getSource() == createUser) {
+		} else if (e.getSource() == createUser || e.getSource() == regpass || e.getSource() == reguser
+				|| e.getSource() == repass) {
 			String username = reguser.getText();
 			String password = regpass.getText();
 			if (username.equals("") || password.equals("")) {
@@ -234,14 +251,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 
 				@Override
 				protected void process(List<String> chunks) {
-					
+
 					String latest = chunks.get(chunks.size() - 1);
 					labelM1.setText(latest);
 				}
 
 				@Override
 				protected void done() {
-					StringBuilder sb = new StringBuilder("<html><b>User List:</b><br>");
+					StringBuilder sb = new StringBuilder("<html><b>User - Pass - Score</b><br>");
 					for (User<String, String> u : loginsystem.getUserList()) {
 						sb.append(u.getUser()).append(" - ").append(u.getPass()).append(" - ").append(u.getDiem())
 								.append("<br>");
@@ -254,7 +271,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			worker.execute();
 		} else if (e.getSource() == addUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username:");
-			
+
 			if (username == null || username.trim().isEmpty()) {
 				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
 				return;
@@ -301,6 +318,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			Thread.currentThread().interrupt();
 		}
 	}
+
 	// Main
 	public static void main(String[] args) {
 		new SwingLogin();
