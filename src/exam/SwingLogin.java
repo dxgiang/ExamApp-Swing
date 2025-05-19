@@ -216,7 +216,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 					countWrong++;
 					if (countWrong == 5) {
 						JOptionPane.showMessageDialog(this,
-								"YOU HAVE ENTERED WRONG PASSWORD 5 TIMES. APPLICATION WILL BE FREEZED FEW SECOND!");
+								"YOU HAVE ENTERED WRONG PASSWORD 5 TIMES. APPLICATION WILL FREEZE FOR FEW SECOND!");
 						wait(5000);
 					}
 				} else {
