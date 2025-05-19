@@ -89,7 +89,7 @@ public class ExamTest extends JFrame {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
 			if (luaChon == ch.getIndexRightAns()) {
-				score += 2.5;
+				score += (double) 10 / listQuestion.size();
 			}
 			index++;
 			showQuestion();
