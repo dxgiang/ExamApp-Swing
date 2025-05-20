@@ -13,6 +13,6 @@ This app includes the following functions:
    - Can show list of account
    - Can show application
 3. The Exam Test
-4. While you're in Login/Register, you cannot exit the app. Just login as root can exit the app.
+4. While you're in Exam, you cannot exit the app. Just finish and it will close.
 
 THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT UGLY. SORRY FOR MY BAD ENGLISH =))
