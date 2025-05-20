@@ -127,7 +127,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		loginInReG.addActionListener(this);
 		JPanel panel9 = new JPanel();
 		createUser = new JButton("Create");
-		createUser.setBackground(Color.green);
+		createUser.setBackground(Color.blue);
 		createUser.setFont(labelLogin.getFont().deriveFont(13f));
 		createUser.addActionListener(this);
 		panel9.add(loginInReG);
@@ -199,12 +199,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 		if (e.getSource() == register) {
 			getContentPane().remove(loginPanel);
 			getContentPane().add(registerPanel);
+			reguser.setText("");
+			regpass.setText("");
+			repass.setText("");
 			setTitle("Register");
 			revalidate();
 			repaint();
 		} else if (e.getSource() == loginInReG) {
 			getContentPane().remove(registerPanel);
 			getContentPane().add(loginPanel);
+			user.setText("");
+			pass.setText("");
 			revalidate();
 			repaint();
 		} else if (e.getSource() == login || e.getSource() == pass || e.getSource() == user) {
@@ -264,7 +269,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(this, "PASSWORDS DO NOT MATCH!");
 				return;
 			}
-			loginsystem.addUser(new User<String, String>(username, password, 0.0), true);
+			loginsystem.addUser(new User<String, String>(username, password, 0.0), false);
+			JOptionPane.showMessageDialog(this, "REGISTER SUCCESSFULLY");
+			getContentPane().remove(registerPanel);
+			getContentPane().add(loginPanel);
+			user.setText("");
+			pass.setText("");
+			revalidate();
+			repaint();
 		} else if (e.getSource() == printList) {
 			SwingWorker<Void, String> worker = new SwingWorker<>() {
 				@Override

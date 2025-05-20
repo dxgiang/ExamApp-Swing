@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 public class ExamTest extends JFrame {
-	//Attributes
+	// Attributes
 	private static final long serialVersionUID = 1L;
 	private JPanel panelStart, panelExamTest;
 	private JLabel labelStart, labelQues;
@@ -23,14 +23,15 @@ public class ExamTest extends JFrame {
 	private int index = 0;
 	private double score = 0;
 	private List<Question> listQuestion;
+
 	// Constructor
 	public ExamTest() {
-		//FIX BUG
+		// FIX BUG
 		String currentUser = userName;
-	    if (currentUser == null || currentUser.isEmpty()) {
-	        currentUser = "Unknown";
-	    }
-	    setTitle("Thi - User: " + getUserName());
+		if (currentUser == null || currentUser.isEmpty()) {
+			currentUser = "Unknown";
+		}
+		setTitle("Thi - User: " + getUserName());
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -54,7 +55,7 @@ public class ExamTest extends JFrame {
 		panelStart.add(start, BorderLayout.LINE_END);
 		panelStart.setBackground(Color.GREEN);
 		getContentPane().add(panelStart);
-		
+
 		//
 		panelExamTest = new JPanel();
 		panelExamTest.setBackground(Color.CYAN);
@@ -86,21 +87,26 @@ public class ExamTest extends JFrame {
 		ans3.addActionListener(e -> processQuestion(3));
 		ans4.addActionListener(e -> processQuestion(4));
 	}
+
 	private String getUserName() {
 		// TODO Auto-generated method stub
 		return userName;
 	}
+
 	// Getter and Setter
 	public double getScore() {
 		return score;
 	}
+
 	public void setScore(double score) {
 		this.score = score;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	//Methods
+
+	// Methods
 	private void processQuestion(int luaChon) {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
@@ -111,6 +117,7 @@ public class ExamTest extends JFrame {
 			showQuestion();
 		}
 	}
+
 	private void showQuestion() {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
@@ -121,10 +128,11 @@ public class ExamTest extends JFrame {
 			ans4.setText(ch.getAns4());
 		} else {
 			// Kết thúc
-			JOptionPane.showMessageDialog(this, "You have completed the test. Score: "+ score + "/10.0.");
-			this.dispose(); 
+			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
+			this.dispose();
 		}
 	}
+
 	// Main
 	public static void main(String[] args) {
 		try {
