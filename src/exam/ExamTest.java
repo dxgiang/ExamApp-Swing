@@ -26,7 +26,6 @@ public class ExamTest extends JFrame {
 
 	// Constructor
 	public ExamTest() {
-		// FIX BUG
 		String currentUser = userName;
 		if (currentUser == null || currentUser.isEmpty()) {
 			currentUser = "Unknown";
@@ -56,7 +55,7 @@ public class ExamTest extends JFrame {
 		panelStart.setBackground(Color.GREEN);
 		getContentPane().add(panelStart);
 
-		//
+		//UI START EXAM
 		panelExamTest = new JPanel();
 		panelExamTest.setBackground(Color.CYAN);
 		labelQues = new JLabel();
@@ -127,7 +126,6 @@ public class ExamTest extends JFrame {
 			ans3.setText(ch.getAns3());
 			ans4.setText(ch.getAns4());
 		} else {
-			// Kết thúc
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			this.dispose();
 		}
