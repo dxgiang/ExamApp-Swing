@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingWorker;
+import javax.swing.UIManager;
 
 public class SwingLogin extends JFrame implements ActionListener {
 	// Attributes
@@ -35,19 +36,22 @@ public class SwingLogin extends JFrame implements ActionListener {
 	public SwingLogin() throws HeadlessException {
 		super();
 		setSize(500, 300);
-		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
 		setTitle("Login");
 		setResizable(false);
+		
 		// UI LOGIN
 		loginPanel = new JPanel();
 		loginPanel.setLayout(new GridLayout(4, 1, 10, 10));
 		labelLogin = new JLabel("LOGIN");
+		labelLogin.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel1 = new JPanel();
 		panel1.setBackground(Color.yellow);
 		panel1.add(labelLogin);
 		labelUser = new JLabel("Username");
+		labelUser.setFont(labelLogin.getFont().deriveFont(13f));
 		user = new JTextField(15);
 		user.addActionListener(this);
 		JPanel panel2 = new JPanel();
@@ -55,6 +59,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel2.add(user);
 		panel2.setBackground(Color.yellow);
 		labelPass = new JLabel("Password ");
+		labelPass.setFont(labelLogin.getFont().deriveFont(13f));
 		pass = new JPasswordField(15);
 		pass.addActionListener(this);
 		JPanel panel3 = new JPanel();
@@ -62,6 +67,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel3.add(pass);
 		panel3.setBackground(Color.yellow);
 		login = new JButton("Login");
+		login.setBackground(Color.green);
+		login.setFont(labelLogin.getFont().deriveFont(13f));
 		login.addActionListener(this);
 		register = new JButton("Register");
 		register.addActionListener(this);
@@ -80,24 +87,28 @@ public class SwingLogin extends JFrame implements ActionListener {
 		registerPanel = new JPanel();
 		registerPanel.setLayout(new GridLayout(5, 1, 10, 10));
 		labelRegister = new JLabel("REGISTER");
+		labelRegister.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel5 = new JPanel();
 		panel5.add(labelRegister);
 		panel5.setBackground(Color.yellow);
-		labelUser = new JLabel("Username");
+		labelUser = new JLabel("Username ");
+		labelUser.setFont(labelLogin.getFont().deriveFont(13f));
 		reguser = new JTextField(15);
 		reguser.addActionListener(this);
 		JPanel panel6 = new JPanel();
 		panel6.add(labelUser);
 		panel6.add(reguser);
 		panel6.setBackground(Color.yellow);
-		labelPass = new JLabel("Password");
+		labelPass = new JLabel("Password  ");
+		labelPass.setFont(labelLogin.getFont().deriveFont(13f));
 		regpass = new JPasswordField(15);
 		regpass.addActionListener(this);
 		JPanel panel7 = new JPanel();
 		panel7.add(labelPass);
 		panel7.add(regpass);
 		panel7.setBackground(Color.yellow);
-		labelRePass = new JLabel("Re - Password");
+		labelRePass = new JLabel("RePassword");
+		labelRePass.setFont(labelLogin.getFont().deriveFont(13f));
 		repass = new JPasswordField(15);
 		repass.addActionListener(this);
 		JPanel panel8 = new JPanel();
@@ -108,6 +119,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 		loginInReG.addActionListener(this);
 		JPanel panel9 = new JPanel();
 		createUser = new JButton("Create");
+		createUser.setBackground(Color.green);
+		createUser.setFont(labelLogin.getFont().deriveFont(13f));
 		createUser.addActionListener(this);
 		panel9.add(loginInReG);
 		panel9.add(createUser);
@@ -124,22 +137,28 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelM1.setBorder(BorderFactory.createLineBorder(Color.black));
 		labelM1 = new JLabel();
 		panelM1.setBackground(Color.pink);
+		labelM1.setFont(labelLogin.getFont().deriveFont(12f));
 		panelM1.add(labelM1);
 		panelM3 = new JPanel();
 		printList = new JButton("Print List");
 		printList.setBackground(Color.gray);
+		printList.setFont(labelLogin.getFont().deriveFont(12f));
 		printList.addActionListener(this);
 		addUser = new JButton("Add User");
 		addUser.setBackground(Color.green);
+		addUser.setFont(labelLogin.getFont().deriveFont(12f));
 		addUser.addActionListener(this);
 		delUser = new JButton("Delete User");
 		delUser.setBackground(Color.red);
+		delUser.setFont(labelLogin.getFont().deriveFont(12f));
 		delUser.addActionListener(this);
 		showApp = new JButton("Show App");
 		showApp.setBackground(Color.blue);
+		showApp.setFont(labelLogin.getFont().deriveFont(12f));
 		showApp.addActionListener(this);
 		logout = new JButton("Logout");
 		logout.setBackground(Color.orange);
+		logout.setFont(labelLogin.getFont().deriveFont(12f));
 		logout.addActionListener(this);
 		panelM3.add(printList);
 		panelM3.add(addUser);
@@ -190,7 +209,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 					getContentPane().remove(registerPanel);
 					getContentPane().add(panelMN);
 					setTitle("Managerment");
-					setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					revalidate();
 					repaint();
 				} else {
@@ -241,7 +259,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				@Override
 				protected Void doInBackground() throws Exception {
 					StringBuilder load = new StringBuilder();
-					for (int i = 0; i < 100; i++) {
+					for (int i = 0; i < 80; i++) {
 						load.append("|");
 						publish(load.toString());
 						Thread.sleep(5);
@@ -303,7 +321,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 		} else if (e.getSource() == logout) {
 			getContentPane().remove(panelMN);
 			getContentPane().add(loginPanel);
-			setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 			user.setText("");
 			pass.setText("");
 			revalidate();
@@ -321,6 +338,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 
 	// Main
 	public static void main(String[] args) {
+		try {
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		} catch (Exception e) {
+		}
 		new SwingLogin();
 	}
 }

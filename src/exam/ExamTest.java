@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 public class ExamTest extends JFrame {
 	//Attributes
@@ -38,8 +39,10 @@ public class ExamTest extends JFrame {
 		//
 		panelStart = new JPanel();
 		labelStart = new JLabel("              Press the button to start the test");
+		labelStart.setFont(labelStart.getFont().deriveFont(15f));
 		panelStart.setLayout(new BorderLayout());
 		start = new JButton("===Start===");
+		start.setFont(start.getFont().deriveFont(14f));
 		start.setBackground(Color.ORANGE);
 		panelStart.add(labelStart, BorderLayout.WEST);
 		panelStart.add(start, BorderLayout.LINE_END);
@@ -111,6 +114,11 @@ public class ExamTest extends JFrame {
 	}
 	// Main
 	public static void main(String[] args) {
+		try {
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		new ExamTest().setVisible(true);
 	}
 }
