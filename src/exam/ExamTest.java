@@ -121,10 +121,15 @@ public class ExamTest extends JFrame {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
 			labelQues.setText("Question " + (index + 1) + ": " + ch.getQuestion());
+			labelQues.setFont(labelQues.getFont().deriveFont(15f));
 			ans1.setText(ch.getAns1());
+			ans1.setFont(ans1.getFont().deriveFont(12f));
 			ans2.setText(ch.getAns2());
+			ans2.setFont(ans2.getFont().deriveFont(12f));
 			ans3.setText(ch.getAns3());
+			ans3.setFont(ans3.getFont().deriveFont(12f));
 			ans4.setText(ch.getAns4());
+			ans4.setFont(ans4.getFont().deriveFont(12f));
 		} else {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			this.dispose();

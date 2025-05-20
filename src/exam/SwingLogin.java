@@ -26,7 +26,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Attributes
 	private static final long serialVersionUID = 1L;
 	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
-	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1;
+	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, logout;
 	private LoginSystem loginsystem;
@@ -46,7 +46,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		setIconImage(icon.getImage());
 		// UI LOGIN
 		loginPanel = new JPanel();
-		loginPanel.setLayout(new GridLayout(5, 1, 10, 10));
+		loginPanel.setLayout(new GridLayout(6, 1, 10, 10));
 		labelLogin = new JLabel("LOGIN");
 		labelLogin.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel1 = new JPanel();
@@ -83,17 +83,23 @@ public class SwingLogin extends JFrame implements ActionListener {
 		JPanel panel0 = new JPanel();
 		panel0.add(labelNote);
 		panel0.setBackground(Color.yellow);
+		labelCopyright = new JLabel("© • Copyright by river0077");
+		labelCopyright.setFont(labelLogin.getFont().deriveFont(10f));
+		JPanel panel00 = new JPanel();
+		panel00.add(labelCopyright);
+		panel00.setBackground(Color.yellow);
 		loginPanel.add(panel1);
 		loginPanel.add(panel2);
 		loginPanel.add(panel3);
 		loginPanel.add(panel4);
 		loginPanel.add(panel0);
+		loginPanel.add(panel00);
 		loginPanel.setBackground(Color.yellow);
 		getContentPane().add(loginPanel);
 		getContentPane().setBackground(Color.yellow);
 		// UI REGISTER
 		registerPanel = new JPanel();
-		registerPanel.setLayout(new GridLayout(5, 1, 10, 10));
+		registerPanel.setLayout(new GridLayout(6, 1, 10, 10));
 		labelRegister = new JLabel("REGISTER");
 		labelRegister.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel5 = new JPanel();
@@ -133,11 +139,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel9.add(loginInReG);
 		panel9.add(createUser);
 		panel9.setBackground(Color.yellow);
+		JPanel panel10 = new JPanel();
+		labelCopyright = new JLabel("© • Copyright by river0077");
+		panel10.add(labelCopyright);
+		panel10.setBackground(Color.yellow);
 		registerPanel.add(panel5);
 		registerPanel.add(panel6);
 		registerPanel.add(panel7);
 		registerPanel.add(panel8);
 		registerPanel.add(panel9);
+		registerPanel.add(panel10);
 		registerPanel.setBackground(Color.yellow);
 		// UI MANAGEMENT
 		panelM1 = new JPanel();
@@ -178,11 +189,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelLoading.setBackground(Color.yellow);
 		JLabel labelLoading = new JLabel("");
 		panelLoading.add(labelLoading);
+		JPanel panel001 = new JPanel();
+		labelCopyright = new JLabel("© • Copyright by river0077");
+		panel001.add(labelCopyright);
+		panel001.setBackground(Color.yellow);
 		panelMN = new JPanel();
 		panelMN.setLayout(new BorderLayout());
 		panelMN.add(panelM1, BorderLayout.CENTER);
 		panelMN.add(panelM3, BorderLayout.NORTH);
 		panelMN.add(labelLoading, BorderLayout.SOUTH);
+		panelMN.add(panel001, BorderLayout.PAGE_END);
 
 		setVisible(true);
 		// Data
@@ -229,7 +245,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 					user.setText("");
 					pass.setText("");
 					ExamTest exam = new ExamTest();
-					// FIX BUG
 					exam.setUserName(username);
 					exam.setTitle("Thi - User: " + username);
 					exam.setVisible(true);
