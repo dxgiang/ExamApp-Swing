@@ -11,6 +11,7 @@ import java.util.List;
 import java.awt.event.*;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -41,7 +42,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 		setLayout(new FlowLayout());
 		setTitle("Login");
 		setResizable(false);
-		
+		ImageIcon icon = new ImageIcon("image/icon.gif");
+		setIconImage(icon.getImage());
 		// UI LOGIN
 		loginPanel = new JPanel();
 		loginPanel.setLayout(new GridLayout(4, 1, 10, 10));
@@ -238,7 +240,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						wait(5000);
 					}
 				} else {
-					JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+					JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT. Check your username again!");
 				}
 			}
 		} else if (e.getSource() == createUser || e.getSource() == regpass || e.getSource() == reguser
