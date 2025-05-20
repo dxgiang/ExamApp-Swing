@@ -26,7 +26,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Attributes
 	private static final long serialVersionUID = 1L;
 	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
-	private JLabel labelLogin, labelRegister, labelUser, labelPass, labelRePass, labelM1;
+	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1;
 	private JTextField user, pass, repass, reguser, regpass;
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, logout;
 	private LoginSystem loginsystem;
@@ -42,11 +42,11 @@ public class SwingLogin extends JFrame implements ActionListener {
 		setLayout(new FlowLayout());
 		setTitle("Login");
 		setResizable(false);
-		ImageIcon icon = new ImageIcon("image/icon.gif");
+		ImageIcon icon = new ImageIcon("image/icon.jpg");
 		setIconImage(icon.getImage());
 		// UI LOGIN
 		loginPanel = new JPanel();
-		loginPanel.setLayout(new GridLayout(4, 1, 10, 10));
+		loginPanel.setLayout(new GridLayout(5, 1, 10, 10));
 		labelLogin = new JLabel("LOGIN");
 		labelLogin.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel1 = new JPanel();
@@ -78,10 +78,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel4.add(register);
 		panel4.add(login);
 		panel4.setBackground(Color.yellow);
+		labelNote = new JLabel("Note: If you enter wrong password 5 times, application will freeze few seconds!");
+		labelNote.setFont(labelLogin.getFont().deriveFont(10f));
+		JPanel panel0 = new JPanel();
+		panel0.add(labelNote);
+		panel0.setBackground(Color.yellow);
 		loginPanel.add(panel1);
 		loginPanel.add(panel2);
 		loginPanel.add(panel3);
 		loginPanel.add(panel4);
+		loginPanel.add(panel0);
 		loginPanel.setBackground(Color.yellow);
 		getContentPane().add(loginPanel);
 		getContentPane().setBackground(Color.yellow);
@@ -217,14 +223,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
 					user.setText("");
 					pass.setText("");
-					ExamTest thi = new ExamTest();
-					thi.setVisible(true);
-					thi.addWindowListener(new WindowAdapter() {
+					ExamTest exam = new ExamTest();
+					// FIX BUG
+					exam.setUserName(username);
+					exam.setTitle("Thi - User: " + username);
+					exam.setVisible(true);
+					exam.addWindowListener(new WindowAdapter() {
 						@Override
 						public void windowClosed(WindowEvent e) {
 							for (User<String, String> u : loginsystem.getUserList()) {
 								if (u.getUser().equals(username)) {
-									u.setDiem(thi.getScore());
+									u.setDiem(exam.getScore());
 								}
 							}
 						}
@@ -309,6 +318,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			printList.doClick();
 		} else if (e.getSource() == showApp) {
 			testExam = new ExamTest();
+			testExam.setTitle("Thi - User: root");
 			testExam.setVisible(true);
 			testExam.addWindowListener(new WindowAdapter() {
 				@Override

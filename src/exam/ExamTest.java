@@ -19,12 +19,18 @@ public class ExamTest extends JFrame {
 	private JPanel panelStart, panelExamTest;
 	private JLabel labelStart, labelQues;
 	private JButton start, ans1, ans2, ans3, ans4;
+	private String userName;
 	private int index = 0;
 	private double score = 0;
 	private List<Question> listQuestion;
 	// Constructor
 	public ExamTest() {
-		setTitle("Thi");
+		//FIX BUG
+		String currentUser = userName;
+	    if (currentUser == null || currentUser.isEmpty()) {
+	        currentUser = "Unknown";
+	    }
+	    setTitle("Thi - User: " + getUserName());
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -80,12 +86,19 @@ public class ExamTest extends JFrame {
 		ans3.addActionListener(e -> processQuestion(3));
 		ans4.addActionListener(e -> processQuestion(4));
 	}
+	private String getUserName() {
+		// TODO Auto-generated method stub
+		return userName;
+	}
 	// Getter and Setter
 	public double getScore() {
 		return score;
 	}
 	public void setScore(double score) {
 		this.score = score;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	//Methods
 	private void processQuestion(int luaChon) {
