@@ -14,6 +14,6 @@ This app includes the following functions:
    - Can show application
 3. The Exam Test
 4. While you're in Exam, you cannot exit the app. Just finish and it will close.
-5. When you minimize the app; alt + tab; click outside, a message will pop up saying you have cheated.
+5. Anti cheat: When you minimize the app; alt + tab; click outside, a message will pop up saying you have cheated.
 
 THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT UGLY. SORRY FOR MY BAD ENGLISH =))
