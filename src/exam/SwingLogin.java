@@ -235,6 +235,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			if (loginsystem.authenticate(username, password)) {
 				if (username.equals("root")) {
 					JOptionPane.showMessageDialog(this, "LOGIN AS ROOT");
+					countWrong = 0;
 					getContentPane().remove(loginPanel);
 					getContentPane().remove(registerPanel);
 					getContentPane().add(panelMN);
@@ -243,6 +244,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 					repaint();
 				} else {
 					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
+					countWrong = 0;
 					user.setText("");
 					pass.setText("");
 					ExamTest exam = new ExamTest();
@@ -328,7 +330,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 			worker.execute();
 		} else if (e.getSource() == addUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username:");
-
 			if (username == null || username.trim().isEmpty()) {
 				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
 				return;
