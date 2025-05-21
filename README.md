@@ -1,6 +1,6 @@
-EXAM TEST APP
+EXAM APP
 
-This is the example of Exam Test App using Swing
+This is the Exam App using Swing
 
 This app includes the following functions:
 1. Login/Register system:
