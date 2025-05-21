@@ -94,7 +94,7 @@ public class ExamTest extends JFrame {
 				// TODO Auto-generated method stub
 				if (index < listQuestion.size()) {
 					JOptionPane.showMessageDialog(ExamTest.this, "You cheated on the test!");
-					System.out.println("CHEAT!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
+					System.out.println(getTitle() + " CHEAT!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
 					// Close the application
 					ExamTest.this.dispose();
 					// Set score to 0

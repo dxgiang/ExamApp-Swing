@@ -244,6 +244,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 					repaint();
 				} else {
 					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
+					// Check if user have taken the exam
+					for (User<String, String> u : loginsystem.getUserList()) {
+						if (u.getUser().equals(username)) {
+							if (u.getStatus() != null) {
+								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM!");
+								user.setText("");
+								pass.setText("");
+								return;
+							}
+						}
+					}
 					countWrong = 0;
 					user.setText("");
 					pass.setText("");
