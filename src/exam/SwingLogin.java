@@ -300,6 +300,12 @@ public class SwingLogin extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(this, "PASSWORDS DO NOT MATCH!");
 				return;
 			}
+			for (User<String, String> u : loginsystem.getUserList()) {
+				if (u.getUser().equals(username)) {
+					JOptionPane.showMessageDialog(this, "USERNAME ALREADY EXISTS!");
+					return;
+				}
+			}
 			loginsystem.addUser(new User<String, String>(username, password, 0.0, null), false);
 			JOptionPane.showMessageDialog(this, "REGISTER SUCCESSFULLY");
 			getContentPane().remove(registerPanel);
