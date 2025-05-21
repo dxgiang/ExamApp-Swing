@@ -79,6 +79,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel4.add(login);
 		panel4.setBackground(Color.yellow);
 		labelNote = new JLabel("Note: If you enter wrong password 5 times, application will freeze few seconds!");
+		labelNote.setForeground(Color.red);
 		labelNote.setFont(labelLogin.getFont().deriveFont(10f));
 		JPanel panel0 = new JPanel();
 		panel0.add(labelNote);
@@ -248,7 +249,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
 							if (u.getStatus() != null) {
-								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM!");
+								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
 								user.setText("");
 								pass.setText("");
 								return;
@@ -330,7 +331,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 				protected void done() {
 					StringBuilder sb = new StringBuilder("<html><b>User -|- Pass -|- Score -|- Status</b><br>");
 					for (User<String, String> u : loginsystem.getUserList()) {
-						sb.append(u.getUser()).append(" -|- ").append(u.getPass()).append(" -|- ").append(u.getScore()).append(" -|- ").append(u.getStatus()).append("<br>");
+						sb.append(u.getUser()).append(" -|- ").append(u.getPass()).append(" -|- ").append(u.getScore())
+								.append(" -|- ").append(u.getStatus()).append("<br>");
 					}
 					sb.append("</html>");
 					labelM1.setText(sb.toString());

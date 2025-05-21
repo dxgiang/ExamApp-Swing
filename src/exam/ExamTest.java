@@ -19,7 +19,7 @@ public class ExamTest extends JFrame {
 	// Attributes
 	private static final long serialVersionUID = 1L;
 	private JPanel panelStart, panelExamTest;
-	private JLabel labelStart, labelQues;
+	private JLabel labelStart, labelNote, labelQues;
 	private JButton start, ans1, ans2, ans3, ans4;
 	private String userName;
 	private int index = 0;
@@ -49,11 +49,17 @@ public class ExamTest extends JFrame {
 		panelStart = new JPanel();
 		labelStart = new JLabel("              Press the button to start the test");
 		labelStart.setFont(labelStart.getFont().deriveFont(15f));
+		labelNote = new JLabel("               Note: Do not minimize or switch to another window during the test.");
+		labelNote.setFont(labelNote.getFont().deriveFont(12f));
+		labelNote.setForeground(Color.RED);
+		labelNote.setBackground(Color.YELLOW);
 		panelStart.setLayout(new BorderLayout());
 		start = new JButton("===Start===");
 		start.setFont(start.getFont().deriveFont(14f));
 		start.setBackground(Color.ORANGE);
 		panelStart.add(labelStart, BorderLayout.WEST);
+		panelStart.add(labelNote, BorderLayout.CENTER);
+		panelStart.add(labelNote, BorderLayout.SOUTH);
 		panelStart.add(start, BorderLayout.LINE_END);
 		panelStart.setBackground(Color.GREEN);
 		getContentPane().add(panelStart);
