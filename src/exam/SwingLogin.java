@@ -310,7 +310,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 
 				@Override
 				protected void process(List<String> chunks) {
-
 					String latest = chunks.get(chunks.size() - 1);
 					labelM1.setText(latest);
 				}
@@ -380,7 +379,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Main
 	public static void main(String[] args) {
 		try {
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
 		}
 		new SwingLogin();

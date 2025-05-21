@@ -3,6 +3,8 @@ package exam;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,6 +87,25 @@ public class ExamTest extends JFrame {
 		ans2.addActionListener(e -> processQuestion(2));
 		ans3.addActionListener(e -> processQuestion(3));
 		ans4.addActionListener(e -> processQuestion(4));
+		addWindowFocusListener(new WindowFocusListener() {
+			
+			@Override
+			public void windowLostFocus(WindowEvent e) {
+				// TODO Auto-generated method stub
+				JOptionPane.showMessageDialog(ExamTest.this, "You cheated on the test!");
+				System.out.println("CHEAT!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
+				// Close the application
+				ExamTest.this.dispose();
+				//Set score to 0
+				score = 0;
+			}
+			
+			@Override
+			public void windowGainedFocus(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 	}
 
 	private String getUserName() {
