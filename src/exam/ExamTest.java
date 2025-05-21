@@ -88,7 +88,6 @@ public class ExamTest extends JFrame {
 		ans3.addActionListener(e -> processQuestion(3));
 		ans4.addActionListener(e -> processQuestion(4));
 		addWindowFocusListener(new WindowFocusListener() {
-
 			@Override
 			public void windowLostFocus(WindowEvent e) {
 				// TODO Auto-generated method stub
@@ -101,11 +100,9 @@ public class ExamTest extends JFrame {
 					score = 0;
 				}
 			}
-
 			@Override
 			public void windowGainedFocus(WindowEvent e) {
 				// TODO Auto-generated method stub
-
 			}
 		});
 	}
