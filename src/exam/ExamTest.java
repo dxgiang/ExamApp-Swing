@@ -24,6 +24,7 @@ public class ExamTest extends JFrame {
 	private String userName;
 	private int index = 0;
 	private double score = 0;
+	private String status = null;
 	private List<Question> listQuestion;
 
 	// Constructor
@@ -98,6 +99,7 @@ public class ExamTest extends JFrame {
 					ExamTest.this.dispose();
 					// Set score to 0
 					score = 0;
+					status = "CHEAT";
 				}
 			}
 			@Override
@@ -123,6 +125,14 @@ public class ExamTest extends JFrame {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	// Methods
@@ -152,6 +162,11 @@ public class ExamTest extends JFrame {
 			ans4.setFont(ans4.getFont().deriveFont(12f));
 		} else {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
+			if (score >= 5) {
+				status = "PASS";
+			} else {
+				status = "FAIL";
+			}
 			this.dispose();
 		}
 	}

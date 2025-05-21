@@ -203,9 +203,9 @@ public class SwingLogin extends JFrame implements ActionListener {
 		setVisible(true);
 		// Data
 		loginsystem = new LoginSystem();
-		loginsystem.addUser(new User<String, String>("root", "admin", 0.0), false);
-		loginsystem.addUser(new User<String, String>("giang", "0077", 0.0), false);
-		loginsystem.addUser(new User<String, String>("hitler", "1945", 0.0), false);
+		loginsystem.addUser(new User<String, String>("root", "admin", 0.0, null), false);
+		loginsystem.addUser(new User<String, String>("giang", "0077", 0.0, null), false);
+		loginsystem.addUser(new User<String, String>("hitler", "1945", 0.0, null), false);
 	}
 
 	// ActionListener
@@ -256,7 +256,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 						public void windowClosed(WindowEvent e) {
 							for (User<String, String> u : loginsystem.getUserList()) {
 								if (u.getUser().equals(username)) {
-									u.setDiem(exam.getScore());
+									u.setScore(exam.getScore());
+									u.setStatus(exam.getStatus());
 								}
 							}
 						}
@@ -287,7 +288,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(this, "PASSWORDS DO NOT MATCH!");
 				return;
 			}
-			loginsystem.addUser(new User<String, String>(username, password, 0.0), false);
+			loginsystem.addUser(new User<String, String>(username, password, 0.0, null), false);
 			JOptionPane.showMessageDialog(this, "REGISTER SUCCESSFULLY");
 			getContentPane().remove(registerPanel);
 			getContentPane().add(loginPanel);
@@ -316,10 +317,9 @@ public class SwingLogin extends JFrame implements ActionListener {
 
 				@Override
 				protected void done() {
-					StringBuilder sb = new StringBuilder("<html><b>User - Pass - Score</b><br>");
+					StringBuilder sb = new StringBuilder("<html><b>User -|- Pass -|- Score -|- Status</b><br>");
 					for (User<String, String> u : loginsystem.getUserList()) {
-						sb.append(u.getUser()).append(" - ").append(u.getPass()).append(" - ").append(u.getDiem())
-								.append("<br>");
+						sb.append(u.getUser()).append(" -|- ").append(u.getPass()).append(" -|- ").append(u.getScore()).append(" -|- ").append(u.getStatus()).append("<br>");
 					}
 					sb.append("</html>");
 					labelM1.setText(sb.toString());
@@ -338,7 +338,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
 				return;
 			}
-			loginsystem.addUser(new User<String, String>(username, password, 0.0), true);
+			loginsystem.addUser(new User<String, String>(username, password, 0.0, null), true);
 			printList.doClick();
 		} else if (e.getSource() == delUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to delete:");
@@ -353,7 +353,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 				public void windowClosed(WindowEvent e) {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals("root")) {
-							u.setDiem(testExam.getScore());
+							u.setScore(testExam.getScore());
+							u.setStatus(testExam.getStatus());
 						}
 					}
 				}
@@ -379,7 +380,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Main
 	public static void main(String[] args) {
 		try {
-		UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
 		}
 		new SwingLogin();
