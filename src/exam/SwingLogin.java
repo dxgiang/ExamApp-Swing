@@ -226,6 +226,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			getContentPane().add(loginPanel);
 			user.setText("");
 			pass.setText("");
+			setTitle("Login");
 			revalidate();
 			repaint();
 		} else if (e.getSource() == login || e.getSource() == pass || e.getSource() == user) {
