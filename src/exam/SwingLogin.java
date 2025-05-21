@@ -375,6 +375,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		} else if (e.getSource() == logout) {
 			getContentPane().remove(panelMN);
 			getContentPane().add(loginPanel);
+			setTitle("Login");
 			user.setText("");
 			pass.setText("");
 			revalidate();
