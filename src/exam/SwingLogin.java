@@ -36,7 +36,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Constructor
 	public SwingLogin() throws HeadlessException {
 		super();
-		setSize(500, 300);
+		setSize(530, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
@@ -78,7 +78,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel4.add(register);
 		panel4.add(login);
 		panel4.setBackground(Color.yellow);
-		labelNote = new JLabel("Note: If you enter wrong password 5 times, application will freeze few seconds!");
+		labelNote = new JLabel("Note: If you enter wrong password 3 times, application will freeze few seconds!");
 		labelNote.setForeground(Color.red);
 		labelNote.setFont(labelLogin.getFont().deriveFont(10f));
 		JPanel panel0 = new JPanel();
@@ -162,27 +162,27 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelM3 = new JPanel();
 		printList = new JButton("Print List");
 		printList.setBackground(Color.gray);
-		printList.setFont(labelLogin.getFont().deriveFont(10f));
+		printList.setFont(labelLogin.getFont().deriveFont(10.5f));
 		printList.addActionListener(this);
 		addUser = new JButton("Add User");
 		addUser.setBackground(Color.green);
-		addUser.setFont(labelLogin.getFont().deriveFont(10f));
+		addUser.setFont(labelLogin.getFont().deriveFont(10.5f));
 		addUser.addActionListener(this);
 		delUser = new JButton("Delete User");
 		delUser.setBackground(Color.red);
-		delUser.setFont(labelLogin.getFont().deriveFont(10f));
+		delUser.setFont(labelLogin.getFont().deriveFont(10.5f));
 		delUser.addActionListener(this);
 		showApp = new JButton("Show App");
 		showApp.setBackground(Color.blue);
-		showApp.setFont(labelLogin.getFont().deriveFont(10f));
+		showApp.setFont(labelLogin.getFont().deriveFont(10.5f));
 		showApp.addActionListener(this);
 		unlock = new JButton("Unlock");
 		unlock.setBackground(Color.pink);
-		unlock.setFont(labelLogin.getFont().deriveFont(10f));
+		unlock.setFont(labelLogin.getFont().deriveFont(10.5f));
 		unlock.addActionListener(this);
 		logout = new JButton("Logout");
 		logout.setBackground(Color.orange);
-		logout.setFont(labelLogin.getFont().deriveFont(10f));
+		logout.setFont(labelLogin.getFont().deriveFont(10.5f));
 		logout.addActionListener(this);
 		panelM3.add(printList);
 		panelM3.add(addUser);
