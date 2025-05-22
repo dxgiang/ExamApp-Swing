@@ -38,6 +38,8 @@ public class ExamTest extends JFrame {
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
+		setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		setUndecorated(true);
 		setResizable(false);
 		// Data
 		listQuestion = new ArrayList<Question>();
@@ -52,7 +54,7 @@ public class ExamTest extends JFrame {
 		labelStart.setFont(labelStart.getFont().deriveFont(15f));
 		labelNote = new JLabel("                Note: Do not minimize or switch to another window during the test.");
 		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
-		labelNote.setFont(labelNote.getFont().deriveFont(12f));
+		labelNote.setFont(labelNote.getFont().deriveFont(15f));
 		labelNote.setForeground(Color.RED);
 		labelNote.setBackground(Color.YELLOW);
 		panelStart.setLayout(new BorderLayout());
