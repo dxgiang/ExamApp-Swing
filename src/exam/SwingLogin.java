@@ -28,10 +28,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
 	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
-	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, logout;
+	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, logout;
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
-	private int countWrong = 0;
+	private int countWrong = 0, countWrong2 = 0;
 
 	// Constructor
 	public SwingLogin() throws HeadlessException {
@@ -162,28 +162,33 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelM3 = new JPanel();
 		printList = new JButton("Print List");
 		printList.setBackground(Color.gray);
-		printList.setFont(labelLogin.getFont().deriveFont(12f));
+		printList.setFont(labelLogin.getFont().deriveFont(10f));
 		printList.addActionListener(this);
 		addUser = new JButton("Add User");
 		addUser.setBackground(Color.green);
-		addUser.setFont(labelLogin.getFont().deriveFont(12f));
+		addUser.setFont(labelLogin.getFont().deriveFont(10f));
 		addUser.addActionListener(this);
 		delUser = new JButton("Delete User");
 		delUser.setBackground(Color.red);
-		delUser.setFont(labelLogin.getFont().deriveFont(12f));
+		delUser.setFont(labelLogin.getFont().deriveFont(10f));
 		delUser.addActionListener(this);
 		showApp = new JButton("Show App");
 		showApp.setBackground(Color.blue);
-		showApp.setFont(labelLogin.getFont().deriveFont(12f));
+		showApp.setFont(labelLogin.getFont().deriveFont(10f));
 		showApp.addActionListener(this);
+		unlock = new JButton("Unlock");
+		unlock.setBackground(Color.pink);
+		unlock.setFont(labelLogin.getFont().deriveFont(10f));
+		unlock.addActionListener(this);
 		logout = new JButton("Logout");
 		logout.setBackground(Color.orange);
-		logout.setFont(labelLogin.getFont().deriveFont(12f));
+		logout.setFont(labelLogin.getFont().deriveFont(10f));
 		logout.addActionListener(this);
 		panelM3.add(printList);
 		panelM3.add(addUser);
 		panelM3.add(delUser);
 		panelM3.add(showApp);
+		panelM3.add(unlock);
 		panelM3.add(logout);
 		panelM3.setBackground(Color.yellow);
 		JPanel panelLoading = new JPanel();
@@ -248,8 +253,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 					// Check if user have taken the exam
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
-							if (u.getStatus() != null) {
+							if (u.getStatus() == "PASS" || u.getStatus() == "FAIL" || u.getStatus() == "CHEAT") {
 								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
+								user.setText("");
+								pass.setText("");
+								return;
+							} else if (u.getStatus() == "LOCKED") {
+								JOptionPane.showMessageDialog(this,
+										"YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
 								user.setText("");
 								pass.setText("");
 								return;
@@ -279,10 +290,22 @@ public class SwingLogin extends JFrame implements ActionListener {
 				if (loginsystem.wrongPass(username, password)) {
 					JOptionPane.showMessageDialog(this, "WRONG PASSWORD");
 					countWrong++;
-					if (countWrong == 5) {
+					if (countWrong == 3) {
 						JOptionPane.showMessageDialog(this,
-								"YOU HAVE ENTERED WRONG PASSWORD 5 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
+								"YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
+						countWrong = 0;
+						countWrong2++;
 						wait(5000);
+					}
+					if (countWrong2 == 3) {
+						JOptionPane.showMessageDialog(this, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
+						countWrong2 = 0;
+						for (User<String, String> u : loginsystem.getUserList()) {
+							if (u.getUser().equals(username)) {
+								u.setStatus("LOCKED");
+								return;
+							}
+						}
 					}
 				} else {
 					JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT. Check your username again!");
@@ -386,6 +409,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 			pass.setText("");
 			revalidate();
 			repaint();
+		} else if (e.getSource() == unlock) {
+			String username = JOptionPane.showInputDialog(this, "Enter username to unlock:");
+			for (User<String, String> u : loginsystem.getUserList()) {
+				if (u.getUser().equals(username)) {
+					u.setStatus("null");
+					JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
+					printList.doClick();
+					return;
+				}
+			}
+			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
 		}
 	}
 

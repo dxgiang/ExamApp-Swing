@@ -85,5 +85,18 @@ public class LoginSystem extends JFrame {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT!");
 		}
 	}
+	public boolean lockUser(String username) {
+		boolean found = false;
+		for (User<String, String> user : list) {
+			if (user.getUser().equals(username)) {
+				found = true;
+			}
+		}
+		if(found == true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

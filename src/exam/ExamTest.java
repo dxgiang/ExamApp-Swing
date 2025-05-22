@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 
 public class ExamTest extends JFrame {
 	// Attributes
@@ -49,7 +50,8 @@ public class ExamTest extends JFrame {
 		panelStart = new JPanel();
 		labelStart = new JLabel("              Press the button to start the test");
 		labelStart.setFont(labelStart.getFont().deriveFont(15f));
-		labelNote = new JLabel("               Note: Do not minimize or switch to another window during the test.");
+		labelNote = new JLabel("                Note: Do not minimize or switch to another window during the test.");
+		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
 		labelNote.setFont(labelNote.getFont().deriveFont(12f));
 		labelNote.setForeground(Color.RED);
 		labelNote.setBackground(Color.YELLOW);
