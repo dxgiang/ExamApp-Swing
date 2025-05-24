@@ -32,6 +32,7 @@ public class LoginSystem extends JFrame {
 		list.add(userAdd);
 		if (showMes == true) {
 			JOptionPane.showMessageDialog(this, "ADDED ACCOUNT!");
+			System.out.println("Add User - User: " + userAdd.getUser() + " (Added user successfully)");
 		}
 	}
 

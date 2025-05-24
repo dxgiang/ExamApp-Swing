@@ -174,8 +174,10 @@ public class ExamTest extends JFrame {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			if (score >= 5) {
 				status = "PASS";
+				System.out.println(getTitle() + " PASS! Score: " + score + "/10.0");
 			} else {
 				status = "FAIL";
+				System.out.println(getTitle() + " FAIL! Score: " + score + "/10.0");
 			}
 			this.dispose();
 		}
