@@ -24,4 +24,14 @@ Diagram:
 ![diagram-export-19_37_33-24-5-2025](https://github.com/user-attachments/assets/1b5773af-7e6c-4643-a6f7-83e3dc1de89b)
 
 
-[![River's GitHub stats](https://github-readme-stats.vercel.app/apiriver0077=anuraghazra)]
+
+# 💻Tech Stack
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+# 📊GitHub Stats :
+![](https://github-readme-stats.vercel.app/api?username=river0077&theme=radical&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=river0077&theme=radical&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=river0077&theme=radical&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
+---
+[![](https://visitcount.itsvg.in/api?id=river0077&icon=0&color=0)](https://visitcount.itsvg.in)
+
