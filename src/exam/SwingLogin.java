@@ -255,9 +255,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 					revalidate();
 					repaint();
 				} else {
-					System.out.println("Login - User: " + username + " (logined successfully)");
-					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
-					// Check if user have taken the exam
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
 							if (u.getStatus() == "PASS" || u.getStatus() == "FAIL" || u.getStatus() == "CHEAT") {
@@ -276,6 +273,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 							}
 						}
 					}
+					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
+					System.out.println("Login - User: " + username + " (logined successfully)");
 					countWrong = 0;
 					user.setText("");
 					pass.setText("");
@@ -447,12 +446,11 @@ public class SwingLogin extends JFrame implements ActionListener {
 			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
-					if (u.getStatus().equals("LOCKED") || u.getStatus().equals("CHEAT")
-							|| u.getStatus().equals("PASS") || u.getStatus().equals("FAIL")) {
+					if (u.getStatus() != null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
 						System.out.println("Lock - User: " + username + " (not locked or already locked)");
 						return;
-					} else {
+					} else if(u.getStatus() == null) {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println("Lock - User: " + username + " (locked successfully)");
