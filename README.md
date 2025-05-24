@@ -8,10 +8,11 @@ This app includes the following functions:
    - It has account and password checking feature.
    - If you enter the wrong password 5 times, the app will freeze for 5 seconds
 2. Login as root:
-   - You can manage the application
-   - Can add/delete user
-   - Can show list of account
-   - Can show application
+   - manage the application
+   - add/delete user
+   - show list of account
+   - show application
+   - Lock/Unlock user   
 3. The Exam Test
 4. While you're in Exam, you cannot exit the app. Just finish and it will close.
 5. Anti cheat: When you minimize the app; alt + tab; click outside, a message will pop up saying you have cheated.
