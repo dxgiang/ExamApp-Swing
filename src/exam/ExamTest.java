@@ -108,6 +108,7 @@ public class ExamTest extends JFrame {
 				if (index < listQuestion.size()) {
 					JOptionPane.showMessageDialog(ExamTest.this, "You cheated on the test!");
 					System.out.println(getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
+					System.out.println(getTitle() + " (Log out)");
 					// Close the application
 					ExamTest.this.dispose();
 					// Set score to 0
@@ -178,9 +179,11 @@ public class ExamTest extends JFrame {
 			if (score >= 5) {
 				status = "PASS";
 				System.out.println(getTitle() + " PASS! Score: " + score + "/10.0");
+				System.out.println(getTitle() + " (Log out)");
 			} else {
 				status = "FAIL";
 				System.out.println(getTitle() + " FAIL! Score: " + score + "/10.0");
+				System.out.println(getTitle() + " (Log out)");
 			}
 			this.dispose();
 		}
