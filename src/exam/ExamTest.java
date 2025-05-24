@@ -50,16 +50,19 @@ public class ExamTest extends JFrame {
 
 		//
 		panelStart = new JPanel();
-		labelStart = new JLabel("              Press the button to start the test");
-		labelStart.setFont(labelStart.getFont().deriveFont(15f));
-		labelNote = new JLabel("                Note: Do not minimize or switch to another window during the test.");
+		labelStart = new JLabel("                                                       Press the button to start the test");
+
+		labelStart.setFont(labelStart.getFont().deriveFont(25f));
+		labelNote = new JLabel("Note: Do not minimize or switch to another window during the test.");
+		//Set the text to the center of the label
+		labelNote.setHorizontalAlignment(JLabel.CENTER);
 		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
-		labelNote.setFont(labelNote.getFont().deriveFont(15f));
+		labelNote.setFont(labelNote.getFont().deriveFont(25f));
 		labelNote.setForeground(Color.RED);
 		labelNote.setBackground(Color.YELLOW);
 		panelStart.setLayout(new BorderLayout());
 		start = new JButton("===Start===");
-		start.setFont(start.getFont().deriveFont(14f));
+		start.setFont(start.getFont().deriveFont(25f));
 		start.setBackground(Color.ORANGE);
 		panelStart.add(labelStart, BorderLayout.WEST);
 		panelStart.add(labelNote, BorderLayout.CENTER);
@@ -161,15 +164,15 @@ public class ExamTest extends JFrame {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
 			labelQues.setText("Question " + (index + 1) + ": " + ch.getQuestion());
-			labelQues.setFont(labelQues.getFont().deriveFont(15f));
+			labelQues.setFont(labelQues.getFont().deriveFont(17f));
 			ans1.setText(ch.getAns1());
-			ans1.setFont(ans1.getFont().deriveFont(12f));
+			ans1.setFont(ans1.getFont().deriveFont(15f));
 			ans2.setText(ch.getAns2());
-			ans2.setFont(ans2.getFont().deriveFont(12f));
+			ans2.setFont(ans2.getFont().deriveFont(15f));
 			ans3.setText(ch.getAns3());
-			ans3.setFont(ans3.getFont().deriveFont(12f));
+			ans3.setFont(ans3.getFont().deriveFont(15f));
 			ans4.setText(ch.getAns4());
-			ans4.setFont(ans4.getFont().deriveFont(12f));
+			ans4.setFont(ans4.getFont().deriveFont(15f));
 		} else {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			if (score >= 5) {
