@@ -18,3 +18,5 @@ This app includes the following functions:
 5. Anti cheat: When you minimize the app; alt + tab; click outside, a message will pop up saying you have cheated.
 
 THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT UGLY. SORRY FOR MY BAD ENGLISH =))
+
+![examdiagram](https://github.com/user-attachments/assets/29db7561-dafe-40f9-81d1-aaf522692ad6)
