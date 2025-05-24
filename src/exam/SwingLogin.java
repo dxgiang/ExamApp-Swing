@@ -274,6 +274,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				printList.doClick();
+				itemPrintList.setText("Reload");
 			}
 		});
 		itemAddUser = new JMenuItem("Add User");
