@@ -5,20 +5,23 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 import java.awt.event.*;
+import java.awt.Image;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.SwingWorker;
 import javax.swing.UIManager;
 
@@ -29,6 +32,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout;
+	private JMenuBar barmenu;
+	private JMenu menuOption, menuUser, menuHelp;
+	private JMenuItem itemExit, itemAbout, itemLogin, itemRegister, itemPrintList, itemAddUser, itemDelUser,
+			itemShowApp, itemUnlock, itemLock, itemLogout, itemNonRoot;
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
 	private int countWrong = 0, countWrong2 = 0;
@@ -36,7 +43,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Constructor
 	public SwingLogin() throws HeadlessException {
 		super();
-		setSize(550, 300);
+		setSize(550, 325);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
@@ -204,6 +211,160 @@ public class SwingLogin extends JFrame implements ActionListener {
 		labelCopyright = new JLabel("© • Copyright by river0077");
 		panel001.add(labelCopyright);
 		panel001.setBackground(Color.yellow);
+		// Menu
+		barmenu = new JMenuBar();
+		menuOption = new JMenu("Option");
+		menuUser = new JMenu("User");
+		itemNonRoot = new JMenuItem("You can not access this!");
+		menuUser.add(itemNonRoot);
+		itemLogin = new JMenuItem("Login");
+		itemLogin.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.ALT_MASK));
+		ImageIcon iconLogin = new ImageIcon("image/login.png");
+		// set size for iconLogin
+		iconLogin = new ImageIcon(iconLogin.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemLogin.setIcon(iconLogin);
+		itemLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getContentPane().remove(registerPanel);
+				getContentPane().remove(panelMN);
+				getContentPane().add(loginPanel);
+				user.setText("");
+				pass.setText("");
+				setTitle("Login");
+				revalidate();
+				repaint();
+			}
+		});
+		itemRegister = new JMenuItem("Register");
+		itemRegister.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.ALT_MASK));
+		// set size for iconRegister
+		ImageIcon iconRegister = new ImageIcon("image/register.png");
+		// set size for iconRegister
+		iconRegister = new ImageIcon(iconRegister.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemRegister.setIcon(iconRegister);
+		itemRegister.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getContentPane().remove(loginPanel);
+				getContentPane().remove(panelMN);
+				getContentPane().add(registerPanel);
+				reguser.setText("");
+				regpass.setText("");
+				repass.setText("");
+				setTitle("Register");
+				revalidate();
+				repaint();
+			}
+		});
+		itemExit = new JMenuItem("Exit");
+		itemExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F4, ActionEvent.ALT_MASK));
+		ImageIcon iconExit = new ImageIcon("image/exit.png");
+		// set size for iconExit
+		iconExit = new ImageIcon(iconExit.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemExit.setIcon(iconExit);
+		itemExit.addActionListener(e -> System.exit(0));
+		itemPrintList = new JMenuItem("Print List");
+		itemPrintList.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
+		ImageIcon iconPrintList = new ImageIcon("image/printlist.png");
+		// set size for iconPrintList
+		iconPrintList = new ImageIcon(iconPrintList.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemPrintList.setIcon(iconPrintList);
+		itemPrintList.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				printList.doClick();
+			}
+		});
+		itemAddUser = new JMenuItem("Add User");
+		itemAddUser.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK));
+		ImageIcon iconAddUser = new ImageIcon("image/add.png");
+		// set size for iconAddUser
+		iconAddUser = new ImageIcon(iconAddUser.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemAddUser.setIcon(iconAddUser);
+		itemAddUser.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				addUser.doClick();
+			}
+		});
+		itemDelUser = new JMenuItem("Delete User");
+		itemDelUser.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
+		ImageIcon iconDelUser = new ImageIcon("image/delete.png");
+		// set size for iconDelUser
+		iconDelUser = new ImageIcon(iconDelUser.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemDelUser.setIcon(iconDelUser);
+		itemDelUser.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				delUser.doClick();
+			}
+		});
+		itemShowApp = new JMenuItem("Show App");
+		itemShowApp.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
+		ImageIcon iconShowApp = new ImageIcon("image/showapp.png");
+		// set size for iconShowApp
+		iconShowApp = new ImageIcon(iconShowApp.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemShowApp.setIcon(iconShowApp);
+		itemShowApp.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				showApp.doClick();
+			}
+		});
+		itemUnlock = new JMenuItem("Unlock");
+		itemUnlock.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, ActionEvent.CTRL_MASK));
+		ImageIcon iconUnlock = new ImageIcon("image/unlock.png");
+		// set size for iconUnlock
+		iconUnlock = new ImageIcon(iconUnlock.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemUnlock.setIcon(iconUnlock);
+		itemUnlock.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				unlock.doClick();
+			}
+		});
+		itemLock = new JMenuItem("Lock");
+		itemLock.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));
+		ImageIcon iconLock = new ImageIcon("image/lock.png");
+		// set size for iconLock
+		iconLock = new ImageIcon(iconLock.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemLock.setIcon(iconLock);
+		itemLock.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lock.doClick();
+			}
+		});
+		itemLogout = new JMenuItem("Logout");
+		itemLogout.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
+		ImageIcon iconLogout = new ImageIcon("image/logout.png");
+		// set size for iconLogout
+		iconLogout = new ImageIcon(iconLogout.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemLogout.setIcon(iconLogout);
+		itemLogout.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				logout.doClick();
+			}
+		});
+		menuOption.add(itemLogin);
+		menuOption.add(itemRegister);
+		menuOption.add(itemExit);
+		menuHelp = new JMenu("Help");
+		itemAbout = new JMenuItem("About");
+		ImageIcon iconAbout = new ImageIcon("image/about.png");
+		// set size for iconAbout
+		iconAbout = new ImageIcon(iconAbout.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+		itemAbout.setIcon(iconAbout);
+		itemAbout.addActionListener(e -> {
+			JOptionPane.showMessageDialog(this, "Developed by river0077.");
+		});
+		menuHelp.add(itemAbout);
+		barmenu.add(menuOption);
+		barmenu.add(menuUser);
+		barmenu.add(menuHelp);
+		setJMenuBar(barmenu);
 		panelMN = new JPanel();
 		panelMN.setLayout(new BorderLayout());
 		panelMN.add(panelM1, BorderLayout.CENTER);
@@ -250,6 +411,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 					countWrong = 0;
 					getContentPane().remove(loginPanel);
 					getContentPane().remove(registerPanel);
+					menuUser.remove(itemNonRoot);
+					menuUser.add(itemPrintList);
+					menuUser.add(itemAddUser);
+					menuUser.add(itemDelUser);
+					menuUser.add(itemShowApp);
+					menuUser.add(itemUnlock);
+					menuUser.add(itemLock);
+					menuUser.add(itemLogout);
 					getContentPane().add(panelMN);
 					setTitle("Managerment");
 					revalidate();
@@ -350,6 +519,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			revalidate();
 			repaint();
 		} else if (e.getSource() == printList) {
+			printList.setText("Reload");
 			SwingWorker<Void, String> worker = new SwingWorker<>() {
 				@Override
 				protected Void doInBackground() throws Exception {
@@ -419,6 +589,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "LOGOUT SUCCESSFULLY");
 			getContentPane().remove(panelMN);
 			getContentPane().add(loginPanel);
+			menuUser.remove(itemPrintList);
+			menuUser.remove(itemAddUser);
+			menuUser.remove(itemDelUser);
+			menuUser.remove(itemShowApp);
+			menuUser.remove(itemUnlock);
+			menuUser.remove(itemLock);
+			menuUser.remove(itemLogout);
+			menuUser.add(itemNonRoot);
 			setTitle("Login");
 			user.setText("");
 			pass.setText("");
@@ -433,7 +611,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						System.out.println("Unlock - User: " + username + " (not locked)");
 						return;
 					} else {
-						u.setStatus("null");
+						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
 						System.out.println("Unlock - User: " + username + " (unlocked successfully)");
 						printList.doClick();
@@ -450,7 +628,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
 						System.out.println("Lock - User: " + username + " (not locked or already locked)");
 						return;
-					} else if(u.getStatus() == null) {
+					} else if (u.getStatus() == null) {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println("Lock - User: " + username + " (locked successfully)");
