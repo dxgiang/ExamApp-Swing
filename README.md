@@ -21,4 +21,5 @@ THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT U
 
 Diagram:
 
-![examdiagram](https://github.com/user-attachments/assets/29db7561-dafe-40f9-81d1-aaf522692ad6)
+![diagram-export-19_37_33-24-5-2025](https://github.com/user-attachments/assets/1b5773af-7e6c-4643-a6f7-83e3dc1de89b)
+
