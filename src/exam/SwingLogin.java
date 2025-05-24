@@ -28,7 +28,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
 	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
-	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, logout;
+	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout;
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
 	private int countWrong = 0, countWrong2 = 0;
@@ -36,7 +36,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	// Constructor
 	public SwingLogin() throws HeadlessException {
 		super();
-		setSize(530, 300);
+		setSize(550, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
@@ -180,6 +180,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 		unlock.setBackground(Color.pink);
 		unlock.setFont(labelLogin.getFont().deriveFont(10.5f));
 		unlock.addActionListener(this);
+		lock = new JButton("Lock");
+		lock.setBackground(Color.red);
+		lock.setFont(labelLogin.getFont().deriveFont(10.5f));
+		lock.addActionListener(this);
 		logout = new JButton("Logout");
 		logout.setBackground(Color.orange);
 		logout.setFont(labelLogin.getFont().deriveFont(10.5f));
@@ -189,6 +193,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelM3.add(delUser);
 		panelM3.add(showApp);
 		panelM3.add(unlock);
+		panelM3.add(lock);
 		panelM3.add(logout);
 		panelM3.setBackground(Color.yellow);
 		JPanel panelLoading = new JPanel();
@@ -432,6 +437,25 @@ public class SwingLogin extends JFrame implements ActionListener {
 						u.setStatus("null");
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
 						System.out.println("Unlock - User: " + username + " (unlocked successfully)");
+						printList.doClick();
+						return;
+					}
+				}
+			}
+			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+		} else if (e.getSource() == lock) {
+			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
+			for (User<String, String> u : loginsystem.getUserList()) {
+				if (u.getUser().equals(username)) {
+					if (u.getStatus().equals("LOCKED") || u.getStatus().equals("CHEAT")
+							|| u.getStatus().equals("PASS") || u.getStatus().equals("FAIL")) {
+						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
+						System.out.println("Lock - User: " + username + " (not locked or already locked)");
+						return;
+					} else {
+						u.setStatus("LOCKED");
+						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
+						System.out.println("Lock - User: " + username + " (locked successfully)");
 						printList.doClick();
 						return;
 					}
