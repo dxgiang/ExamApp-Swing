@@ -19,4 +19,6 @@ This app includes the following functions:
 
 THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT UGLY. SORRY FOR MY BAD ENGLISH =))
 
+Diagram:
+
 ![examdiagram](https://github.com/user-attachments/assets/29db7561-dafe-40f9-81d1-aaf522692ad6)
