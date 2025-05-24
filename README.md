@@ -24,4 +24,4 @@ Diagram:
 ![diagram-export-19_37_33-24-5-2025](https://github.com/user-attachments/assets/1b5773af-7e6c-4643-a6f7-83e3dc1de89b)
 
 
-[![River's GitHub stats](https://github-readme-stats.vercel.app/apiriver0077=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+[![River's GitHub stats](https://github-readme-stats.vercel.app/apiriver0077=anuraghazra)]
