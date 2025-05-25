@@ -2,10 +2,10 @@ package main.java.com.example.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
-import java.util.List;
 import java.awt.event.*;
 import java.awt.Image;
 
@@ -20,10 +20,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 import javax.swing.SwingWorker;
 import javax.swing.UIManager;
+import javax.swing.table.DefaultTableModel;
 
 import main.java.com.example.auth.LoginSystem;
 import main.java.com.example.auth.User;
@@ -32,8 +35,8 @@ import main.java.com.example.exam.ExamTest;
 public class SwingLogin extends JFrame implements ActionListener {
 	// Attributes
 	private static final long serialVersionUID = 1L;
-	private JPanel loginPanel, registerPanel, panelMN, panelM1, panelM3;
-	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelM1, labelCopyright;
+	private JPanel loginPanel, registerPanel, panelMN, panelM3;
+	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout;
 	private JMenuBar barmenu;
@@ -43,6 +46,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
 	private int countWrong = 0, countWrong2 = 0;
+	private JTable userTable; 
+	private DefaultTableModel tableModel;
 
 	// Constructor
 	public SwingLogin() throws HeadlessException {
@@ -125,7 +130,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panel6.add(labelUser);
 		panel6.add(reguser);
 		panel6.setBackground(Color.yellow);
-		labelPass = new JLabel("Password  ");
+		labelPass = new JLabel("Password  ");
 		labelPass.setFont(labelLogin.getFont().deriveFont(13f));
 		regpass = new JPasswordField(15);
 		regpass.addActionListener(this);
@@ -162,14 +167,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 		registerPanel.add(panel9);
 		registerPanel.add(panel10);
 		registerPanel.setBackground(Color.yellow);
-		// UI MANAGEMENT
-		panelM1 = new JPanel();
-		panelM1.setSize(300, 200);
-		panelM1.setBorder(BorderFactory.createLineBorder(Color.black));
-		labelM1 = new JLabel();
-		panelM1.setBackground(Color.pink);
-		labelM1.setFont(labelLogin.getFont().deriveFont(12f));
-		panelM1.add(labelM1);
+
+		// UI MANAGEMENT 
+		String[] columnNames = {"Username", "Password", "Score", "Status"};
+		tableModel = new DefaultTableModel(columnNames, 0);
+		userTable = new JTable(tableModel);
+		userTable.setEnabled(false);
+		JScrollPane scrollPane = new JScrollPane(userTable);
+		scrollPane.setBorder(BorderFactory.createLineBorder(Color.black));
+		scrollPane.setPreferredSize(new Dimension(450, 200));
+
 		panelM3 = new JPanel();
 		printList = new JButton("Print List");
 		printList.setBackground(Color.gray);
@@ -370,9 +377,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 		barmenu.add(menuUser);
 		barmenu.add(menuHelp);
 		setJMenuBar(barmenu);
-		panelMN = new JPanel();
-		panelMN.setLayout(new BorderLayout());
-		panelMN.add(panelM1, BorderLayout.CENTER);
+		panelMN = new JPanel(new BorderLayout()); // Changed layout to BorderLayout for panelMN
+		panelMN.add(scrollPane, BorderLayout.CENTER); // Add scroll pane with table to center
 		panelMN.add(panelM3, BorderLayout.NORTH);
 		panelMN.add(labelLoading, BorderLayout.SOUTH);
 		panelMN.add(panel001, BorderLayout.PAGE_END);
@@ -408,7 +414,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == login || e.getSource() == pass || e.getSource() == user) {
 			String username = user.getText();
-			String password = pass.getText();
+			String password = new String(pass.getText()); // Use new String() for JPasswordField
 			if (loginsystem.authenticate(username, password)) {
 				if (username.equals("root")) {
 					System.out.println("logined successfully as root");
@@ -431,13 +437,13 @@ public class SwingLogin extends JFrame implements ActionListener {
 				} else {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
-							if (u.getStatus() == "PASS" || u.getStatus() == "FAIL" || u.getStatus() == "CHEAT") {
+							if (u.getStatus() != null && (u.getStatus().equals("PASS") || u.getStatus().equals("FAIL") || u.getStatus().equals("CHEAT"))) {
 								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
 								System.out.println("Logout - User: " + username + "(auto log out)");
 								user.setText("");
 								pass.setText("");
 								return;
-							} else if (u.getStatus() == "LOCKED") {
+							} else if (u.getStatus() != null && u.getStatus().equals("LOCKED")) {
 								JOptionPane.showMessageDialog(this,
 										"YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
 								System.out.println("Login - User: " + username + " Fail! (account locked)");
@@ -525,36 +531,20 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == printList) {
 			printList.setText("Reload");
-			SwingWorker<Void, String> worker = new SwingWorker<>() {
+			SwingWorker<Void, Void> worker = new SwingWorker<>() {
 				@Override
 				protected Void doInBackground() throws Exception {
-					StringBuilder load = new StringBuilder();
-					for (int i = 0; i < 80; i++) {
-						load.append("|");
-						publish(load.toString());
-						Thread.sleep(5);
-					}
-					return null;
-				}
-
-				@Override
-				protected void process(List<String> chunks) {
-					String latest = chunks.get(chunks.size() - 1);
-					labelM1.setText(latest);
+						return null;
 				}
 
 				@Override
 				protected void done() {
-					StringBuilder sb = new StringBuilder("<html><b>User -|- Pass -|- Score -|- Status</b><br>");
+					tableModel.setRowCount(0); // Clear existing data
 					for (User<String, String> u : loginsystem.getUserList()) {
-						sb.append(u.getUser()).append(" -|- ").append(u.getPass()).append(" -|- ").append(u.getScore())
-								.append(" -|- ").append(u.getStatus()).append("<br>");
+						tableModel.addRow(new Object[]{u.getUser(), u.getPass(), u.getScore(), u.getStatus()});
 					}
-					sb.append("</html>");
-					labelM1.setText(sb.toString());
 				}
 			};
-
 			worker.execute();
 		} else if (e.getSource() == addUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username:");
@@ -571,9 +561,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 			printList.doClick();
 		} else if (e.getSource() == delUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to delete:");
-			System.out.println("Delete User - User: " + username + " (deleted successfully)");
-			loginsystem.deleteUser(username);
-			printList.doClick();
+			if (username != null && !username.trim().isEmpty()) {
+				System.out.println("Delete User - User: " + username + " (deleted successfully)");
+				loginsystem.deleteUser(username);
+				printList.doClick();
+			} else {
+				JOptionPane.showMessageDialog(this, "Invalid username.");
+			}
+
 		} else if (e.getSource() == showApp) {
 			testExam = new ExamTest();
 			testExam.setTitle("Thi - User: root");
@@ -609,17 +604,25 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == unlock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to unlock:");
+			if (username == null || username.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
+				return;
+			}
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
 					if (u.getStatus() == null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED");
 						System.out.println("Unlock - User: " + username + " (not locked)");
 						return;
-					} else {
+					} else if (u.getStatus().equals("LOCKED")) {
 						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
 						System.out.println("Unlock - User: " + username + " (unlocked successfully)");
 						printList.doClick();
+						return;
+					} else {
+						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED"); // If status is PASS/FAIL/CHEAT
+						System.out.println("Unlock - User: " + username + " (not locked, status: " + u.getStatus() + ")");
 						return;
 					}
 				}
@@ -627,18 +630,22 @@ public class SwingLogin extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
 		} else if (e.getSource() == lock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
+			if (username == null || username.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
+				return;
+			}
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
 					if(u.getUser().equals("root")) {
 						JOptionPane.showMessageDialog(this, "YOU CAN NOT LOCK ROOT ACCOUNT");
-						System.out.println("Unlock - User: root (cannot lock root account)");
+						System.out.println("Lock - User: root (cannot lock root account)");
 						return;
 					}
-					else if (u.getStatus() != null) {
-						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
-						System.out.println("Lock - User: " + username + " (not locked or already locked)");
+					else if (u.getStatus() != null && u.getStatus().equals("LOCKED")) {
+						JOptionPane.showMessageDialog(this, "ACCOUNT IS ALREADY LOCKED");
+						System.out.println("Lock - User: " + username + " (already locked)");
 						return;
-					} else if (u.getStatus() == null) {
+					} else if (u.getStatus() == null || (!u.getStatus().equals("LOCKED"))) { // If status is null or PASS/FAIL/CHEAT
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println("Lock - User: " + username + " (locked successfully)");
@@ -664,6 +671,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		new SwingLogin();
 	}
