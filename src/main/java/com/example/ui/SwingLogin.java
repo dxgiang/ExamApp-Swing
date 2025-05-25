@@ -604,25 +604,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == unlock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to unlock:");
-			if (username == null || username.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
-				return;
-			}
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
 					if (u.getStatus() == null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED");
 						System.out.println("Unlock - User: " + username + " (not locked)");
 						return;
-					} else if (u.getStatus().equals("LOCKED")) {
+					} else {
 						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
 						System.out.println("Unlock - User: " + username + " (unlocked successfully)");
 						printList.doClick();
-						return;
-					} else {
-						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED"); // If status is PASS/FAIL/CHEAT
-						System.out.println("Unlock - User: " + username + " (not locked, status: " + u.getStatus() + ")");
 						return;
 					}
 				}
@@ -630,22 +622,18 @@ public class SwingLogin extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
 		} else if (e.getSource() == lock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
-			if (username == null || username.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
-				return;
-			}
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
 					if(u.getUser().equals("root")) {
 						JOptionPane.showMessageDialog(this, "YOU CAN NOT LOCK ROOT ACCOUNT");
-						System.out.println("Lock - User: root (cannot lock root account)");
+						System.out.println("Unlock - User: root (cannot lock root account)");
 						return;
 					}
-					else if (u.getStatus() != null && u.getStatus().equals("LOCKED")) {
-						JOptionPane.showMessageDialog(this, "ACCOUNT IS ALREADY LOCKED");
-						System.out.println("Lock - User: " + username + " (already locked)");
+					else if (u.getStatus() != null) {
+						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
+						System.out.println("Lock - User: " + username + " (not locked or already locked)");
 						return;
-					} else if (u.getStatus() == null || (!u.getStatus().equals("LOCKED"))) { // If status is null or PASS/FAIL/CHEAT
+					} else if (u.getStatus() == null) {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println("Lock - User: " + username + " (locked successfully)");
@@ -657,7 +645,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
 		}
 	}
-
 	public void wait(int ms) {
 		try {
 			Thread.sleep(ms);
