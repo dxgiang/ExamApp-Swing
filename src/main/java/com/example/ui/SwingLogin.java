@@ -38,8 +38,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private JPanel loginPanel, registerPanel, panelMN, panelM3;
 	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
-	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout, hidePass, hideRePass, 
-			hideRegPass;
+	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout,
+			hidePass, hideRePass, hideRegPass;
 	private JMenuBar barmenu;
 	private JMenu menuOption, menuUser, menuHelp;
 	private JMenuItem itemExit, itemAbout, itemLogin, itemRegister, itemPrintList, itemAddUser, itemDelUser,
@@ -47,7 +47,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
 	private int countWrong = 0, countWrong2 = 0;
-	private JTable userTable; 
+	private JTable userTable;
 	private DefaultTableModel tableModel;
 
 	// Constructor
@@ -231,8 +231,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 		registerPanel.add(panel10);
 		registerPanel.setBackground(Color.white);
 
-		// UI MANAGEMENT 
-		String[] columnNames = {"Username", "Password", "Score", "Status"};
+		// UI MANAGEMENT
+		String[] columnNames = { "Username", "Password", "Score", "Status" };
 		tableModel = new DefaultTableModel(columnNames, 0);
 		userTable = new JTable(tableModel);
 		userTable.setEnabled(true);
@@ -303,6 +303,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 				getContentPane().remove(registerPanel);
 				getContentPane().remove(panelMN);
 				getContentPane().add(loginPanel);
+				menuUser.remove(itemPrintList);
+				menuUser.remove(itemAddUser);
+				menuUser.remove(itemDelUser);
+				menuUser.remove(itemShowApp);
+				menuUser.remove(itemUnlock);
+				menuUser.remove(itemLock);
+				menuUser.remove(itemLogout);
+				menuUser.add(itemNonRoot);
 				user.setText("");
 				pass.setText("");
 				setTitle("Login");
@@ -323,6 +331,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 				getContentPane().remove(loginPanel);
 				getContentPane().remove(panelMN);
 				getContentPane().add(registerPanel);
+				menuUser.remove(itemPrintList);
+				menuUser.remove(itemAddUser);
+				menuUser.remove(itemDelUser);
+				menuUser.remove(itemShowApp);
+				menuUser.remove(itemUnlock);
+				menuUser.remove(itemLock);
+				menuUser.remove(itemLogout);
+				menuUser.add(itemNonRoot);
 				reguser.setText("");
 				regpass.setText("");
 				repass.setText("");
@@ -453,7 +469,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		loginsystem.addUser(new User<String, String>("giang", "0077", 0.0, null), false);
 		loginsystem.addUser(new User<String, String>("hitler", "1945", 0.0, null), false);
 		loginsystem.addUser(new User<String, String>("user1", "pass1", 0.0, null), false);
-		
+
 	}
 
 	// ActionListener
@@ -503,7 +519,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 				} else {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
-							if (u.getStatus() != null && (u.getStatus().equals("PASS") || u.getStatus().equals("FAIL") || u.getStatus().equals("CHEAT"))) {
+							if (u.getStatus() != null && (u.getStatus().equals("PASS") || u.getStatus().equals("FAIL")
+									|| u.getStatus().equals("CHEAT"))) {
 								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
 								System.out.println("Logout - User: " + username + "(auto log out)");
 								user.setText("");
@@ -543,12 +560,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 			} else {
 				if (loginsystem.wrongPass(username, password)) {
 					JOptionPane.showMessageDialog(this, "WRONG PASSWORD");
-					System.out.println("Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
+					System.out.println(
+							"Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
 					countWrong++;
 					if (countWrong == 3) {
 						JOptionPane.showMessageDialog(this,
 								"YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
-						System.out.println("Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
+						System.out.println(
+								"Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
 						countWrong = 0;
 						countWrong2++;
 						wait(5000);
@@ -572,7 +591,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				|| e.getSource() == repass) {
 			String username = reguser.getText();
 			String password = regpass.getText();
-			if (username.equals("") || password.equals("")) {
+			if (username.trim().isEmpty() || password.trim().isEmpty()) {
 				JOptionPane.showMessageDialog(this, "PLEASE ENTER CHARACTERS");
 				return;
 			}
@@ -600,14 +619,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 			SwingWorker<Void, Void> worker = new SwingWorker<>() {
 				@Override
 				protected Void doInBackground() throws Exception {
-						return null;
+					return null;
 				}
 
 				@Override
 				protected void done() {
 					tableModel.setRowCount(0); // Clear existing data
 					for (User<String, String> u : loginsystem.getUserList()) {
-						tableModel.addRow(new Object[]{u.getUser(), u.getPass(), u.getScore(), u.getStatus()});
+						tableModel.addRow(new Object[] { u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
 					}
 				}
 			};
@@ -690,12 +709,11 @@ public class SwingLogin extends JFrame implements ActionListener {
 			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
-					if(u.getUser().equals("root")) {
+					if (u.getUser().equals("root")) {
 						JOptionPane.showMessageDialog(this, "YOU CAN NOT LOCK ROOT ACCOUNT");
 						System.out.println("Unlock - User: root (cannot lock root account)");
 						return;
-					}
-					else if (u.getStatus() != null) {
+					} else if (u.getStatus() != null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
 						System.out.println("Lock - User: " + username + " (not locked or already locked)");
 						return;
@@ -711,6 +729,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
 		}
 	}
+
 	public void wait(int ms) {
 		try {
 			Thread.sleep(ms);
