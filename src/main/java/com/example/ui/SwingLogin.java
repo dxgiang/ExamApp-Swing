@@ -67,24 +67,27 @@ public class SwingLogin extends JFrame implements ActionListener {
 		labelLogin = new JLabel("LOGIN");
 		labelLogin.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel1 = new JPanel();
-		panel1.setBackground(Color.yellow);
+		panel1.setBackground(Color.white);
 		panel1.add(labelLogin);
 		labelUser = new JLabel("Username");
 		labelUser.setFont(labelLogin.getFont().deriveFont(15f));
 		user = new JTextField(20);
+		user.setBorder(BorderFactory.createTitledBorder("Username"));
+		user.setBackground(Color.white);
 		user.addActionListener(this);
 		JPanel panel2 = new JPanel();
 //		panel2.add(labelUser);
 		panel2.add(user);
-		panel2.setBorder(BorderFactory.createTitledBorder("Username"));
-		panel2.setBackground(Color.yellow);
+		panel2.setBackground(Color.white);
 		labelPass = new JLabel("Password ");
 		labelPass.setFont(labelLogin.getFont().deriveFont(15f));
 		pass = new JPasswordField(15);
+		pass.setBorder(BorderFactory.createTitledBorder("Password"));
+		pass.setBackground(Color.white);
 		pass.addActionListener(this);
 		// Add a button to toggle password visibility
 		hidePass = new JButton("⦿");
-		hidePass.setBackground(Color.lightGray);
+		hidePass.setBackground(Color.white);
 		hidePass.setFont(labelLogin.getFont().deriveFont(9f));
 		hidePass.addActionListener(new ActionListener() {
 			@Override
@@ -102,38 +105,37 @@ public class SwingLogin extends JFrame implements ActionListener {
 //		panel3.add(labelPass);
 		panel3.add(pass);
 		panel3.add(hidePass);
-		panel3.setBorder(BorderFactory.createTitledBorder("Password"));
-		panel3.setBackground(Color.yellow);
+		panel3.setBackground(Color.white);
 		login = new JButton("Login");
 		login.setBackground(Color.green);
-		login.setFont(labelLogin.getFont().deriveFont(15f));
+		login.setFont(labelLogin.getFont().deriveFont(13f));
 		login.addActionListener(this);
 		register = new JButton("Register");
 		register.addActionListener(this);
 		JPanel panel4 = new JPanel();
 		panel4.add(register);
 		panel4.add(login);
-		panel4.setBackground(Color.yellow);
-		labelNote = new JLabel("Note: Wrong password 9/9 = locked account");
+		panel4.setBackground(Color.white);
+		labelNote = new JLabel("Note: If you enter wrong password 3 times, application will freeze few seconds!");
 		labelNote.setForeground(Color.red);
-		labelNote.setFont(labelLogin.getFont().deriveFont(14f));
+		labelNote.setFont(labelLogin.getFont().deriveFont(13f));
 		JPanel panel0 = new JPanel();
 		panel0.add(labelNote);
-		panel0.setBackground(Color.yellow);
+		panel0.setBackground(Color.white);
 		labelCopyright = new JLabel("© • Exam App 2025 - Copyright by river0077 • ©");
 		labelCopyright.setFont(labelLogin.getFont().deriveFont(13f));
 		JPanel panel00 = new JPanel();
 		panel00.add(labelCopyright);
-		panel00.setBackground(Color.yellow);
+		panel00.setBackground(Color.white);
 		loginPanel.add(panel1);
 		loginPanel.add(panel2);
 		loginPanel.add(panel3);
 		loginPanel.add(panel4);
 		loginPanel.add(panel0);
 		loginPanel.add(panel00);
-		loginPanel.setBackground(Color.yellow);
+		loginPanel.setBackground(Color.white);
 		getContentPane().add(loginPanel);
-		getContentPane().setBackground(Color.yellow);
+		getContentPane().setBackground(Color.white);
 		// UI REGISTER
 		registerPanel = new JPanel();
 		registerPanel.setLayout(new GridLayout(6, 1, 10, 10));
@@ -141,23 +143,26 @@ public class SwingLogin extends JFrame implements ActionListener {
 		labelRegister.setFont(labelLogin.getFont().deriveFont(18f));
 		JPanel panel5 = new JPanel();
 		panel5.add(labelRegister);
-		panel5.setBackground(Color.yellow);
+		panel5.setBackground(Color.white);
 		labelUser = new JLabel("Username  ");
 		labelUser.setFont(labelLogin.getFont().deriveFont(15f));
 		reguser = new JTextField(20);
+		reguser.setBorder(BorderFactory.createTitledBorder("Username"));
+		reguser.setBackground(Color.white);
 		reguser.addActionListener(this);
 		JPanel panel6 = new JPanel();
 //		panel6.add(labelUser);
 		panel6.add(reguser);
-		panel6.setBorder(BorderFactory.createTitledBorder("Username"));
-		panel6.setBackground(Color.yellow);
+		panel6.setBackground(Color.white);
 		labelPass = new JLabel("Password  ");
 		labelPass.setFont(labelLogin.getFont().deriveFont(15f));
 		regpass = new JPasswordField(15);
+		regpass.setBorder(BorderFactory.createTitledBorder("Password"));
+		regpass.setBackground(Color.white);
 		regpass.addActionListener(this);
 		// Add a button to toggle password visibility
 		hideRegPass = new JButton("⦿");
-		hideRegPass.setBackground(Color.lightGray);
+		hideRegPass.setBackground(Color.white);
 		hideRegPass.setFont(labelLogin.getFont().deriveFont(9f));
 		hideRegPass.addActionListener(new ActionListener() {
 			@Override
@@ -175,15 +180,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 //		panel7.add(labelPass);
 		panel7.add(regpass);
 		panel7.add(hideRegPass);
-		panel7.setBorder(BorderFactory.createTitledBorder("Password"));
-		panel7.setBackground(Color.yellow);
+		panel7.setBackground(Color.white);
 		labelRePass = new JLabel("RePassword");
 		labelRePass.setFont(labelLogin.getFont().deriveFont(15f));
 		repass = new JPasswordField(15);
+		repass.setBorder(BorderFactory.createTitledBorder("RePassword"));
+		repass.setBackground(Color.white);
 		repass.addActionListener(this);
 		// Add a button to toggle password visibility
 		hideRePass = new JButton("⦿");
-		hideRePass.setBackground(Color.lightGray);
+		hideRePass.setBackground(Color.white);
 		hideRePass.setFont(labelLogin.getFont().deriveFont(9f));
 		hideRePass.addActionListener(new ActionListener() {
 			@Override
@@ -201,30 +207,29 @@ public class SwingLogin extends JFrame implements ActionListener {
 //		panel8.add(labelRePass);
 		panel8.add(repass);
 		panel8.add(hideRePass);
-		panel8.setBorder(BorderFactory.createTitledBorder("RePassword"));
-		panel8.setBackground(Color.yellow);
+		panel8.setBackground(Color.white);
 		loginInReG = new JButton("Login");
 		loginInReG.addActionListener(this);
 		JPanel panel9 = new JPanel();
 		createUser = new JButton("Create");
 		createUser.setBackground(Color.blue);
-		createUser.setFont(labelLogin.getFont().deriveFont(15f));
+		createUser.setFont(labelLogin.getFont().deriveFont(13f));
 		createUser.addActionListener(this);
 		panel9.add(loginInReG);
 		panel9.add(createUser);
-		panel9.setBackground(Color.yellow);
+		panel9.setBackground(Color.white);
 		JPanel panel10 = new JPanel();
 		labelCopyright = new JLabel("© • Exam App 2025 - Copyright by river0077 • ©");
 		labelCopyright.setFont(labelLogin.getFont().deriveFont(13f));
 		panel10.add(labelCopyright);
-		panel10.setBackground(Color.yellow);
+		panel10.setBackground(Color.white);
 		registerPanel.add(panel5);
 		registerPanel.add(panel6);
 		registerPanel.add(panel7);
 		registerPanel.add(panel8);
 		registerPanel.add(panel9);
 		registerPanel.add(panel10);
-		registerPanel.setBackground(Color.yellow);
+		registerPanel.setBackground(Color.white);
 
 		// UI MANAGEMENT 
 		String[] columnNames = {"Username", "Password", "Score", "Status"};
