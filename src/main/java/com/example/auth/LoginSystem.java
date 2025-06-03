@@ -2,6 +2,8 @@ package main.java.com.example.auth;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -10,6 +12,7 @@ public class LoginSystem extends JFrame {
 	// Attributes
 	private static final long serialVersionUID = 1L;
 	private List<User<String, String>> list;
+	private LocalDateTime dt;
 	// Constructor
 	public LoginSystem() {
 		list = new ArrayList<>();
@@ -32,7 +35,7 @@ public class LoginSystem extends JFrame {
 		list.add(userAdd);
 		if (showMes == true) {
 			JOptionPane.showMessageDialog(this, "ADDED ACCOUNT!");
-			System.out.println("Add User - User: " + userAdd.getUser() + " (Added user successfully)");
+			System.out.println(upTime() + " Add User - User: " + userAdd.getUser() + " (Added user successfully)");
 		}
 	}
 
@@ -98,6 +101,12 @@ public class LoginSystem extends JFrame {
 		} else {
 			return false;
 		}
+	}
+	public String upTime() {
+		dt = LocalDateTime.now();
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		String dtfor = dt.format(format);
+		return dtfor;
 	}
 
 }
