@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
+
 
 public class ExamTest extends JFrame {
 	// Attributes
@@ -27,6 +30,7 @@ public class ExamTest extends JFrame {
 	private double score = 0;
 	private String status = null;
 	private List<Question> listQuestion;
+	private LocalDateTime dt;
 
 	// Constructor
 	public ExamTest() {
@@ -107,8 +111,8 @@ public class ExamTest extends JFrame {
 				// TODO Auto-generated method stub
 				if (index < listQuestion.size()) {
 					JOptionPane.showMessageDialog(ExamTest.this, "You cheated on the test!");
-					System.out.println(getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
-					System.out.println(getTitle() + " (Log out)");
+					System.out.println(upTime() + " " + getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
+					System.out.println(upTime() + " " + getTitle() + " (Log out)");
 					// Close the application
 					ExamTest.this.dispose();
 					// Set score to 0
@@ -178,15 +182,21 @@ public class ExamTest extends JFrame {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			if (score >= 5) {
 				status = "PASS";
-				System.out.println(getTitle() + " PASS! Score: " + score + "/10.0");
-				System.out.println(getTitle() + " (Log out)");
+				System.out.println(upTime() + " " +getTitle() + " PASS! Score: " + score + "/10.0");
+				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			} else {
 				status = "FAIL";
-				System.out.println(getTitle() + " FAIL! Score: " + score + "/10.0");
-				System.out.println(getTitle() + " (Log out)");
+				System.out.println(upTime() + " " + getTitle() + " FAIL! Score: " + score + "/10.0");
+				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			}
 			this.dispose();
 		}
+	}
+	public String upTime() {
+		dt = LocalDateTime.now();
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		String dtfor = dt.format(format);
+		return dtfor;
 	}
 
 	// Main

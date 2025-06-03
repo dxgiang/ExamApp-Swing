@@ -1,6 +1,6 @@
 package main.java.com.example;
 
-import main.java.com.example.ui.SwingLogin;
+import main.java.com.example.ui.SwingLogin; 
 import javax.swing.UIManager;
 
 public class MainApp {

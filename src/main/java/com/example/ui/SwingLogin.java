@@ -8,6 +8,8 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.awt.Image;
 
 import javax.swing.BorderFactory;
@@ -50,6 +52,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private int countWrong = 0, countWrong2 = 0;
 	private JTable userTable;
 	private DefaultTableModel tableModel;
+	private LocalDateTime dt;
 
 	// Constructor
 	public SwingLogin() throws HeadlessException {
@@ -501,7 +504,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 			String password = new String(pass.getText()); // Use new String() for JPasswordField
 			if (loginsystem.authenticate(username, password)) {
 				if (username.equals("root")) {
-					System.out.println("logined successfully as root");
+					System.out.println(upTime() + " logined successfully as root");
 					JOptionPane.showMessageDialog(this, "LOGIN AS ROOT");
 					countWrong = 0;
 					getContentPane().remove(loginPanel);
@@ -525,14 +528,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 							if (u.getStatus() != null && (u.getStatus().equals("PASS") || u.getStatus().equals("FAIL")
 									|| u.getStatus().equals("CHEAT"))) {
 								JOptionPane.showMessageDialog(this, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
-								System.out.println("Logout - User: " + username + "(auto log out)");
+								System.out.println(upTime() + " Logout - User: " + username + "(auto log out)");
 								user.setText("");
 								pass.setText("");
 								return;
 							} else if (u.getStatus() != null && u.getStatus().equals("LOCKED")) {
 								JOptionPane.showMessageDialog(this,
 										"YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
-								System.out.println("Login - User: " + username + " Fail! (account locked)");
+								System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
 								user.setText("");
 								pass.setText("");
 								return;
@@ -540,7 +543,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						}
 					}
 					JOptionPane.showMessageDialog(this, "LOGIN SUCCESSFULLY");
-					System.out.println("Login - User: " + username + " (logined successfully)");
+					System.out.println(upTime() + " Login - User: " + username + " (logined successfully)");
 					countWrong = 0;
 					user.setText("");
 					pass.setText("");
@@ -564,19 +567,19 @@ public class SwingLogin extends JFrame implements ActionListener {
 				if (loginsystem.wrongPass(username, password)) {
 					JOptionPane.showMessageDialog(this, "WRONG PASSWORD");
 					System.out.println(
-							"Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
+							upTime() + " Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
 					countWrong++;
 					if (countWrong == 3) {
 						JOptionPane.showMessageDialog(this,
 								"YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
 						System.out.println(
-								"Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
+								upTime() + " Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
 						countWrong = 0;
 						countWrong2++;
 						wait(5000);
 					}
 					if (countWrong2 == 3) {
-						System.out.println("Login - User: " + username + " Fail! (account locked)");
+						System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
 						JOptionPane.showMessageDialog(this, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
 						countWrong2 = 0;
 						for (User<String, String> u : loginsystem.getUserList()) {
@@ -609,7 +612,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				}
 			}
 			loginsystem.addUser(new User<String, String>(username, password, 0.0, null), false);
-			System.out.println("Register - User: " + username + " (registered successfully)");
+			System.out.println(upTime() + " Register - User: " + username + " (registered successfully)");
 			JOptionPane.showMessageDialog(this, "REGISTER SUCCESSFULLY");
 			getContentPane().remove(registerPanel);
 			getContentPane().add(loginPanel);
@@ -650,7 +653,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		} else if (e.getSource() == delUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to delete:");
 			if (username != null && !username.trim().isEmpty()) {
-				System.out.println("Delete User - User: " + username + " (deleted successfully)");
+				System.out.println(upTime() + " Delete User - User: " + username + " (deleted successfully)");
 				loginsystem.deleteUser(username);
 				printList.doClick();
 			} else {
@@ -673,7 +676,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				}
 			});
 		} else if (e.getSource() == logout) {
-			System.out.println("Logout - User: root (log out)");
+			System.out.println(upTime() + " Logout - User: root (log out)");
 			JOptionPane.showMessageDialog(this, "LOGOUT SUCCESSFULLY");
 			getContentPane().remove(panelMN);
 			getContentPane().add(loginPanel);
@@ -696,12 +699,12 @@ public class SwingLogin extends JFrame implements ActionListener {
 				if (u.getUser().equals(username)) {
 					if (u.getStatus() == null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED");
-						System.out.println("Unlock - User: " + username + " (not locked)");
+						System.out.println(upTime() + " Unlock - User: " + username + " (not locked)");
 						return;
 					} else {
 						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
-						System.out.println("Unlock - User: " + username + " (unlocked successfully)");
+						System.out.println(upTime() + " Unlock - User: " + username + " (unlocked successfully)");
 						printList.doClick();
 						return;
 					}
@@ -714,16 +717,16 @@ public class SwingLogin extends JFrame implements ActionListener {
 				if (u.getUser().equals(username)) {
 					if (u.getUser().equals("root")) {
 						JOptionPane.showMessageDialog(this, "YOU CAN NOT LOCK ROOT ACCOUNT");
-						System.out.println("Unlock - User: root (cannot lock root account)");
+						System.out.println(upTime() + " Unlock - User: root (cannot lock root account)");
 						return;
 					} else if (u.getStatus() != null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
-						System.out.println("Lock - User: " + username + " (not locked or already locked)");
+						System.out.println(upTime() + " Lock - User: " + username + " (not locked or already locked)");
 						return;
 					} else if (u.getStatus() == null) {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
-						System.out.println("Lock - User: " + username + " (locked successfully)");
+						System.out.println(upTime() + " Lock - User: " + username + " (locked successfully)");
 						printList.doClick();
 						return;
 					}
@@ -739,6 +742,12 @@ public class SwingLogin extends JFrame implements ActionListener {
 		} catch (InterruptedException ex) {
 			Thread.currentThread().interrupt();
 		}
+	}
+	public String upTime() {
+		dt = LocalDateTime.now();
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		String dtfor = dt.format(format);
+		return dtfor;
 	}
 
 	// Main
