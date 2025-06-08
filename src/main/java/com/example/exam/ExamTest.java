@@ -18,7 +18,6 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 
-
 public class ExamTest extends JFrame {
 	// Attributes
 	private static final long serialVersionUID = 1L;
@@ -42,7 +41,7 @@ public class ExamTest extends JFrame {
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
-		setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setUndecorated(true);
 		setResizable(false);
 		// Data
@@ -54,11 +53,12 @@ public class ExamTest extends JFrame {
 
 		//
 		panelStart = new JPanel();
-		labelStart = new JLabel("                                                       Press the button to start the test");
+		labelStart = new JLabel(
+				"                                                       Press the button to start the test");
 
 		labelStart.setFont(labelStart.getFont().deriveFont(25f));
 		labelNote = new JLabel("Note: Do not minimize or switch to another window during the test.");
-		//Set the text to the center of the label
+		// Set the text to the center of the label
 		labelNote.setHorizontalAlignment(JLabel.CENTER);
 		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
 		labelNote.setFont(labelNote.getFont().deriveFont(25f));
@@ -111,7 +111,8 @@ public class ExamTest extends JFrame {
 				// TODO Auto-generated method stub
 				if (index < listQuestion.size()) {
 					JOptionPane.showMessageDialog(ExamTest.this, "You cheated on the test!");
-					System.out.println(upTime() + " " + getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
+					System.out.println(
+							upTime() + " " + getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
 					System.out.println(upTime() + " " + getTitle() + " (Log out)");
 					// Close the application
 					ExamTest.this.dispose();
@@ -120,6 +121,7 @@ public class ExamTest extends JFrame {
 					status = "CHEAT";
 				}
 			}
+
 			@Override
 			public void windowGainedFocus(WindowEvent e) {
 				// TODO Auto-generated method stub
@@ -182,7 +184,7 @@ public class ExamTest extends JFrame {
 			JOptionPane.showMessageDialog(this, "You have completed the test. Score: " + score + "/10.0.");
 			if (score >= 5) {
 				status = "PASS";
-				System.out.println(upTime() + " " +getTitle() + " PASS! Score: " + score + "/10.0");
+				System.out.println(upTime() + " " + getTitle() + " PASS! Score: " + score + "/10.0");
 				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			} else {
 				status = "FAIL";
@@ -192,6 +194,7 @@ public class ExamTest extends JFrame {
 			this.dispose();
 		}
 	}
+
 	public String upTime() {
 		dt = LocalDateTime.now();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

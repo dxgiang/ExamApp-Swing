@@ -38,7 +38,7 @@ import main.java.com.example.exam.ExamTest;
 public class SwingLogin extends JFrame implements ActionListener {
 	// Attributes
 	private static final long serialVersionUID = 1L;
-	private JPanel loginPanel, registerPanel, panelMN, panelM3;
+	private JPanel loginPanel, registerPanel, panelMN, panelM3, panelLoading;
 	private JLabel labelLogin, labelRegister, labelNote, labelUser, labelPass, labelRePass, labelCopyright;
 	private JTextField user, pass, repass, reguser, regpass;
 	private JButton createUser, login, register, loginInReG, printList, addUser, delUser, showApp, unlock, lock, logout,
@@ -296,6 +296,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 		menuOption = new JMenu("Option");
 		menuUser = new JMenu("User");
 		itemNonRoot = new JMenuItem("You can not access this!");
+		itemNonRoot.setEnabled(false);
 		menuUser.add(itemNonRoot);
 		itemLogin = new JMenuItem("Login");
 		itemLogin.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.ALT_MASK));
@@ -359,7 +360,15 @@ public class SwingLogin extends JFrame implements ActionListener {
 		// set size for iconExit
 		iconExit = new ImageIcon(iconExit.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
 		itemExit.setIcon(iconExit);
-		itemExit.addActionListener(e -> System.exit(0));
+		itemExit.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.out.println(upTime() + " Exit app");
+				System.exit(0);
+			}
+		});
 		itemPrintList = new JMenuItem("Print List");
 		itemPrintList.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
 		ImageIcon iconPrintList = new ImageIcon(getClass().getResource("/main/resources/auth/printlist.png"));
@@ -517,11 +526,31 @@ public class SwingLogin extends JFrame implements ActionListener {
 					menuUser.add(itemUnlock);
 					menuUser.add(itemLock);
 					menuUser.add(itemLogout);
-					getContentPane().add(panelMN);
-					setTitle("Managerment");
-					printList.doClick();
+					ImageIcon iconloading = new ImageIcon(getClass().getResource("/main/resources/ui/loading.gif"));
+					panelLoading = new JPanel();
+					panelLoading.add(new JLabel(iconloading), BorderLayout.CENTER);
+					getContentPane().add(panelLoading);
+					setTitle("Management");
 					revalidate();
 					repaint();
+					SwingWorker<Void, Void> loadingWorker = new SwingWorker<Void, Void>() {
+						@Override
+						protected Void doInBackground() throws Exception {
+							Thread.sleep(1500);
+							return null;
+						}
+
+						@Override
+						protected void done() {
+							getContentPane().remove(panelLoading);
+							getContentPane().add(panelMN);
+							printList.doClick();
+							revalidate();
+							repaint();
+						}
+					};
+
+					loadingWorker.execute();
 				} else {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
@@ -566,14 +595,14 @@ public class SwingLogin extends JFrame implements ActionListener {
 			} else {
 				if (loginsystem.wrongPass(username, password)) {
 					JOptionPane.showMessageDialog(this, "WRONG PASSWORD");
-					System.out.println(
-							upTime() + " Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
+					System.out.println(upTime() + " Login - User: " + username + " Fail! (wrong password "
+							+ (countWrong + 1) + "/3)");
 					countWrong++;
 					if (countWrong == 3) {
 						JOptionPane.showMessageDialog(this,
 								"YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
-						System.out.println(
-								upTime() + " Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
+						System.out.println(upTime() + " Login - User: " + username + " Fail! (freeze 5 seconds, "
+								+ (countWrong2 + 1) + "/3)");
 						countWrong = 0;
 						countWrong2++;
 						wait(5000);
@@ -679,7 +708,29 @@ public class SwingLogin extends JFrame implements ActionListener {
 			System.out.println(upTime() + " Logout - User: root (log out)");
 			JOptionPane.showMessageDialog(this, "LOGOUT SUCCESSFULLY");
 			getContentPane().remove(panelMN);
-			getContentPane().add(loginPanel);
+			ImageIcon iconloading = new ImageIcon(getClass().getResource("/main/resources/ui/loading.gif"));
+			panelLoading = new JPanel();
+			panelLoading.add(new JLabel(iconloading), BorderLayout.CENTER);
+			getContentPane().add(panelLoading);
+			revalidate();
+			repaint();
+			SwingWorker<Void, Void> loadingWorker = new SwingWorker<Void, Void>() {
+				@Override
+				protected Void doInBackground() throws Exception {
+					Thread.sleep(1500);
+					return null;
+				}
+
+				@Override
+				protected void done() {
+					getContentPane().remove(panelLoading);
+					getContentPane().add(loginPanel);
+					revalidate();
+					repaint();
+				}
+			};
+
+			loadingWorker.execute();
 			menuUser.remove(itemPrintList);
 			menuUser.remove(itemAddUser);
 			menuUser.remove(itemDelUser);
@@ -743,6 +794,8 @@ public class SwingLogin extends JFrame implements ActionListener {
 			Thread.currentThread().interrupt();
 		}
 	}
+
+	// Method format time
 	public String upTime() {
 		dt = LocalDateTime.now();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

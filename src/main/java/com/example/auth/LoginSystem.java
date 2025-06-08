@@ -13,10 +13,12 @@ public class LoginSystem extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private List<User<String, String>> list;
 	private LocalDateTime dt;
+
 	// Constructor
 	public LoginSystem() {
 		list = new ArrayList<>();
 	}
+
 	// Methods
 	public void addUser(User<String, String> userAdd, boolean showMes) {
 		for (User<String, String> user : list) {
@@ -47,6 +49,7 @@ public class LoginSystem extends JFrame {
 		}
 		return false;
 	}
+
 	public boolean wrongPass(String username, String password) {
 		for (User<String, String> user : list) {
 			if (user.getUser().equals(username) && user.getPass().equals(password) == false) {
@@ -89,6 +92,7 @@ public class LoginSystem extends JFrame {
 			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT!");
 		}
 	}
+
 	public boolean lockUser(String username) {
 		boolean found = false;
 		for (User<String, String> user : list) {
@@ -96,12 +100,13 @@ public class LoginSystem extends JFrame {
 				found = true;
 			}
 		}
-		if(found == true) {
+		if (found == true) {
 			return true;
 		} else {
 			return false;
 		}
 	}
+
 	public String upTime() {
 		dt = LocalDateTime.now();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

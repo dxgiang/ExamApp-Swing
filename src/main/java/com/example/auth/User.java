@@ -5,7 +5,7 @@ public class User<K, V> {
 	private V pass;
 	private double score;
 	private String status;
-	
+
 	public User() {
 		super();
 	}
@@ -53,5 +53,5 @@ public class User<K, V> {
 	public String printList() {
 		return (user + "          " + pass + "\n");
 	}
-	
+
 }
