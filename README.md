@@ -1,4 +1,5 @@
-EXAM APP
+
+# ExamApp-Swing
 
 This is the Exam App using Swing
 
@@ -19,5 +20,39 @@ This app includes the following functions:
 
 THIS IS JUST A TEST VERSION. I JUST LEARNED PROGRAMMING SO THE APP LOOKS A BIT UGLY. SORRY FOR MY BAD ENGLISH =))
 
+## Repository Details
 
+- **Primary Language:** Java
+- **Stars:** 1
+- **Forks:** 0
+- **Open Issues:** 0
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+Clone the repository:
+
+~~~bash
+git clone https://github.com/river0077/ExamApp-Swing
+~~~
+
+## Usage
+
+Follow the usage instructions provided in the project documentation.
+
+## Contributing
+
+Feel free to fork the project and submit pull requests. For major changes, please open an issue first.
+
+## License
+
+
+No license information provided.
 
