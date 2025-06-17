@@ -1,4 +1,4 @@
-hitler,1945,0.0,null
+river,0000,0.0,null
 user1,pass1,0.0,null
-root,admin,0.0,null
+root,admin,0.0,CHEAT
 giang,0077,0.0,null

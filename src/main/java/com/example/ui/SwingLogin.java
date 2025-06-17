@@ -11,8 +11,6 @@ import java.awt.event.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.awt.Image;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 import javax.swing.BorderFactory;
@@ -84,7 +82,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 		user.setBackground(Color.white);
 		user.addActionListener(this);
 		JPanel panel2 = new JPanel();
-//		panel2.add(labelUser);
 		panel2.add(user);
 		panel2.setBackground(Color.white);
 		labelPass = new JLabel("Password ");
@@ -110,7 +107,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 			}
 		});
 		JPanel panel3 = new JPanel();
-//		panel3.add(labelPass);
 		panel3.add(pass);
 		panel3.add(hidePass);
 		panel3.setBackground(Color.white);
@@ -160,7 +156,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 		reguser.setBackground(Color.white);
 		reguser.addActionListener(this);
 		JPanel panel6 = new JPanel();
-//		panel6.add(labelUser);
 		panel6.add(reguser);
 		panel6.setBackground(Color.white);
 		labelPass = new JLabel("Password  ");
@@ -186,7 +181,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 			}
 		});
 		JPanel panel7 = new JPanel();
-//		panel7.add(labelPass);
 		panel7.add(regpass);
 		panel7.add(hideRegPass);
 		panel7.setBackground(Color.white);
@@ -213,7 +207,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 			}
 		});
 		JPanel panel8 = new JPanel();
-//		panel8.add(labelRePass);
 		panel8.add(repass);
 		panel8.add(hideRePass);
 		panel8.setBackground(Color.white);
@@ -835,33 +828,11 @@ public class SwingLogin extends JFrame implements ActionListener {
 		return dtfor;
 	}
 
-	private static PrintStream originalOut;
-	private static PrintStream originalErr;
-	private static final String LOG_DIRECTORY = "src/main/logs/";
+	public static PrintStream originalOut = System.out;
+	public static PrintStream originalErr = System.err;
 
 	// Main
 	public static void main(String[] args) {
-		originalOut = System.out;
-		originalErr = System.err;
-
-		try {
-			File logDir = new File(LOG_DIRECTORY);
-			if (!logDir.exists()) {
-				logDir.mkdirs();
-			}
-
-			LocalDateTime now = LocalDateTime.now();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
-			String logFileName = LOG_DIRECTORY + File.separator + "app_log_" + now.format(formatter) + ".txt";
-
-			PrintStream fileOut = new PrintStream(new FileOutputStream(logFileName, true));
-			System.setOut(fileOut);
-			System.setErr(fileOut);
-
-		} catch (Exception e) {
-			originalErr.println("Error redirecting console output to file: " + e.getMessage());
-			e.printStackTrace(originalErr);
-		}
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
