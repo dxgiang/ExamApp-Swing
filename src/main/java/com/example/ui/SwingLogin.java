@@ -525,10 +525,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == login || e.getSource() == pass || e.getSource() == user) {
 			String username = user.getText();
-			String password = new String(pass.getText()); // Use new String() for JPasswordField
+			String password = new String(pass.getText());
 			if (loginsystem.authenticate(username, password)) {
 				if (username.equals("root")) {
-					System.out.println(upTime() + " logined successfully as root");
+					System.out.println(upTime() + " Logined successfully as root");
 					JOptionPane.showMessageDialog(this, "LOGIN AS ROOT");
 					isRoot = true;
 					countWrong = 0;
@@ -542,31 +542,12 @@ public class SwingLogin extends JFrame implements ActionListener {
 					menuUser.add(itemUnlock);
 					menuUser.add(itemLock);
 					menuUser.add(itemLogout);
-					ImageIcon iconloading = new ImageIcon(getClass().getResource("/main/resources/ui/loading.gif"));
-					panelLoading = new JPanel();
-					panelLoading.add(new JLabel(iconloading), BorderLayout.CENTER);
-					getContentPane().add(panelLoading);
 					setTitle("Management");
+					getContentPane().add(panelMN);
+					printList.doClick();
 					revalidate();
 					repaint();
-					SwingWorker<Void, Void> loadingWorker = new SwingWorker<Void, Void>() {
-						@Override
-						protected Void doInBackground() throws Exception {
-							Thread.sleep(1500);
-							return null;
-						}
 
-						@Override
-						protected void done() {
-							getContentPane().remove(panelLoading);
-							getContentPane().add(panelMN);
-							printList.doClick();
-							revalidate();
-							repaint();
-						}
-					};
-
-					loadingWorker.execute();
 				} else {
 					for (User<String, String> u : loginsystem.getUserList()) {
 						if (u.getUser().equals(username)) {
@@ -604,8 +585,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 									if (u.getUser().equals(username)) {
 										u.setScore(exam.getScore());
 										u.setStatus(exam.getStatus());
-										// Save the updated user data
-										loginsystem.addUser(u, false); // This will update and save if user exists
+										loginsystem.addUser(u, false);
 									}
 								}
 							} catch (Exception ex) {
@@ -636,9 +616,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						for (User<String, String> u : loginsystem.getUserList()) {
 							if (u.getUser().equals(username)) {
 								u.setStatus("LOCKED");
-								// This needs to be saved to file
-								// You might want to add a method in LoginSystem to update user status and save
-								loginsystem.addUser(u, false); // This will update and save if user exists
+								loginsystem.addUser(u, false);
 								return;
 							}
 						}
@@ -676,14 +654,26 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == printList) {
 			printList.setText("Reload");
+			ImageIcon iconloading = new ImageIcon(getClass().getResource("/main/resources/ui/loading.gif"));
+			panelLoading = new JPanel();
+			panelLoading.add(new JLabel(iconloading), BorderLayout.CENTER);
+			getContentPane().remove(panelMN);
+			getContentPane().add(panelLoading);
+			revalidate();
+			repaint();
 			SwingWorker<Void, Void> worker = new SwingWorker<>() {
 				@Override
 				protected Void doInBackground() throws Exception {
+					Thread.sleep(1000);
 					return null;
 				}
 
 				@Override
 				protected void done() {
+					getContentPane().remove(panelLoading);
+					getContentPane().add(panelMN);
+					revalidate();
+					repaint();
 					tableModel.setRowCount(0); // Clear existing data
 					for (User<String, String> u : loginsystem.getUserList()) {
 						tableModel.addRow(new Object[] { u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
@@ -759,7 +749,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 					repaint();
 				}
 			};
-
 			loadingWorker.execute();
 			menuUser.remove(itemPrintList);
 			menuUser.remove(itemAddUser);
@@ -787,6 +776,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 					} else {
 						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
+						u.setScore(0.0);
 						System.out.println(upTime() + " Unlock - User: " + username + " (unlocked successfully)");
 						loginsystem.addUser(u, false);
 						printList.doClick();
@@ -815,6 +805,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println(upTime() + " Lock - User: " + username + " (locked successfully)");
+						u.setScore(0.0);
 						loginsystem.addUser(u, false);
 						printList.doClick();
 						return;

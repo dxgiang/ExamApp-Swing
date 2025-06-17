@@ -191,6 +191,7 @@ public class ExamTest extends JFrame {
 				System.out.println(upTime() + " " + getTitle() + " FAIL! Score: " + score + "/10.0");
 				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			}
+			
 			this.dispose();
 		}
 	}
