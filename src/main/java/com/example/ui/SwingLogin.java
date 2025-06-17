@@ -11,6 +11,9 @@ import java.awt.event.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.awt.Image;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -50,6 +53,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 	private LoginSystem loginsystem;
 	private ExamTest testExam;
 	private int countWrong = 0, countWrong2 = 0;
+	private boolean isRoot = false;
 	private JTable userTable;
 	private DefaultTableModel tableModel;
 	private LocalDateTime dt;
@@ -307,22 +311,26 @@ public class SwingLogin extends JFrame implements ActionListener {
 		itemLogin.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getContentPane().remove(registerPanel);
-				getContentPane().remove(panelMN);
-				getContentPane().add(loginPanel);
-				menuUser.remove(itemPrintList);
-				menuUser.remove(itemAddUser);
-				menuUser.remove(itemDelUser);
-				menuUser.remove(itemShowApp);
-				menuUser.remove(itemUnlock);
-				menuUser.remove(itemLock);
-				menuUser.remove(itemLogout);
-				menuUser.add(itemNonRoot);
-				user.setText("");
-				pass.setText("");
-				setTitle("Login");
-				revalidate();
-				repaint();
+				if (isRoot == true && e.getSource() == itemLogin) {
+					logout.doClick();
+				} else {
+					getContentPane().remove(registerPanel);
+					getContentPane().remove(panelMN);
+					getContentPane().add(loginPanel);
+					menuUser.remove(itemPrintList);
+					menuUser.remove(itemAddUser);
+					menuUser.remove(itemDelUser);
+					menuUser.remove(itemShowApp);
+					menuUser.remove(itemUnlock);
+					menuUser.remove(itemLock);
+					menuUser.remove(itemLogout);
+					menuUser.add(itemNonRoot);
+					user.setText("");
+					pass.setText("");
+					setTitle("Login");
+					revalidate();
+					repaint();
+				}
 			}
 		});
 		itemRegister = new JMenuItem("Register");
@@ -335,23 +343,27 @@ public class SwingLogin extends JFrame implements ActionListener {
 		itemRegister.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getContentPane().remove(loginPanel);
-				getContentPane().remove(panelMN);
-				getContentPane().add(registerPanel);
-				menuUser.remove(itemPrintList);
-				menuUser.remove(itemAddUser);
-				menuUser.remove(itemDelUser);
-				menuUser.remove(itemShowApp);
-				menuUser.remove(itemUnlock);
-				menuUser.remove(itemLock);
-				menuUser.remove(itemLogout);
-				menuUser.add(itemNonRoot);
-				reguser.setText("");
-				regpass.setText("");
-				repass.setText("");
-				setTitle("Register");
-				revalidate();
-				repaint();
+				if (isRoot == true && e.getSource() == itemRegister) {
+					logout.doClick();
+				} else {
+					getContentPane().remove(loginPanel);
+					getContentPane().remove(panelMN);
+					getContentPane().add(registerPanel);
+					menuUser.remove(itemPrintList);
+					menuUser.remove(itemAddUser);
+					menuUser.remove(itemDelUser);
+					menuUser.remove(itemShowApp);
+					menuUser.remove(itemUnlock);
+					menuUser.remove(itemLock);
+					menuUser.remove(itemLogout);
+					menuUser.add(itemNonRoot);
+					reguser.setText("");
+					regpass.setText("");
+					repass.setText("");
+					setTitle("Register");
+					revalidate();
+					repaint();
+				}
 			}
 		});
 		itemExit = new JMenuItem("Exit");
@@ -476,15 +488,18 @@ public class SwingLogin extends JFrame implements ActionListener {
 		panelMN.add(panelM3, BorderLayout.NORTH);
 		panelMN.add(labelLoading, BorderLayout.SOUTH);
 		panelMN.add(panel001, BorderLayout.PAGE_END);
-
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.out.println(upTime() + " Exit app");
+				System.setOut(SwingLogin.originalOut);
+				System.setErr(SwingLogin.originalErr);
+				System.exit(0);
+			}
+		});
 		setVisible(true);
 		// Data
 		loginsystem = new LoginSystem();
-		loginsystem.addUser(new User<String, String>("root", "admin", 0.0, null), false);
-		loginsystem.addUser(new User<String, String>("giang", "0077", 0.0, null), false);
-		loginsystem.addUser(new User<String, String>("hitler", "1945", 0.0, null), false);
-		loginsystem.addUser(new User<String, String>("user1", "pass1", 0.0, null), false);
-
 	}
 
 	// ActionListener
@@ -515,6 +530,7 @@ public class SwingLogin extends JFrame implements ActionListener {
 				if (username.equals("root")) {
 					System.out.println(upTime() + " logined successfully as root");
 					JOptionPane.showMessageDialog(this, "LOGIN AS ROOT");
+					isRoot = true;
 					countWrong = 0;
 					getContentPane().remove(loginPanel);
 					getContentPane().remove(registerPanel);
@@ -583,11 +599,17 @@ public class SwingLogin extends JFrame implements ActionListener {
 					exam.addWindowListener(new WindowAdapter() {
 						@Override
 						public void windowClosed(WindowEvent e) {
-							for (User<String, String> u : loginsystem.getUserList()) {
-								if (u.getUser().equals(username)) {
-									u.setScore(exam.getScore());
-									u.setStatus(exam.getStatus());
+							try {
+								for (User<String, String> u : loginsystem.getUserList()) {
+									if (u.getUser().equals(username)) {
+										u.setScore(exam.getScore());
+										u.setStatus(exam.getStatus());
+										// Save the updated user data
+										loginsystem.addUser(u, false); // This will update and save if user exists
+									}
 								}
+							} catch (Exception ex) {
+								System.out.println();
 							}
 						}
 					});
@@ -614,6 +636,9 @@ public class SwingLogin extends JFrame implements ActionListener {
 						for (User<String, String> u : loginsystem.getUserList()) {
 							if (u.getUser().equals(username)) {
 								u.setStatus("LOCKED");
+								// This needs to be saved to file
+								// You might want to add a method in LoginSystem to update user status and save
+								loginsystem.addUser(u, false); // This will update and save if user exists
 								return;
 							}
 						}
@@ -682,7 +707,6 @@ public class SwingLogin extends JFrame implements ActionListener {
 		} else if (e.getSource() == delUser) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to delete:");
 			if (username != null && !username.trim().isEmpty()) {
-				System.out.println(upTime() + " Delete User - User: " + username + " (deleted successfully)");
 				loginsystem.deleteUser(username);
 				printList.doClick();
 			} else {
@@ -696,17 +720,23 @@ public class SwingLogin extends JFrame implements ActionListener {
 			testExam.addWindowListener(new WindowAdapter() {
 				@Override
 				public void windowClosed(WindowEvent e) {
-					for (User<String, String> u : loginsystem.getUserList()) {
-						if (u.getUser().equals("root")) {
-							u.setScore(testExam.getScore());
-							u.setStatus(testExam.getStatus());
+					try {
+						for (User<String, String> u : loginsystem.getUserList()) {
+							if (u.getUser().equals("root")) {
+								u.setScore(testExam.getScore());
+								u.setStatus(testExam.getStatus());
+								loginsystem.addUser(u, false);
+							}
 						}
+					} catch (Exception ex) {
+						System.out.println();
 					}
 				}
 			});
 		} else if (e.getSource() == logout) {
 			System.out.println(upTime() + " Logout - User: root (log out)");
 			JOptionPane.showMessageDialog(this, "LOGOUT SUCCESSFULLY");
+			isRoot = false;
 			getContentPane().remove(panelMN);
 			ImageIcon iconloading = new ImageIcon(getClass().getResource("/main/resources/ui/loading.gif"));
 			panelLoading = new JPanel();
@@ -746,8 +776,10 @@ public class SwingLogin extends JFrame implements ActionListener {
 			repaint();
 		} else if (e.getSource() == unlock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to unlock:");
+			boolean userFound = false;
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
+					userFound = true;
 					if (u.getStatus() == null) {
 						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED");
 						System.out.println(upTime() + " Unlock - User: " + username + " (not locked)");
@@ -756,37 +788,46 @@ public class SwingLogin extends JFrame implements ActionListener {
 						u.setStatus(null);
 						JOptionPane.showMessageDialog(this, "UNLOCKED SUCCESSFULLY");
 						System.out.println(upTime() + " Unlock - User: " + username + " (unlocked successfully)");
+						loginsystem.addUser(u, false);
 						printList.doClick();
 						return;
 					}
 				}
 			}
-			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+			if (!userFound) {
+				JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+			}
 		} else if (e.getSource() == lock) {
 			String username = JOptionPane.showInputDialog(this, "Enter username to lock:");
+			boolean userFound = false;
 			for (User<String, String> u : loginsystem.getUserList()) {
 				if (u.getUser().equals(username)) {
+					userFound = true;
 					if (u.getUser().equals("root")) {
 						JOptionPane.showMessageDialog(this, "YOU CAN NOT LOCK ROOT ACCOUNT");
-						System.out.println(upTime() + " Unlock - User: root (cannot lock root account)");
+						System.out.println(upTime() + " Lock - User: root (cannot lock root account)");
 						return;
 					} else if (u.getStatus() != null) {
-						JOptionPane.showMessageDialog(this, "ACCOUNT IS NOT LOCKED OR ALREADY LOCKED");
-						System.out.println(upTime() + " Lock - User: " + username + " (not locked or already locked)");
+						JOptionPane.showMessageDialog(this, "ACCOUNT IS ALREADY LOCKED");
+						System.out.println(upTime() + " Lock - User: " + username + " (already locked)");
 						return;
-					} else if (u.getStatus() == null) {
+					} else {
 						u.setStatus("LOCKED");
 						JOptionPane.showMessageDialog(this, "LOCKED SUCCESSFULLY");
 						System.out.println(upTime() + " Lock - User: " + username + " (locked successfully)");
+						loginsystem.addUser(u, false);
 						printList.doClick();
 						return;
 					}
 				}
 			}
-			JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+			if (!userFound) {
+				JOptionPane.showMessageDialog(this, "NOT FOUND ACCOUNT");
+			}
 		}
 	}
 
+	// Method wait for ms
 	public void wait(int ms) {
 		try {
 			Thread.sleep(ms);
@@ -803,8 +844,33 @@ public class SwingLogin extends JFrame implements ActionListener {
 		return dtfor;
 	}
 
+	private static PrintStream originalOut;
+	private static PrintStream originalErr;
+	private static final String LOG_DIRECTORY = "src/main/logs/";
+
 	// Main
 	public static void main(String[] args) {
+		originalOut = System.out;
+		originalErr = System.err;
+
+		try {
+			File logDir = new File(LOG_DIRECTORY);
+			if (!logDir.exists()) {
+				logDir.mkdirs();
+			}
+
+			LocalDateTime now = LocalDateTime.now();
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+			String logFileName = LOG_DIRECTORY + File.separator + "app_log_" + now.format(formatter) + ".txt";
+
+			PrintStream fileOut = new PrintStream(new FileOutputStream(logFileName, true));
+			System.setOut(fileOut);
+			System.setErr(fileOut);
+
+		} catch (Exception e) {
+			originalErr.println("Error redirecting console output to file: " + e.getMessage());
+			e.printStackTrace(originalErr);
+		}
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
