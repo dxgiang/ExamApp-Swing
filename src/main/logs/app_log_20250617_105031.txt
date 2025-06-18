@@ -1,3 +1,0 @@
-17-06-2025 10:50:32 User data loaded from src/main/resources/data/users.txt
-17-06-2025 10:50:36 logined successfully as root
-17-06-2025 10:50:38 Exit app
