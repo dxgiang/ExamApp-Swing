@@ -160,7 +160,7 @@ public class LoginSystem extends JFrame {
 		list.clear();
 		addUser(new User<String, String>("root", "admin", 0.0, null), false);
 		addUser(new User<String, String>("giang", "0077", 0.0, null), false);
-		addUser(new User<String, String>("hitler", "1945", 0.0, null), false);
+		addUser(new User<String, String>("river", "0000", 0.0, null), false);
 		addUser(new User<String, String>("user1", "pass1", 0.0, null), false);
 	}
 }

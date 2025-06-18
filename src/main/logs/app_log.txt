@@ -19,3 +19,14 @@
 17-06-2025 18:06:13 Logined successfully as root
 17-06-2025 18:06:19 Logout - User: root (log out)
 17-06-2025 18:06:22 Exit app
+17-06-2025 18:14:13 User data loaded from src/main/resources/data/users.txt
+17-06-2025 18:14:16 Logined successfully as root
+17-06-2025 18:14:21 Unlock - User: root (unlocked successfully)
+17-06-2025 18:14:21 User data saved to src/main/resources/data/users.txt
+17-06-2025 18:14:26 Exit app
+17-06-2025 19:18:06 User data loaded from src/main/resources/data/users.txt
+17-06-2025 19:18:18 Logined successfully as root
+17-06-2025 19:19:09 Exit app
+18-06-2025 22:41:03 User data loaded from src/main/resources/data/users.txt
+18-06-2025 22:41:09 Logined successfully as root
+18-06-2025 22:41:31 Exit app

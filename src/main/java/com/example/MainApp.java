@@ -23,7 +23,6 @@ public class MainApp {
             PrintStream fileOut = new PrintStream(new FileOutputStream(logFilePath, true));
             System.setOut(fileOut);
             System.setErr(fileOut);
-
         } catch (Exception e) {
             System.err.println("Error redirecting console output to file: " + e.getMessage());
             e.printStackTrace();
