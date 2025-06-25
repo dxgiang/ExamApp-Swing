@@ -38,12 +38,8 @@ public class ExamTest extends JFrame {
 
 	// Constructor
 	public ExamTest() {
-		// No change needed for userName handling, just ensure it's set before test starts
-		// String currentUser = userName;
-		// if (currentUser == null || currentUser.isEmpty()) {
-		// 	currentUser = "Unknown";
-		// }
-		setTitle("Thi - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown")); // Use getter or direct field
+		setTitle("Thi - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown")); // Use getter or
+																										// direct field
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,19 +48,14 @@ public class ExamTest extends JFrame {
 		setResizable(false);
 		// Data
 		listQuestion = new ArrayList<Question>();
+		loadQuestionsFromWord("data/questions.docx");
 
-		// === Bắt đầu thay đổi ===
-		loadQuestionsFromWord("data/questions.docx"); // Thay đổi tên file nếu cần
-		// === Kết thúc thay đổi ===
-
-		//
 		panelStart = new JPanel();
 		labelStart = new JLabel(
 				"                                                       Press the button to start the test");
 
 		labelStart.setFont(labelStart.getFont().deriveFont(25f));
 		labelNote = new JLabel("Note: Do not minimize or switch to another window during the test.");
-		// Set the text to the center of the label
 		labelNote.setHorizontalAlignment(JLabel.CENTER);
 		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
 		labelNote.setFont(labelNote.getFont().deriveFont(25f));
@@ -103,7 +94,8 @@ public class ExamTest extends JFrame {
 		// Add action listener
 		start.addActionListener(e -> {
 			if (listQuestion.isEmpty()) {
-				JOptionPane.showMessageDialog(this, "Không có câu hỏi nào được tải. Vui lòng kiểm tra file Word.");
+				JOptionPane.showMessageDialog(this,
+						"There is not enough questions to start the exam. Please add questions in the file 'questions.docx'.");
 				return;
 			}
 			panelStart.setVisible(false);
@@ -119,8 +111,8 @@ public class ExamTest extends JFrame {
 			@Override
 			public void windowLostFocus(WindowEvent e) {
 				// TODO Auto-generated method stub
-				if (index < listQuestion.size() && status == null) { // Check status to avoid multiple messages
-					JOptionPane.showMessageDialog(ExamTest.this, "Bạn đã gian lận trong bài kiểm tra!");
+				if (index < listQuestion.size() && status == null) {
+					JOptionPane.showMessageDialog(ExamTest.this, "You're cheat on the exam!");
 					System.out.println(
 							upTime() + " " + getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
 					System.out.println(upTime() + " " + getTitle() + " (Log out)");
@@ -191,14 +183,16 @@ public class ExamTest extends JFrame {
 			ans4.setText(ch.getAns4());
 			ans4.setFont(ans4.getFont().deriveFont(15f));
 		} else {
-			JOptionPane.showMessageDialog(this, "Bạn đã hoàn thành bài kiểm tra. Điểm: " + String.format("%.2f", score) + "/10.0.");
+			JOptionPane.showMessageDialog(this, "You're " + String.format("%.2f", score) + "/10.0.");
 			if (score >= 5) {
 				status = "PASS";
-				System.out.println(upTime() + " " + getTitle() + " PASS! Score: " + String.format("%.2f", score) + "/10.0");
+				System.out.println(
+						upTime() + " " + getTitle() + " PASS! Score: " + String.format("%.2f", score) + "/10.0");
 				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			} else {
 				status = "FAIL";
-				System.out.println(upTime() + " " + getTitle() + " FAIL! Score: " + String.format("%.2f", score) + "/10.0");
+				System.out.println(
+						upTime() + " " + getTitle() + " FAIL! Score: " + String.format("%.2f", score) + "/10.0");
 				System.out.println(upTime() + " " + getTitle() + " (Log out)");
 			}
 
@@ -213,48 +207,36 @@ public class ExamTest extends JFrame {
 		return dtfor;
 	}
 
-	// === Bắt đầu thêm phương thức đọc file Word ===
-    private void loadQuestionsFromWord(String filePath) {
-        try (FileInputStream fis = new FileInputStream(filePath);
-             XWPFDocument document = new XWPFDocument(fis)) {
+	private void loadQuestionsFromWord(String filePath) {
+		try (FileInputStream fis = new FileInputStream(filePath); XWPFDocument document = new XWPFDocument(fis)) {
+			listQuestion.clear();
+			List<XWPFParagraph> paragraphs = document.getParagraphs();
+			for (int i = 0; i < paragraphs.size(); i += 6) {
+				if (i + 5 < paragraphs.size()) {
+					String questionText = paragraphs.get(i).getText().trim();
+					String ans1Text = paragraphs.get(i + 1).getText().trim();
+					String ans2Text = paragraphs.get(i + 2).getText().trim();
+					String ans3Text = paragraphs.get(i + 3).getText().trim();
+					String ans4Text = paragraphs.get(i + 4).getText().trim();
+					int correctAnswerIndex = Integer.parseInt(paragraphs.get(i + 5).getText().trim());
 
-            // Clear any existing questions
-            listQuestion.clear();
+					listQuestion.add(
+							new Question(questionText, ans1Text, ans2Text, ans3Text, ans4Text, correctAnswerIndex));
+				}
+			}
+			System.out.println(upTime() + " Loaded " + listQuestion.size() + " questions from " + filePath);
 
-            // Simple parsing assumption:
-            // Each question block consists of:
-            // Paragraph 1: Question text
-            // Paragraph 2: Answer A
-            // Paragraph 3: Answer B
-            // Paragraph 4: Answer C
-            // Paragraph 5: Answer D
-            // Paragraph 6: Correct answer index (e.g., "1", "2", "3", "4")
-
-            List<XWPFParagraph> paragraphs = document.getParagraphs();
-            for (int i = 0; i < paragraphs.size(); i += 6) { // Increment by 6 for each question block
-                if (i + 5 < paragraphs.size()) { // Ensure there are enough paragraphs for a full question
-                    String questionText = paragraphs.get(i).getText().trim();
-                    String ans1Text = paragraphs.get(i + 1).getText().trim();
-                    String ans2Text = paragraphs.get(i + 2).getText().trim();
-                    String ans3Text = paragraphs.get(i + 3).getText().trim();
-                    String ans4Text = paragraphs.get(i + 4).getText().trim();
-                    int correctAnswerIndex = Integer.parseInt(paragraphs.get(i + 5).getText().trim());
-
-                    listQuestion.add(new Question(questionText, ans1Text, ans2Text, ans3Text, ans4Text, correctAnswerIndex));
-                }
-            }
-            System.out.println(upTime() + " Đã tải " + listQuestion.size() + " câu hỏi từ " + filePath);
-
-        } catch (IOException e) {
-            System.err.println(upTime() + " Lỗi khi đọc file Word: " + e.getMessage());
-            JOptionPane.showMessageDialog(this, "Không thể đọc file câu hỏi: " + filePath + "\n" + e.getMessage(), "Lỗi đọc file", JOptionPane.ERROR_MESSAGE);
-        } catch (NumberFormatException e) {
-            System.err.println(upTime() + " Lỗi định dạng đáp án đúng trong file Word: " + e.getMessage());
-            JOptionPane.showMessageDialog(this, "Lỗi định dạng đáp án đúng trong file câu hỏi. Vui lòng kiểm tra lại file Word.", "Lỗi định dạng", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    // === Kết thúc thêm phương thức đọc file Word ===
-
+		} catch (IOException e) {
+			System.err.println(upTime() + " Error reading Word file: " + e.getMessage());
+			JOptionPane.showMessageDialog(this, "Cannot read question file: " + filePath + "\n" + e.getMessage(),
+					"Error reading file", JOptionPane.ERROR_MESSAGE);
+		} catch (NumberFormatException e) {
+			System.err.println(upTime() + " Error formatting the correct answer in the Word file: " + e.getMessage());
+			JOptionPane.showMessageDialog(this,
+					"Error formatting the correct answer in the question file. Please check the Word file again.",
+					"Error formating", JOptionPane.ERROR_MESSAGE);
+		}
+	}
 
 	// Main
 	public static void main(String[] args) {

@@ -124,3 +124,6 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 25-06-2025 17:57:52 Exit app
 25-06-2025 18:12:39 User data loaded from data\users.txt
 25-06-2025 18:13:39 Exit app
+25-06-2025 18:21:36 User data loaded from data\users.txt
+25-06-2025 18:21:38 Logined successfully as root
+25-06-2025 18:21:47 Exit app
