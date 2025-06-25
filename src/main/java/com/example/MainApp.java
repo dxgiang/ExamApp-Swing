@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import javax.swing.UIManager;
 
 public class MainApp {
-	private static final String LOG_DIRECTORY = "src/main/logs/";
+	private static final String LOG_DIRECTORY = "data/";
 	private static final String SINGLE_LOG_FILE_NAME = "app_log.txt";
 	public static void main(String[] args) {
 		try {
