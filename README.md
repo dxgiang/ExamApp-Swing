@@ -4,7 +4,7 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 
 - Login/Register system with:
   - Account creation and password validation
-  - Lockout after 5 failed login attempts (5-second freeze)
+  - Lockout after 3 failed login attempts (5-second freeze)
 - **Root** (admin) mode that allows:
   - Adding/deleting users
   - Viewing user list & locking/unlocking accounts
