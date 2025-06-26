@@ -172,7 +172,7 @@ public class ExamTest extends JFrame {
 	private void showQuestion() {
 		if (index < listQuestion.size()) {
 			Question ch = listQuestion.get(index);
-			labelQues.setText("Question " + (index + 1) + ": " + ch.getQuestion());
+			labelQues.setText(ch.getQuestion());
 			labelQues.setFont(labelQues.getFont().deriveFont(17f));
 			ans1.setText(ch.getAns1());
 			ans1.setFont(ans1.getFont().deriveFont(15f));
