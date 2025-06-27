@@ -12,7 +12,7 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
   - Prevents exit or window switching until the test is completed
   - Anti-cheat detection: minimizing, alt‑tabbing, or clicking outside triggers a warning
 
-> **Note:** This is a learning version—the UI is minimal and English may be imperfect. 😊
+> **Note:** This is a learning version—the UI is minimal and English may be imperfect. =))
 
 ---
 
