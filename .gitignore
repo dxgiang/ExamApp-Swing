@@ -1,7 +1,2 @@
 # Ignore target directory
 target/
-
-# Ignore data files
-data/app_log.txt
-data/users.txt
-data/questions.docx
