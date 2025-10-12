@@ -369,7 +369,6 @@ public class SwingApp extends JFrame implements ActionListener {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				System.out.println(upTime() + " Exit app");
 				System.exit(0);
 			}
@@ -498,7 +497,6 @@ public class SwingApp extends JFrame implements ActionListener {
 	// ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		if (e.getSource() == register) {
 			getContentPane().remove(loginPanel);
 			getContentPane().add(registerPanel);
@@ -568,7 +566,7 @@ public class SwingApp extends JFrame implements ActionListener {
 					pass.setText("");
 					ExamTest exam = new ExamTest();
 					exam.setUserName(username);
-					exam.setTitle("Thi - User: " + username);
+					exam.setTitle("Exam Text - User: " + username);
 					exam.setVisible(true);
 					exam.addWindowListener(new WindowAdapter() {
 						@Override
@@ -698,7 +696,7 @@ public class SwingApp extends JFrame implements ActionListener {
 
 		} else if (e.getSource() == showApp) {
 			testExam = new ExamTest();
-			testExam.setTitle("Thi - User: root");
+			testExam.setTitle("Exam Text - User: root");
 			testExam.setVisible(true);
 			testExam.addWindowListener(new WindowAdapter() {
 				@Override

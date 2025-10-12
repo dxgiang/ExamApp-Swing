@@ -144,3 +144,5 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 12-10-2025 20:09:39 Exit app
 12-10-2025 20:21:14 User data loaded from data\users.txt
 12-10-2025 20:21:16 Exit app
+12-10-2025 20:28:35 User data loaded from data\users.txt
+12-10-2025 20:28:37 Exit app

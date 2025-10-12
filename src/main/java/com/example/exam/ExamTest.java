@@ -38,7 +38,7 @@ public class ExamTest extends JFrame {
 
 	// Constructor
 	public ExamTest() {
-		setTitle("Thi - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown")); // Use getter or
+		setTitle("Exam Text - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown")); // Use getter or
 																										// direct field
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -110,7 +110,6 @@ public class ExamTest extends JFrame {
 		addWindowFocusListener(new WindowFocusListener() {
 			@Override
 			public void windowLostFocus(WindowEvent e) {
-				// TODO Auto-generated method stub
 				if (index < listQuestion.size() && status == null) {
 					JOptionPane.showMessageDialog(ExamTest.this, "You're cheat on the exam!");
 					System.out.println(
@@ -126,13 +125,11 @@ public class ExamTest extends JFrame {
 
 			@Override
 			public void windowGainedFocus(WindowEvent e) {
-				// TODO Auto-generated method stub
 			}
 		});
 	}
 
 	public String getUserName() {
-		// TODO Auto-generated method stub
 		return userName;
 	}
 

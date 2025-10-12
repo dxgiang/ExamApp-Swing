@@ -2,4 +2,6 @@
 target/
 
 # Ignore data files
-data/
+data/app_log.txt
+data/users.txt
+data/questions.docx
