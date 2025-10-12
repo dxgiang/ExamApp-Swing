@@ -21,7 +21,7 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph; // Import this
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 public class ExamTest extends JFrame {
 	// Attributes

@@ -127,3 +127,18 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 25-06-2025 18:21:36 User data loaded from data\users.txt
 25-06-2025 18:21:38 Logined successfully as root
 25-06-2025 18:21:47 Exit app
+12-10-2025 20:08:03 User data loaded from data\users.txt
+12-10-2025 20:08:17 Login - User: root Fail! (wrong password 1/3)
+12-10-2025 20:08:21 Logined successfully as root
+12-10-2025 20:08:35 Logout - User: root (log out)
+12-10-2025 20:08:48 Login - User: giang Fail! (wrong password 1/3)
+12-10-2025 20:08:50 Login - User: giang (logined successfully)
+12-10-2025 20:08:51 Loaded 4 questions from data/questions.docx
+12-10-2025 20:08:56 Thi - User: giang FAIL! Score: 2.50/10.0
+12-10-2025 20:08:56 Thi - User: giang (Log out)
+12-10-2025 20:08:56 User data saved to data\users.txt
+12-10-2025 20:09:04 Logined successfully as root
+12-10-2025 20:09:13 Unlock - User: giang (unlocked successfully)
+12-10-2025 20:09:13 User data saved to data\users.txt
+12-10-2025 20:09:35 Logout - User: root (log out)
+12-10-2025 20:09:39 Exit app

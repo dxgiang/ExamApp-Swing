@@ -1,6 +1,6 @@
 package main.java.com.example;
 
-import main.java.com.example.ui.SwingLogin;
+import main.java.com.example.ui.SwingApp;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,6 +33,6 @@ public class MainApp {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		new SwingLogin().setVisible(true);
+		new SwingApp().setVisible(true);
 	}
 }
