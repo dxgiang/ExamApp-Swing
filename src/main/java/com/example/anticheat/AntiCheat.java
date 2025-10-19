@@ -9,7 +9,7 @@ import static java.awt.Toolkit.getDefaultToolkit;
 import javax.swing.JOptionPane;
 
 import main.java.com.example.exam.ExamTestLogic;
-import main.java.com.example.exam.ExamTestUI;
+import main.java.com.example.ui.ExamTestUI;
 
 public class AntiCheat implements WindowFocusListener, KeyListener {
     private ExamTestLogic examTestLogic;
@@ -31,11 +31,9 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        // Luôn kiểm tra trạng thái đang thi và chưa bị phạt
         if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
             int keyCode = e.getKeyCode();
             
-            // Đoạn 1: Cập nhật cờ
             if (keyCode == KeyEvent.VK_WINDOWS) {
                 windowsPressed = true;
             } else if (keyCode == KeyEvent.VK_ESCAPE) {
@@ -44,7 +42,6 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
                 prtScrPressed = true;
             }
 
-            // Đoạn 2: Áp dụng hình phạt NGAY LẬP TỨC (giữ nguyên logic gốc của bạn)
             if (windowsPressed) {
                 enforceCheatPenalty("Windows key detected");
             } else if (escapePressed) {
@@ -57,7 +54,6 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        // Chỉ reset cờ khi đang thi và chưa bị phạt
         if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_WINDOWS) {
@@ -100,12 +96,8 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
             System.out.println(
                     examTestLogic.upTime() + " " + examTestUI.getTitle() + " CHEAT ON THE EXAM!! Reason: " + reason);
             System.out.println(examTestLogic.upTime() + " " + examTestUI.getTitle() + " (Log out)");
-
-            // Set score to 0 and status to CHEAT
             examTestLogic.setScore(0);
             examTestLogic.setStatus("CHEAT");
-
-            // Close the application
             examTestUI.dispose();
         }
     }

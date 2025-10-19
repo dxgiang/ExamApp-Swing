@@ -10,14 +10,16 @@ import java.util.List;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
+import main.java.com.example.ui.ExamTestUI;
+
 public class ExamTestLogic {
     // Attributes
-    private ExamTestUI ui; // Tham chiếu đến UI để cập nhật giao diện
+    private ExamTestUI ui;
     private int index = 0;
     private double score = 0;
     private String status = null;
     private List<Question> listQuestion;
-    private LocalDateTime dt; // Giữ lại dt như code gốc
+    private LocalDateTime dt;
 
     // Constructor
     public ExamTestLogic(ExamTestUI ui) {
@@ -26,7 +28,6 @@ public class ExamTestLogic {
         loadQuestionsFromWord("data/questions.docx");
     }
 
-    // Getter và Setter (giữ nguyên như code gốc, trừ setUserName đã chuyển sang UI)
     public double getScore() {
         return score;
     }
@@ -47,14 +48,11 @@ public class ExamTestLogic {
         return listQuestion;
     }
 
-    // Methods (Logic xử lý)
     
-    // Hàm xử lý câu hỏi (giữ nguyên logic tính điểm)
     public void processQuestion(int luaChon) {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
             if (luaChon == ch.getIndexRightAns()) {
-                // Logic tính điểm: (10 / tổng số câu)
                 score += (double) 10 / listQuestion.size(); 
             }
             index++;
@@ -62,18 +60,15 @@ public class ExamTestLogic {
         }
     }
 
-    // Hàm hiển thị câu hỏi (giữ nguyên logic cũ)
     public void showQuestion() {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
-            ui.displayQuestion(ch); // Gọi UI để hiển thị
+            ui.displayQuestion(ch);
         } else {
-            // Kết thúc bài thi
-            ui.showResult(score); // Gọi UI để hiển thị kết quả và log
+            ui.showResult(score);
         }
     }
     
-    // Hàm lấy thời gian (giữ nguyên logic cũ)
     public String upTime() {
         dt = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -81,7 +76,6 @@ public class ExamTestLogic {
         return dtfor;
     }
 
-    // Hàm tải câu hỏi từ Word (giữ nguyên logic cũ)
     private void loadQuestionsFromWord(String filePath) {
         try (FileInputStream fis = new FileInputStream(filePath); 
              XWPFDocument document = new XWPFDocument(fis)) {

@@ -1,4 +1,4 @@
-package main.java.com.example.exam;
+package main.java.com.example.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -14,26 +14,23 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 
 import main.java.com.example.anticheat.AntiCheat;
+import main.java.com.example.exam.ExamTestLogic;
+import main.java.com.example.exam.Question;
 
 public class ExamTestUI extends JFrame {
     private static final long serialVersionUID = 1L;
-    public ExamTestLogic logic; // Tham chiếu đến logic xử lý
-
-    // Components
+    public ExamTestLogic logic;
     private JPanel panelStart, panelExamTest;
     private JLabel labelStart, labelNote, labelQues;
     private JButton start, ans1, ans2, ans3, ans4;
-    private String userName; // Giữ lại userName ở UI để quản lý tiêu đề
-    private boolean completed = false; // Trạng thái hoàn thành bài thi
+    private String userName;
+    private boolean completed = false;
 
-    // Constructor
     public ExamTestUI() {
-        // Khởi tạo logic trước để tải câu hỏi
         this.logic = new ExamTestLogic(this);
-        this.userName = ""; // Giữ lại thuộc tính userName
-        this.completed = false; // Khởi tạo trạng thái hoàn thành
+        this.userName = "";
+        this.completed = false;
         
-        // Thiết lập JFrame
         setTitle("Exam Text - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown"));
         setSize(500, 300);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -41,11 +38,8 @@ public class ExamTestUI extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setResizable(false);
-
         initializeUIComponents();
         addListeners();
-        
-        // Cấu hình chống gian lận
         AntiCheat antiCheat = new AntiCheat(this, this.logic);
         addKeyListener(antiCheat);
         addWindowFocusListener(antiCheat);
@@ -71,7 +65,7 @@ public class ExamTestUI extends JFrame {
         start.setBackground(Color.ORANGE);
         panelStart.add(labelStart, BorderLayout.WEST);
         panelStart.add(labelNote, BorderLayout.CENTER);
-        panelStart.add(labelNote, BorderLayout.SOUTH); // Giữ nguyên việc add labelNote 2 lần như code gốc
+        panelStart.add(labelNote, BorderLayout.SOUTH);
         panelStart.add(start, BorderLayout.LINE_END);
         panelStart.setBackground(Color.GREEN);
         getContentPane().add(panelStart);
@@ -108,32 +102,24 @@ public class ExamTestUI extends JFrame {
             panelStart.setVisible(false);
             getContentPane().add(panelExamTest, BorderLayout.CENTER);
             panelExamTest.setVisible(true);
-            logic.showQuestion(); // Chuyển sang logic
+            logic.showQuestion();
         });
         
-        // Chuyển việc xử lý câu trả lời sang logic
         ans1.addActionListener(e -> logic.processQuestion(1));
         ans2.addActionListener(e -> logic.processQuestion(2));
         ans3.addActionListener(e -> logic.processQuestion(3));
         ans4.addActionListener(e -> logic.processQuestion(4));
     }
     
-    // ====================================================================
-    // CÁC PHƯƠNG THỨC GIAO TIẾP VỚI LOGIC (GIỮ NGUYÊN LOGIC CŨ)
-    // ====================================================================
-    
-    // Getter và Setter (giữ lại 2 hàm này ở UI vì logic setTitle và username được dùng ở đây)
     public String getUserName() {
         return userName;
     }
     
     public void setUserName(String userName) {
         this.userName = userName;
-        // Cập nhật tiêu đề theo logic cũ
         setTitle("Exam Text - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown")); 
     }
-    
-    // Phương thức hiển thị câu hỏi (được gọi từ ExamTestLogic)
+
     public void displayQuestion(Question ch) {
         labelQues.setText(ch.getQuestion());
         labelQues.setFont(labelQues.getFont().deriveFont(17f));
@@ -147,7 +133,6 @@ public class ExamTestUI extends JFrame {
         ans4.setFont(ans4.getFont().deriveFont(15f));
     }
 
-    // Phương thức hiển thị kết quả và log (giữ nguyên logic cũ)
     public void showResult(double score) {
         this.completed = true; // Đánh dấu đã hoàn thành bài thi
         JOptionPane.showMessageDialog(this, "You're " + String.format("%.2f", score) + "/10.0.");

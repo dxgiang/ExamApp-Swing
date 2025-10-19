@@ -16,7 +16,7 @@ import javax.swing.SwingWorker;
 import main.java.com.example.auth.DataProcess;
 import main.java.com.example.auth.User;
 import main.java.com.example.exam.ExamTestLogic;
-import main.java.com.example.exam.ExamTestUI;
+import main.java.com.example.ui.ExamTestUI;
 import main.java.com.example.ui.SwingApp;
 import main.java.com.example.ui.SwingAppUI;
 
