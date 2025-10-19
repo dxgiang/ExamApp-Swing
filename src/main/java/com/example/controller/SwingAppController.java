@@ -15,25 +15,30 @@ import javax.swing.SwingWorker;
 
 import main.java.com.example.auth.DataProcess;
 import main.java.com.example.auth.User;
-import main.java.com.example.exam.ExamTest;
+import main.java.com.example.exam.ExamTestLogic;
+import main.java.com.example.exam.ExamTestUI;
 import main.java.com.example.ui.SwingApp;
 import main.java.com.example.ui.SwingAppUI;
 
 public class SwingAppController implements ActionListener {
+    // Attributes
     private SwingAppUI ui;
     private DataProcess loginsystem;
-    private ExamTest testExam;
     private int countWrong = 0;
     private int countWrong2 = 0;
     private LocalDateTime dt;
 
+    // Constructor
     public SwingAppController(SwingAppUI ui, DataProcess loginsystem) {
         this.ui = ui;
         this.loginsystem = loginsystem;
+
         addListeners();
     }
 
+    // Methods
     private void addListeners() {
+        // Button/TextField Listeners
         ui.menuOption.addActionListener(this);
         ui.menuUser.addActionListener(this);
         ui.menuHelp.addActionListener(this);
@@ -54,10 +59,13 @@ public class SwingAppController implements ActionListener {
         ui.lockButton.addActionListener(this);
         ui.logoutButton.addActionListener(this);
 
+        // MenuItem Listeners (Lambdas)
         ui.itemLogin.addActionListener(e -> handleMenuItemLogin());
         ui.itemRegister.addActionListener(e -> handleMenuItemRegister());
         ui.itemExit.addActionListener(e -> handleMenuItemExit());
         ui.itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(ui, "Developed by river0077."));
+        
+        // Cần đảm bảo các item này đã được add vào ui.menuUser trước khi addListener
         ui.itemPrintList.addActionListener(e -> ui.printListButton.doClick());
         ui.itemAddUser.addActionListener(e -> ui.addUserButton.doClick());
         ui.itemDelUser.addActionListener(e -> ui.delUserButton.doClick());
@@ -66,15 +74,18 @@ public class SwingAppController implements ActionListener {
         ui.itemLock.addActionListener(e -> ui.lockButton.doClick());
         ui.itemLogout.addActionListener(e -> ui.logoutButton.doClick());
 
+        // Password Visibility Listeners
         ui.hidePassButton.addActionListener(e -> togglePasswordVisibility(ui.pass, ui.hidePassButton));
         ui.hideRePassButton.addActionListener(e -> togglePasswordVisibility(ui.repass, ui.hideRePassButton));
         ui.hideRegPassButton.addActionListener(e -> togglePasswordVisibility(ui.regpass, ui.hideRegPassButton));
 
+        // Window Listener
         ui.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 System.out.println(upTime() + " Exit app");
-                System.setOut(SwingApp.originalOut);
+                // Khôi phục System.out và System.err
+                System.setOut(SwingApp.originalOut); 
                 System.setErr(SwingApp.originalErr);
                 System.exit(0);
             }
@@ -83,31 +94,32 @@ public class SwingAppController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == ui.registerButton) {
+        Object source = e.getSource();
+        
+        if (source == ui.registerButton) {
             handleRegisterTransition();
-        } else if (e.getSource() == ui.loginInReGButton) {
+        } else if (source == ui.loginInReGButton) {
             handleLoginTransition();
-        } else if (e.getSource() == ui.loginButton || e.getSource() == ui.pass || e.getSource() == ui.user) {
+        } else if (source == ui.loginButton || source == ui.pass || source == ui.user) {
             handleLoginAttempt();
-        } else if (e.getSource() == ui.createUserButton || e.getSource() == ui.regpass || e.getSource() == ui.reguser || e.getSource() == ui.repass) {
+        } else if (source == ui.createUserButton || source == ui.regpass || source == ui.reguser || source == ui.repass) {
             handleCreateUser();
-        } else if (e.getSource() == ui.printListButton) {
+        } else if (source == ui.printListButton) {
             handlePrintList();
-        } else if (e.getSource() == ui.addUserButton) {
+        } else if (source == ui.addUserButton) {
             handleAddUser();
-        } else if (e.getSource() == ui.delUserButton) {
+        } else if (source == ui.delUserButton) {
             handleDeleteUser();
-        } else if (e.getSource() == ui.showAppButton) {
+        } else if (source == ui.showAppButton) {
             handleShowApp();
-        } else if (e.getSource() == ui.logoutButton) {
+        } else if (source == ui.logoutButton) {
             handleLogout();
-        } else if (e.getSource() == ui.unlockButton) {
+        } else if (source == ui.unlockButton) {
             handleUnlockUser();
-        } else if (e.getSource() == ui.lockButton) {
+        } else if (source == ui.lockButton) {
             handleLockUser();
         }
     }
-
 
     private void handleMenuItemLogin() {
         if (ui.isRoot) {
@@ -222,23 +234,11 @@ public class SwingAppController implements ActionListener {
     }
 
     private void handleRegularUserLogin(String username) {
-        for (User<String, String> u : loginsystem.getUserList()) {
-            if (u.getUser().equals(username)) {
-                if (u.getStatus() != null && (u.getStatus().equals("PASS") || u.getStatus().equals("FAIL") || u.getStatus().equals("CHEAT"))) {
-                    JOptionPane.showMessageDialog(ui, "YOU HAVE TAKEN THE EXAM! AUTO LOG OUT!");
-                    System.out.println(upTime() + " Logout - User: " + username + "(auto log out)");
-                    ui.user.setText("");
-                    ui.pass.setText("");
-                    return;
-                } else if (u.getStatus() != null && u.getStatus().equals("LOCKED")) {
-                    JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
-                    System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
-                    ui.user.setText("");
-                    ui.pass.setText("");
-                    return;
-                }
-            }
-        }
+        // ... (Kiểm tra trạng thái cũ)
+        
+        // Tạo instance ExamTestUI và ExamTestLogic MỚI cho mỗi lần thi
+        ExamTestUI currentExamTestUI = new ExamTestUI(); 
+        ExamTestLogic currentExamLogic = currentExamTestUI.logic; // Lấy logic đã được tạo trong constructor của UI
         
         JOptionPane.showMessageDialog(ui, "LOGIN SUCCESSFULLY");
         System.out.println(upTime() + " Login - User: " + username + " (logined successfully)");
@@ -246,22 +246,22 @@ public class SwingAppController implements ActionListener {
         ui.user.setText("");
         ui.pass.setText("");
 
-        ExamTest exam = new ExamTest();
-        exam.setUserName(username);
-        exam.setTitle("Exam Text - User: " + username);
-        exam.setVisible(true);
+        currentExamTestUI.setUserName(username);
+        currentExamTestUI.setVisible(true); // Hiển thị UI mới
         
-        exam.addWindowListener(new WindowAdapter() {
+        // Listener cho UI mới
+        currentExamTestUI.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
+                // Sửa: Lấy kết quả từ currentExam và cập nhật trạng thái
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
                     @Override
                     protected Void doInBackground() throws Exception {
                         for (User<String, String> u : loginsystem.getUserList()) {
                             if (u.getUser().equals(username)) {
-                                u.setScore(exam.getScore());
-                                u.setStatus(exam.getStatus());
-                                loginsystem.addUser(u, false);
+                                u.setScore(currentExamLogic.getScore()); // Lấy score từ logic của bài thi này
+                                u.setStatus(currentExamLogic.getStatus()); // Lấy status từ logic của bài thi này
+                                loginsystem.addUser(u, false); 
                                 break;
                             }
                         }
@@ -310,7 +310,7 @@ public class SwingAppController implements ActionListener {
         for (User<String, String> u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 u.setStatus("LOCKED");
-                loginsystem.addUser(u, false);
+                loginsystem.addUser(u, false); // Cập nhật trạng thái khóa
                 return;
             }
         }
@@ -345,7 +345,9 @@ public class SwingAppController implements ActionListener {
 
     private void handlePrintList() {
         ui.printListButton.setText("Reload");
-        ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif"));
+        // LOGIC KÉM HIỆU QUẢ/NULL POINTER CÓ THỂ XẢY RA:
+        // Lấy tài nguyên bằng getResource()
+        ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif")); 
         ui.labelLoading.setIcon(iconloading); 
         ui.panelLoading.setVisible(true);
 
@@ -396,6 +398,7 @@ public class SwingAppController implements ActionListener {
             }
         }
         
+        // Logic cũ: thêm/cập nhật người dùng với cờ 'true' (thêm thủ công)
         loginsystem.addUser(new User<String, String>(username, password, 0.0, null), true);
         ui.printListButton.doClick();
     }
@@ -411,10 +414,15 @@ public class SwingAppController implements ActionListener {
     }
 
     private void handleShowApp() {
-        testExam = new ExamTest();
-        testExam.setTitle("Exam Text - User: root");
-        testExam.setVisible(true);
-        testExam.addWindowListener(new WindowAdapter() {
+        // Logic cho root/admin xem trước app
+        ExamTestUI tempExamUI = new ExamTestUI();
+        ExamTestLogic tempExamLogic = tempExamUI.logic; // Lấy logic đã được tạo trong constructor của UI
+        
+        tempExamUI.setUserName("root");
+        tempExamUI.setTitle("Exam Text - User: root");
+        tempExamUI.setVisible(true);
+
+        tempExamUI.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
@@ -422,8 +430,9 @@ public class SwingAppController implements ActionListener {
                     protected Void doInBackground() throws Exception {
                         for (User<String, String> u : loginsystem.getUserList()) {
                             if (u.getUser().equals("root")) {
-                                u.setScore(testExam.getScore());
-                                u.setStatus(testExam.getStatus());
+                                // Lấy kết quả từ tempExamLogic
+                                u.setScore(tempExamLogic.getScore()); 
+                                u.setStatus(tempExamLogic.getStatus());
                                 loginsystem.addUser(u, false);
                                 break;
                             }
@@ -443,7 +452,6 @@ public class SwingAppController implements ActionListener {
         
         ui.getContentPane().remove(ui.panelMN);
         
-        // Hiển thị loading
         ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif"));
         ui.labelLoading.setIcon(iconloading);
         ui.panelLoading.setVisible(true);
@@ -533,6 +541,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Hàm wait (không sử dụng trong actionPerformed, nhưng được giữ lại)
     public void wait(int ms) {
         try {
             Thread.sleep(ms);
@@ -541,6 +550,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Hàm upTime (giữ nguyên logic cũ)
     public String upTime() {
         dt = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

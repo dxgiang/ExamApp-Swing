@@ -491,3 +491,495 @@ Exception in thread "main" java.lang.Error: setAccelerator() is not defined for 
 19-10-2025 12:19:26 Exam Text - User: root (Log out)
 19-10-2025 12:19:26 User data saved to data\users.txt
 19-10-2025 12:19:28 Exit app
+
+
+--- Start New Session: 19-10-2025 12:23:14 ---
+19-10-2025 12:23:14 Redirected console output to data/\app_log.txt
+19-10-2025 12:23:14 User data loaded from data\users.txt
+19-10-2025 12:23:22 Logined successfully as root
+19-10-2025 12:24:34 Exit app
+
+
+--- Start New Session: 19-10-2025 12:24:40 ---
+19-10-2025 12:24:40 Redirected console output to data/\app_log.txt
+19-10-2025 12:24:40 User data loaded from data\users.txt
+19-10-2025 12:24:51 Logined successfully as root
+19-10-2025 12:25:00 User data saved to data\users.txt
+19-10-2025 12:25:00 Unlock - User: root (unlocked successfully)
+19-10-2025 12:25:04 Logout - User: root (log out)
+19-10-2025 12:25:21 Exit app
+
+
+--- Start New Session: 19-10-2025 18:00:23 ---
+19-10-2025 18:00:23 Redirected console output to data/\app_log.txt
+19-10-2025 18:00:23 User data loaded from data\users.txt
+Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+	The import main.java.com.example.exam.ExamTestLogic cannot be resolved
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+	ExamTestLogic cannot be resolved to a type
+
+	at main.java.com.example.controller.SwingAppController.<init>(SwingAppController.java:18)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:23)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 19-10-2025 18:02:19 ---
+19-10-2025 18:02:19 Redirected console output to data/\app_log.txt
+19-10-2025 18:02:19 User data loaded from data\users.txt
+19-10-2025 18:02:21 Loaded 4 questions from data/questions.docx
+19-10-2025 18:02:32 Logined successfully as root
+19-10-2025 18:02:38 Loaded 4 questions from data/questions.docx
+19-10-2025 18:02:38 Loaded 4 questions from data/questions.docx
+19-10-2025 18:02:38 Loaded 4 questions from data/questions.docx
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "main.java.com.example.exam.ExamTestLogic.getStatus()" because "this.examTest" is null
+	at main.java.com.example.anticheat.AntiCheat.keyPressed(AntiCheat.java:33)
+	at java.desktop/java.awt.Component.processKeyEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Window.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "main.java.com.example.exam.ExamTestLogic.getStatus()" because "this.examTest" is null
+	at main.java.com.example.anticheat.AntiCheat.windowLostFocus(AntiCheat.java:75)
+	at java.desktop/java.awt.Window.processWindowFocusEvent(Unknown Source)
+	at java.desktop/java.awt.Window.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.SequencedEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "main.java.com.example.exam.ExamTestLogic.getStatus()" because "this.examTest" is null
+	at main.java.com.example.anticheat.AntiCheat.keyPressed(AntiCheat.java:33)
+	at java.desktop/java.awt.Component.processKeyEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Window.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "main.java.com.example.exam.ExamTestLogic.getStatus()" because "this.examTest" is null
+	at main.java.com.example.anticheat.AntiCheat.windowLostFocus(AntiCheat.java:75)
+	at java.desktop/java.awt.Window.processWindowFocusEvent(Unknown Source)
+	at java.desktop/java.awt.Window.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.SequencedEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "main.java.com.example.exam.ExamTestLogic.getStatus()" because "this.examTest" is null
+	at main.java.com.example.anticheat.AntiCheat.windowLostFocus(AntiCheat.java:75)
+	at java.desktop/java.awt.Window.processWindowFocusEvent(Unknown Source)
+	at java.desktop/java.awt.Window.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.SequencedEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(Unknown Source)
+	at java.desktop/java.awt.WaitDispatchSupport$4.run(Unknown Source)
+	at java.desktop/java.awt.WaitDispatchSupport$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.desktop/java.awt.WaitDispatchSupport.enter(Unknown Source)
+	at java.desktop/java.awt.Dialog.show(Unknown Source)
+	at java.desktop/javax.swing.JOptionPane.showOptionDialog(Unknown Source)
+	at java.desktop/javax.swing.JOptionPane.showMessageDialog(Unknown Source)
+	at java.desktop/javax.swing.JOptionPane.showMessageDialog(Unknown Source)
+	at java.desktop/javax.swing.JOptionPane.showMessageDialog(Unknown Source)
+	at main.java.com.example.exam.ExamTestUI.showResult(ExamTestUI.java:150)
+	at main.java.com.example.exam.ExamTestLogic.showQuestion(ExamTestLogic.java:72)
+	at main.java.com.example.exam.ExamTestLogic.processQuestion(ExamTestLogic.java:61)
+	at main.java.com.example.exam.ExamTestUI.lambda$2(ExamTestUI.java:114)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+19-10-2025 18:02:43 Exam Text - User: root PASS! Score: 5.00/10.0
+19-10-2025 18:02:43 Exam Text - User: root (Log out)
+19-10-2025 18:02:44 User data saved to data\users.txt
+19-10-2025 18:02:45 Exit app
+
+
+--- Start New Session: 19-10-2025 18:05:05 ---
+19-10-2025 18:05:05 Redirected console output to data/\app_log.txt
+19-10-2025 18:05:06 User data loaded from data\users.txt
+19-10-2025 18:05:07 Loaded 4 questions from data/questions.docx
+19-10-2025 18:05:11 Logined successfully as root
+19-10-2025 18:05:14 Loaded 4 questions from data/questions.docx
+19-10-2025 18:05:14 Loaded 4 questions from data/questions.docx
+19-10-2025 18:05:14 Loaded 4 questions from data/questions.docx
+19-10-2025 18:05:16 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:05:16 Exam Text - User: root (Log out)
+19-10-2025 18:05:16 User data saved to data\users.txt
+19-10-2025 18:05:24 Exit app
+
+
+--- Start New Session: 19-10-2025 18:06:54 ---
+19-10-2025 18:06:54 Redirected console output to data/\app_log.txt
+19-10-2025 18:06:54 User data loaded from data\users.txt
+19-10-2025 18:06:56 Loaded 4 questions from data/questions.docx
+19-10-2025 18:06:59 Logined successfully as root
+19-10-2025 18:07:01 Loaded 4 questions from data/questions.docx
+19-10-2025 18:07:01 Loaded 4 questions from data/questions.docx
+19-10-2025 18:07:01 Loaded 4 questions from data/questions.docx
+19-10-2025 18:07:05 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:07:05 Exam Text - User: root (Log out)
+19-10-2025 18:07:05 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:07:05 Exam Text - User: root (Log out)
+19-10-2025 18:07:05 User data saved to data\users.txt
+19-10-2025 18:07:09 Logout - User: root (log out)
+19-10-2025 18:07:14 Login - User: giang (logined successfully)
+19-10-2025 18:07:14 Loaded 4 questions from data/questions.docx
+19-10-2025 18:07:16 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:07:16 Exam Text - User: giang (Log out)
+19-10-2025 18:07:16 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:07:16 Exam Text - User: giang (Log out)
+19-10-2025 18:07:16 User data saved to data\users.txt
+19-10-2025 18:07:20 Logined successfully as root
+19-10-2025 18:07:23 Exit app
+
+
+--- Start New Session: 19-10-2025 18:10:47 ---
+19-10-2025 18:10:47 Redirected console output to data/\app_log.txt
+19-10-2025 18:10:47 User data loaded from data\users.txt
+19-10-2025 18:10:48 Loaded 4 questions from data/questions.docx
+19-10-2025 18:10:51 Logined successfully as root
+19-10-2025 18:10:54 Loaded 4 questions from data/questions.docx
+19-10-2025 18:10:54 Loaded 4 questions from data/questions.docx
+19-10-2025 18:10:54 Loaded 4 questions from data/questions.docx
+19-10-2025 18:10:57 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:10:57 Exam Text - User: root (Log out)
+19-10-2025 18:10:57 User data saved to data\users.txt
+19-10-2025 18:11:01 Exit app
+
+
+--- Start New Session: 19-10-2025 18:11:14 ---
+19-10-2025 18:11:14 Redirected console output to data/\app_log.txt
+19-10-2025 18:11:14 User data loaded from data\users.txt
+19-10-2025 18:11:15 Loaded 4 questions from data/questions.docx
+19-10-2025 18:11:19 Logined successfully as root
+19-10-2025 18:11:23 Loaded 4 questions from data/questions.docx
+19-10-2025 18:11:23 Loaded 4 questions from data/questions.docx
+19-10-2025 18:11:23 Loaded 4 questions from data/questions.docx
+19-10-2025 18:11:28 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:11:28 Exam Text - User: root (Log out)
+19-10-2025 18:11:29 Exam Text - User: root PASS! Score: 10.00/10.0
+19-10-2025 18:11:29 Exam Text - User: root (Log out)
+19-10-2025 18:11:29 User data saved to data\users.txt
+19-10-2025 18:11:34 Exit app
+
+
+--- Start New Session: 19-10-2025 18:23:39 ---
+19-10-2025 18:23:39 Redirected console output to data/\app_log.txt
+19-10-2025 18:23:39 User data loaded from data\users.txt
+19-10-2025 18:23:43 Logined successfully as root
+19-10-2025 18:23:47 Loaded 4 questions from data/questions.docx
+19-10-2025 18:23:49 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 18:23:49 Exam Text - User: root (Log out)
+19-10-2025 18:23:49 User data saved to data\users.txt
+19-10-2025 18:23:53 Logout - User: root (log out)
+19-10-2025 18:23:59 Loaded 4 questions from data/questions.docx
+19-10-2025 18:23:59 Login - User: giang (logined successfully)
+19-10-2025 18:24:04 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:24:04 Exam Text - User: giang (Log out)
+19-10-2025 18:24:04 Exam Text - User: giang PASS! Score: 10.00/10.0
+19-10-2025 18:24:04 Exam Text - User: giang (Log out)
+19-10-2025 18:24:04 User data saved to data\users.txt
+19-10-2025 18:24:09 Logined successfully as root
+19-10-2025 18:24:19 User data saved to data\users.txt
+19-10-2025 18:24:19 Unlock - User: giang (unlocked successfully)
+19-10-2025 18:24:22 User data saved to data\users.txt
+19-10-2025 18:24:22 Unlock - User: root (unlocked successfully)
+19-10-2025 18:24:26 Logout - User: root (log out)
+19-10-2025 18:24:29 Exit app
+
+
+--- Start New Session: 19-10-2025 18:26:40 ---
+19-10-2025 18:26:40 Redirected console output to data/\app_log.txt
+19-10-2025 18:26:40 User data loaded from data\users.txt
+19-10-2025 18:26:45 Logined successfully as root
+19-10-2025 18:26:48 Loaded 4 questions from data/questions.docx
+19-10-2025 18:26:52 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:26:52 Exam Text - User: root (Log out)
+19-10-2025 18:26:52 Exam Text - User: root PASS! Score: 10.00/10.0
+19-10-2025 18:26:52 Exam Text - User: root (Log out)
+19-10-2025 18:26:52 User data saved to data\users.txt
+19-10-2025 18:26:53 Exit app
+
+
+--- Start New Session: 19-10-2025 18:28:37 ---
+19-10-2025 18:28:37 Redirected console output to data/\app_log.txt
+19-10-2025 18:28:37 User data loaded from data\users.txt
+19-10-2025 18:28:41 Logined successfully as root
+19-10-2025 18:28:45 Loaded 4 questions from data/questions.docx
+19-10-2025 18:28:48 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:28:48 Exam Text - User: root (Log out)
+19-10-2025 18:28:48 Exam Text - User: root PASS! Score: 7.50/10.0
+19-10-2025 18:28:48 Exam Text - User: root (Log out)
+19-10-2025 18:28:49 User data saved to data\users.txt
+19-10-2025 18:28:51 Exit app
+
+
+--- Start New Session: 19-10-2025 18:30:44 ---
+19-10-2025 18:30:44 Redirected console output to data/\app_log.txt
+19-10-2025 18:30:45 User data loaded from data\users.txt
+19-10-2025 18:30:49 Logined successfully as root
+19-10-2025 18:30:51 Loaded 4 questions from data/questions.docx
+19-10-2025 18:30:55 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:30:55 Exam Text - User: root (Log out)
+19-10-2025 18:30:55 Exam Text - User: root PASS! Score: 5.00/10.0
+19-10-2025 18:30:55 Exam Text - User: root (Log out)
+19-10-2025 18:30:55 User data saved to data\users.txt
+19-10-2025 18:30:56 Logout - User: root (log out)
+19-10-2025 18:30:58 Exit app
+
+
+--- Start New Session: 19-10-2025 18:39:07 ---
+19-10-2025 18:39:07 Redirected console output to data/\app_log.txt
+19-10-2025 18:39:07 User data loaded from data\users.txt
+19-10-2025 18:39:13 Logined successfully as root
+19-10-2025 18:39:24 User data saved to data\users.txt
+19-10-2025 18:39:24 Unlock - User: root (unlocked successfully)
+19-10-2025 18:39:26 Loaded 4 questions from data/questions.docx
+19-10-2025 18:39:29 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:39:29 Exam Text - User: root (Log out)
+19-10-2025 18:39:29 Exam Text - User: root PASS! Score: 5.00/10.0
+19-10-2025 18:39:29 Exam Text - User: root (Log out)
+19-10-2025 18:39:29 User data saved to data\users.txt
+19-10-2025 18:39:33 Exit app
+
+
+--- Start New Session: 19-10-2025 18:43:28 ---
+19-10-2025 18:43:28 Redirected console output to data/\app_log.txt
+19-10-2025 18:43:28 User data loaded from data\users.txt
+19-10-2025 18:43:30 Exit app
+
+
+--- Start New Session: 19-10-2025 18:43:56 ---
+19-10-2025 18:43:56 Redirected console output to data/\app_log.txt
+19-10-2025 18:43:56 User data loaded from data\users.txt
+19-10-2025 18:44:00 Logined successfully as root
+19-10-2025 18:44:03 Loaded 4 questions from data/questions.docx
+19-10-2025 18:44:07 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 18:44:07 Exam Text - User: root (Log out)
+19-10-2025 18:44:07 Exam Text - User: root PASS! Score: 5.00/10.0
+19-10-2025 18:44:07 Exam Text - User: root (Log out)
+19-10-2025 18:44:07 User data saved to data\users.txt
+19-10-2025 18:44:13 User data saved to data\users.txt
+19-10-2025 18:44:13 Unlock - User: root (unlocked successfully)
+19-10-2025 18:44:15 Exit app
+
+
+--- Start New Session: 19-10-2025 18:52:24 ---
+19-10-2025 18:52:24 Redirected console output to data/\app_log.txt
+19-10-2025 18:52:24 User data loaded from data\users.txt
+19-10-2025 18:52:28 Logined successfully as root
+19-10-2025 18:52:31 Loaded 4 questions from data/questions.docx
+19-10-2025 18:52:34 Exam Text - User: root PASS! Score: 5.00/10.0
+19-10-2025 18:52:34 Exam Text - User: root (Log out)
+19-10-2025 18:52:34 User data saved to data\users.txt
+19-10-2025 18:52:38 Logout - User: root (log out)
+19-10-2025 18:52:45 Loaded 4 questions from data/questions.docx
+19-10-2025 18:52:45 Login - User: giang (logined successfully)
+19-10-2025 18:52:49 Exam Text - User: giang PASS! Score: 10.00/10.0
+19-10-2025 18:52:49 Exam Text - User: giang (Log out)
+19-10-2025 18:52:49 User data saved to data\users.txt
+19-10-2025 18:52:53 Logined successfully as root
+19-10-2025 18:53:00 User data saved to data\users.txt
+19-10-2025 18:53:01 Unlock - User: root (unlocked successfully)
+19-10-2025 18:53:04 User data saved to data\users.txt
+19-10-2025 18:53:05 Unlock - User: giang (unlocked successfully)
+19-10-2025 18:53:07 Logout - User: root (log out)
+19-10-2025 18:53:12 Exit app

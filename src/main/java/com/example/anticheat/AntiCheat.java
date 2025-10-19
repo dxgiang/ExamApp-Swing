@@ -8,48 +8,57 @@ import static java.awt.Toolkit.getDefaultToolkit;
 
 import javax.swing.JOptionPane;
 
-import main.java.com.example.exam.ExamTest;
+import main.java.com.example.exam.ExamTestLogic;
+import main.java.com.example.exam.ExamTestUI;
 
 public class AntiCheat implements WindowFocusListener, KeyListener {
-    private ExamTest examTest;
+    private ExamTestLogic examTestLogic;
+    private ExamTestUI examTestUI;
     private boolean windowsPressed = false;
     private boolean escapePressed = false;
     private boolean prtScrPressed = false;
     private volatile boolean cheatingApplied = false;
 
-    public AntiCheat(ExamTest examTest) {
-        this.examTest = examTest;
+    public AntiCheat(ExamTestUI examTestUI, ExamTestLogic examTestLogic) {
+        this.examTestUI = examTestUI;
+        this.examTestLogic = examTestLogic;
     }
 
     public boolean checkSize() {
-        return examTest.getWidth() != getDefaultToolkit().getScreenSize().width ||
-                examTest.getHeight() != getDefaultToolkit().getScreenSize().height;
+        return examTestUI.getWidth() != getDefaultToolkit().getScreenSize().width ||
+                examTestUI.getHeight() != getDefaultToolkit().getScreenSize().height;
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (examTest.getStatus() == null && !cheatingApplied) {
-            if (e.getKeyCode() == KeyEvent.VK_WINDOWS) {
+        // Luôn kiểm tra trạng thái đang thi và chưa bị phạt
+        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
+            int keyCode = e.getKeyCode();
+            
+            // Đoạn 1: Cập nhật cờ
+            if (keyCode == KeyEvent.VK_WINDOWS) {
                 windowsPressed = true;
-            } else if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            } else if (keyCode == KeyEvent.VK_ESCAPE) {
                 escapePressed = true;
-            } else if (e.getKeyCode() == KeyEvent.VK_PRINTSCREEN) {
+            } else if (keyCode == KeyEvent.VK_PRINTSCREEN) {
                 prtScrPressed = true;
+            }
+
+            // Đoạn 2: Áp dụng hình phạt NGAY LẬP TỨC (giữ nguyên logic gốc của bạn)
+            if (windowsPressed) {
+                enforceCheatPenalty("Windows key detected");
+            } else if (escapePressed) {
+                enforceCheatPenalty("ESC key detected");
+            } else if (prtScrPressed) {
                 enforceCheatPenalty("Print Screen key detected");
             }
-        }
-        if (windowsPressed == true) {
-            enforceCheatPenalty("Windows key detected");
-        } else if (escapePressed == true) {
-            enforceCheatPenalty("ESC key detected");
-        } else if (prtScrPressed == true) {
-            enforceCheatPenalty("Print Screen key detected");
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (examTest.getStatus() == null) {
+        // Chỉ reset cờ khi đang thi và chưa bị phạt
+        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_WINDOWS) {
                 windowsPressed = false;
@@ -71,7 +80,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void windowLostFocus(WindowEvent e) {
-        if (examTest.getStatus() == null && !cheatingApplied) {
+        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) {
             if (windowsPressed) {
                 enforceCheatPenalty("Windows key detected");
             } else if (escapePressed) {
@@ -85,18 +94,19 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     }
 
     private void enforceCheatPenalty(String reason) {
-        if (examTest.getStatus() == null) { // Double check status
-            JOptionPane.showMessageDialog(examTest, "You're caught cheating on the exam! Reason: " + reason);
+        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { // Double check status
+            cheatingApplied = true;
+            JOptionPane.showMessageDialog(examTestUI, "You're caught cheating on the exam! Reason: " + reason);
             System.out.println(
-                    examTest.upTime() + " " + examTest.getTitle() + " CHEAT ON THE EXAM!! Reason: " + reason);
-            System.out.println(examTest.upTime() + " " + examTest.getTitle() + " (Log out)");
+                    examTestLogic.upTime() + " " + examTestUI.getTitle() + " CHEAT ON THE EXAM!! Reason: " + reason);
+            System.out.println(examTestLogic.upTime() + " " + examTestUI.getTitle() + " (Log out)");
 
             // Set score to 0 and status to CHEAT
-            examTest.setScore(0);
-            examTest.setStatus("CHEAT");
+            examTestLogic.setScore(0);
+            examTestLogic.setStatus("CHEAT");
 
             // Close the application
-            examTest.dispose();
+            examTestUI.dispose();
         }
     }
 }
