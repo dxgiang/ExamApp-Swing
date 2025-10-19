@@ -3,8 +3,6 @@ package main.java.com.example.exam;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowFocusListener;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -22,6 +20,8 @@ import javax.swing.border.LineBorder;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+
+import main.java.com.example.anticheat.AntiCheat;
 
 public class ExamTest extends JFrame {
 	// Attributes
@@ -55,7 +55,7 @@ public class ExamTest extends JFrame {
 				"                                                       Press the button to start the test");
 
 		labelStart.setFont(labelStart.getFont().deriveFont(25f));
-		labelNote = new JLabel("Note: Do not minimize or switch to another window during the test.");
+		labelNote = new JLabel("Note: Using the MOUSE to complete the test. Do not minimize or switch to another window during the test.");
 		labelNote.setHorizontalAlignment(JLabel.CENTER);
 		labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
 		labelNote.setFont(labelNote.getFont().deriveFont(25f));
@@ -107,26 +107,11 @@ public class ExamTest extends JFrame {
 		ans2.addActionListener(e -> processQuestion(2));
 		ans3.addActionListener(e -> processQuestion(3));
 		ans4.addActionListener(e -> processQuestion(4));
-		addWindowFocusListener(new WindowFocusListener() {
-			@Override
-			public void windowLostFocus(WindowEvent e) {
-				if (index < listQuestion.size() && status == null) {
-					JOptionPane.showMessageDialog(ExamTest.this, "You're cheat on the exam!");
-					System.out.println(
-							upTime() + " " + getTitle() + " CHEAT ON THE EXAM!!(ALT + TAB, MINIMIZE or CLICK OUTSIDE)");
-					System.out.println(upTime() + " " + getTitle() + " (Log out)");
-					// Close the application
-					ExamTest.this.dispose();
-					// Set score to 0
-					score = 0;
-					status = "CHEAT";
-				}
-			}
-
-			@Override
-			public void windowGainedFocus(WindowEvent e) {
-			}
-		});
+		AntiCheat antiCheat = new AntiCheat(this);
+		addKeyListener(antiCheat);
+		addWindowFocusListener(antiCheat);
+		setFocusable(true);
+		requestFocusInWindow();
 	}
 
 	public String getUserName() {

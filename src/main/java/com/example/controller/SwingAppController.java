@@ -34,38 +34,41 @@ public class SwingAppController implements ActionListener {
     }
 
     private void addListeners() {
-        ui.register.addActionListener(this);
-        ui.loginInReG.addActionListener(this);
-        ui.login.addActionListener(this);
+        ui.menuOption.addActionListener(this);
+        ui.menuUser.addActionListener(this);
+        ui.menuHelp.addActionListener(this);
+        ui.registerButton.addActionListener(this);
+        ui.loginInReGButton.addActionListener(this);
+        ui.loginButton.addActionListener(this);
         ui.pass.addActionListener(this);
         ui.user.addActionListener(this);
-        ui.createUser.addActionListener(this);
+        ui.createUserButton.addActionListener(this);
         ui.regpass.addActionListener(this);
         ui.reguser.addActionListener(this);
         ui.repass.addActionListener(this);
-        ui.printList.addActionListener(this);
-        ui.addUser.addActionListener(this);
-        ui.delUser.addActionListener(this);
-        ui.showApp.addActionListener(this);
-        ui.unlock.addActionListener(this);
-        ui.lock.addActionListener(this);
-        ui.logout.addActionListener(this);
+        ui.printListButton.addActionListener(this);
+        ui.addUserButton.addActionListener(this);
+        ui.delUserButton.addActionListener(this);
+        ui.showAppButton.addActionListener(this);
+        ui.unlockButton.addActionListener(this);
+        ui.lockButton.addActionListener(this);
+        ui.logoutButton.addActionListener(this);
 
         ui.itemLogin.addActionListener(e -> handleMenuItemLogin());
         ui.itemRegister.addActionListener(e -> handleMenuItemRegister());
         ui.itemExit.addActionListener(e -> handleMenuItemExit());
         ui.itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(ui, "Developed by river0077."));
-        ui.itemPrintList.addActionListener(e -> ui.printList.doClick());
-        ui.itemAddUser.addActionListener(e -> ui.addUser.doClick());
-        ui.itemDelUser.addActionListener(e -> ui.delUser.doClick());
-        ui.itemShowApp.addActionListener(e -> ui.showApp.doClick());
-        ui.itemUnlock.addActionListener(e -> ui.unlock.doClick());
-        ui.itemLock.addActionListener(e -> ui.lock.doClick());
-        ui.itemLogout.addActionListener(e -> ui.logout.doClick());
+        ui.itemPrintList.addActionListener(e -> ui.printListButton.doClick());
+        ui.itemAddUser.addActionListener(e -> ui.addUserButton.doClick());
+        ui.itemDelUser.addActionListener(e -> ui.delUserButton.doClick());
+        ui.itemShowApp.addActionListener(e -> ui.showAppButton.doClick());
+        ui.itemUnlock.addActionListener(e -> ui.unlockButton.doClick());
+        ui.itemLock.addActionListener(e -> ui.lockButton.doClick());
+        ui.itemLogout.addActionListener(e -> ui.logoutButton.doClick());
 
-        ui.hidePass.addActionListener(e -> togglePasswordVisibility(ui.pass, ui.hidePass));
-        ui.hideRePass.addActionListener(e -> togglePasswordVisibility(ui.repass, ui.hideRePass));
-        ui.hideRegPass.addActionListener(e -> togglePasswordVisibility(ui.regpass, ui.hideRegPass));
+        ui.hidePassButton.addActionListener(e -> togglePasswordVisibility(ui.pass, ui.hidePassButton));
+        ui.hideRePassButton.addActionListener(e -> togglePasswordVisibility(ui.repass, ui.hideRePassButton));
+        ui.hideRegPassButton.addActionListener(e -> togglePasswordVisibility(ui.regpass, ui.hideRegPassButton));
 
         ui.addWindowListener(new WindowAdapter() {
             @Override
@@ -80,27 +83,27 @@ public class SwingAppController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == ui.register) {
+        if (e.getSource() == ui.registerButton) {
             handleRegisterTransition();
-        } else if (e.getSource() == ui.loginInReG) {
+        } else if (e.getSource() == ui.loginInReGButton) {
             handleLoginTransition();
-        } else if (e.getSource() == ui.login || e.getSource() == ui.pass || e.getSource() == ui.user) {
+        } else if (e.getSource() == ui.loginButton || e.getSource() == ui.pass || e.getSource() == ui.user) {
             handleLoginAttempt();
-        } else if (e.getSource() == ui.createUser || e.getSource() == ui.regpass || e.getSource() == ui.reguser || e.getSource() == ui.repass) {
+        } else if (e.getSource() == ui.createUserButton || e.getSource() == ui.regpass || e.getSource() == ui.reguser || e.getSource() == ui.repass) {
             handleCreateUser();
-        } else if (e.getSource() == ui.printList) {
+        } else if (e.getSource() == ui.printListButton) {
             handlePrintList();
-        } else if (e.getSource() == ui.addUser) {
+        } else if (e.getSource() == ui.addUserButton) {
             handleAddUser();
-        } else if (e.getSource() == ui.delUser) {
+        } else if (e.getSource() == ui.delUserButton) {
             handleDeleteUser();
-        } else if (e.getSource() == ui.showApp) {
+        } else if (e.getSource() == ui.showAppButton) {
             handleShowApp();
-        } else if (e.getSource() == ui.logout) {
+        } else if (e.getSource() == ui.logoutButton) {
             handleLogout();
-        } else if (e.getSource() == ui.unlock) {
+        } else if (e.getSource() == ui.unlockButton) {
             handleUnlockUser();
-        } else if (e.getSource() == ui.lock) {
+        } else if (e.getSource() == ui.lockButton) {
             handleLockUser();
         }
     }
@@ -108,7 +111,7 @@ public class SwingAppController implements ActionListener {
 
     private void handleMenuItemLogin() {
         if (ui.isRoot) {
-            ui.logout.doClick();
+            ui.logoutButton.doClick();
         } else {
             handleLoginTransition();
             clearManagementMenu();
@@ -120,7 +123,7 @@ public class SwingAppController implements ActionListener {
 
     private void handleMenuItemRegister() {
         if (ui.isRoot) {
-            ui.logout.doClick();
+            ui.logoutButton.doClick();
         } else {
             handleRegisterTransition();
             clearManagementMenu();
@@ -213,7 +216,7 @@ public class SwingAppController implements ActionListener {
         
         ui.setTitle("Management");
         ui.getContentPane().add(ui.panelMN);
-        ui.printList.doClick();
+        ui.printListButton.doClick();
         ui.revalidate();
         ui.repaint();
     }
@@ -341,7 +344,7 @@ public class SwingAppController implements ActionListener {
     }
 
     private void handlePrintList() {
-        ui.printList.setText("Reload");
+        ui.printListButton.setText("Reload");
         ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif"));
         ui.labelLoading.setIcon(iconloading); 
         ui.panelLoading.setVisible(true);
@@ -394,14 +397,14 @@ public class SwingAppController implements ActionListener {
         }
         
         loginsystem.addUser(new User<String, String>(username, password, 0.0, null), true);
-        ui.printList.doClick();
+        ui.printListButton.doClick();
     }
 
     private void handleDeleteUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username to delete:");
         if (username != null && !username.trim().isEmpty()) {
             loginsystem.deleteUser(username);
-            ui.printList.doClick();
+            ui.printListButton.doClick();
         } else {
             JOptionPane.showMessageDialog(ui, "Invalid username.");
         }
@@ -488,7 +491,7 @@ public class SwingAppController implements ActionListener {
                     loginsystem.addUser(u, false);
                     JOptionPane.showMessageDialog(ui, "UNLOCKED SUCCESSFULLY! Score/Status reset.");
                     System.out.println(upTime() + " Unlock - User: " + username + " (unlocked successfully)");
-                    ui.printList.doClick();
+                    ui.printListButton.doClick();
                     return;
                 }
             }
@@ -520,7 +523,7 @@ public class SwingAppController implements ActionListener {
                     loginsystem.addUser(u, false);
                     JOptionPane.showMessageDialog(ui, "LOCKED SUCCESSFULLY! Score/Status reset.");
                     System.out.println(upTime() + " Lock - User: " + username + " (locked successfully)");
-                    ui.printList.doClick();
+                    ui.printListButton.doClick();
                     return;
                 }
             }

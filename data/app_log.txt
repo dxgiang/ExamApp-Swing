@@ -246,3 +246,248 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 13-10-2025 18:56:54 Unlock - User: root (unlocked successfully)
 13-10-2025 18:56:57 Logout - User: root (log out)
 13-10-2025 18:57:00 Exit app
+
+
+--- Start New Session: 19-10-2025 10:03:36 ---
+19-10-2025 10:03:36 Redirected console output to data/\app_log.txt
+19-10-2025 10:03:37 User data loaded from data\users.txt
+19-10-2025 10:03:43 Exit app
+
+
+--- Start New Session: 19-10-2025 10:04:41 ---
+19-10-2025 10:04:41 Redirected console output to data/\app_log.txt
+19-10-2025 10:04:41 User data loaded from data\users.txt
+19-10-2025 10:04:46 Exit app
+
+
+--- Start New Session: 19-10-2025 10:06:42 ---
+19-10-2025 10:06:42 Redirected console output to data/\app_log.txt
+19-10-2025 10:06:42 User data loaded from data\users.txt
+19-10-2025 10:06:45 Exit app
+
+
+--- Start New Session: 19-10-2025 10:07:07 ---
+19-10-2025 10:07:07 Redirected console output to data/\app_log.txt
+19-10-2025 10:07:07 User data loaded from data\users.txt
+19-10-2025 10:07:26 Logined successfully as root
+19-10-2025 10:07:33 Logout - User: root (log out)
+19-10-2025 10:08:00 Exit app
+
+
+--- Start New Session: 19-10-2025 10:08:18 ---
+19-10-2025 10:08:18 Redirected console output to data/\app_log.txt
+19-10-2025 10:08:18 User data loaded from data\users.txt
+19-10-2025 10:08:34 Exit app
+
+
+--- Start New Session: 19-10-2025 10:10:31 ---
+19-10-2025 10:10:31 Redirected console output to data/\app_log.txt
+19-10-2025 10:10:31 User data loaded from data\users.txt
+19-10-2025 10:11:11 Exit app
+
+
+--- Start New Session: 19-10-2025 10:12:10 ---
+19-10-2025 10:12:10 Redirected console output to data/\app_log.txt
+19-10-2025 10:12:10 User data loaded from data\users.txt
+19-10-2025 10:12:18 Exit app
+
+
+--- Start New Session: 19-10-2025 10:14:06 ---
+19-10-2025 10:14:06 Redirected console output to data/\app_log.txt
+19-10-2025 10:14:07 User data loaded from data\users.txt
+Exception in thread "main" java.lang.Error: setAccelerator() is not defined for JMenu.  Use setMnemonic() instead.
+	at java.desktop/javax.swing.JMenu.setAccelerator(Unknown Source)
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:296)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:61)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 19-10-2025 10:14:28 ---
+19-10-2025 10:14:28 Redirected console output to data/\app_log.txt
+19-10-2025 10:14:29 User data loaded from data\users.txt
+Exception in thread "main" java.lang.Error: setAccelerator() is not defined for JMenu.  Use setMnemonic() instead.
+	at java.desktop/javax.swing.JMenu.setAccelerator(Unknown Source)
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:296)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:61)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 19-10-2025 10:21:24 ---
+19-10-2025 10:21:24 Redirected console output to data/\app_log.txt
+19-10-2025 10:21:24 User data loaded from data\users.txt
+19-10-2025 10:21:34 Exit app
+
+
+--- Start New Session: 19-10-2025 10:21:41 ---
+19-10-2025 10:21:41 Redirected console output to data/\app_log.txt
+19-10-2025 10:21:41 User data loaded from data\users.txt
+19-10-2025 10:21:44 Exit app
+
+
+--- Start New Session: 19-10-2025 10:22:28 ---
+19-10-2025 10:22:28 Redirected console output to data/\app_log.txt
+19-10-2025 10:22:28 User data loaded from data\users.txt
+19-10-2025 10:22:39 Exit app
+
+
+--- Start New Session: 19-10-2025 10:27:30 ---
+19-10-2025 10:27:30 Redirected console output to data/\app_log.txt
+19-10-2025 10:27:30 User data loaded from data\users.txt
+19-10-2025 10:27:40 Exit app
+
+
+--- Start New Session: 19-10-2025 10:29:23 ---
+19-10-2025 10:29:23 Redirected console output to data/\app_log.txt
+19-10-2025 10:29:24 User data loaded from data\users.txt
+19-10-2025 10:30:02 Exit app
+
+
+--- Start New Session: 19-10-2025 11:52:02 ---
+19-10-2025 11:52:02 Redirected console output to data/\app_log.txt
+19-10-2025 11:52:02 User data loaded from data\users.txt
+19-10-2025 11:52:14 Logined successfully as root
+19-10-2025 11:52:27 Loaded 4 questions from data/questions.docx
+19-10-2025 11:52:31 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 11:52:31 Exam Text - User: root (Log out)
+19-10-2025 11:52:32 User data saved to data\users.txt
+19-10-2025 11:52:57 Logout - User: root (log out)
+19-10-2025 11:53:05 Login - User: giang (logined successfully)
+19-10-2025 11:53:05 Loaded 4 questions from data/questions.docx
+19-10-2025 11:53:12 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 11:53:12 Exam Text - User: giang (Log out)
+19-10-2025 11:53:12 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 11:53:12 Exam Text - User: giang (Log out)
+19-10-2025 11:53:12 User data saved to data\users.txt
+19-10-2025 11:53:29 Exit app
+
+
+--- Start New Session: 19-10-2025 12:03:42 ---
+19-10-2025 12:03:42 Redirected console output to data/\app_log.txt
+19-10-2025 12:03:42 User data loaded from data\users.txt
+19-10-2025 12:03:47 Logined successfully as root
+19-10-2025 12:03:52 User data saved to data\users.txt
+19-10-2025 12:03:53 Unlock - User: giang (unlocked successfully)
+19-10-2025 12:03:56 User data saved to data\users.txt
+19-10-2025 12:03:57 Unlock - User: root (unlocked successfully)
+19-10-2025 12:03:59 Logout - User: root (log out)
+19-10-2025 12:04:05 Login - User: giang (logined successfully)
+19-10-2025 12:04:06 Loaded 4 questions from data/questions.docx
+19-10-2025 12:04:08 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:04:08 Exam Text - User: giang (Log out)
+19-10-2025 12:04:08 User data saved to data\users.txt
+19-10-2025 12:04:15 Logined successfully as root
+19-10-2025 12:04:22 User data saved to data\users.txt
+19-10-2025 12:04:22 Unlock - User: giang (unlocked successfully)
+19-10-2025 12:04:24 Logout - User: root (log out)
+19-10-2025 12:04:30 Login - User: giang (logined successfully)
+19-10-2025 12:04:30 Loaded 4 questions from data/questions.docx
+19-10-2025 12:04:35 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:04:35 Exam Text - User: giang (Log out)
+19-10-2025 12:04:35 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 12:04:35 Exam Text - User: giang (Log out)
+19-10-2025 12:04:35 User data saved to data\users.txt
+19-10-2025 12:04:38 Exit app
+
+
+--- Start New Session: 19-10-2025 12:06:30 ---
+19-10-2025 12:06:30 Redirected console output to data/\app_log.txt
+19-10-2025 12:06:31 User data loaded from data\users.txt
+19-10-2025 12:06:34 Logined successfully as root
+19-10-2025 12:06:39 User data saved to data\users.txt
+19-10-2025 12:06:40 Unlock - User: giang (unlocked successfully)
+19-10-2025 12:06:42 Logout - User: root (log out)
+19-10-2025 12:06:48 Login - User: giang (logined successfully)
+19-10-2025 12:06:49 Loaded 4 questions from data/questions.docx
+19-10-2025 12:06:52 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 12:06:52 Exam Text - User: giang (Log out)
+19-10-2025 12:06:53 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 12:06:53 Exam Text - User: giang (Log out)
+19-10-2025 12:06:53 User data saved to data\users.txt
+19-10-2025 12:06:57 Login - User: river (logined successfully)
+19-10-2025 12:06:57 Loaded 4 questions from data/questions.docx
+19-10-2025 12:07:00 Exam Text - User: river CHEAT ON THE EXAM!! Reason: ESC key detected
+19-10-2025 12:07:00 Exam Text - User: river (Log out)
+19-10-2025 12:07:00 Exam Text - User: river CHEAT ON THE EXAM!! Reason: ESC key detected
+19-10-2025 12:07:00 Exam Text - User: river (Log out)
+19-10-2025 12:07:00 User data saved to data\users.txt
+19-10-2025 12:07:05 Logined successfully as root
+19-10-2025 12:07:37 User data saved to data\users.txt
+19-10-2025 12:07:37 Unlock - User: giang (unlocked successfully)
+19-10-2025 12:07:45 User data saved to data\users.txt
+19-10-2025 12:07:45 Unlock - User: river (unlocked successfully)
+19-10-2025 12:07:49 Logout - User: root (log out)
+19-10-2025 12:07:55 Exit app
+
+
+--- Start New Session: 19-10-2025 12:13:45 ---
+19-10-2025 12:13:45 Redirected console output to data/\app_log.txt
+19-10-2025 12:13:45 User data loaded from data\users.txt
+19-10-2025 12:13:49 Login - User: root Fail! (wrong password 1/3)
+19-10-2025 12:13:53 Logined successfully as root
+19-10-2025 12:13:59 Loaded 4 questions from data/questions.docx
+19-10-2025 12:14:02 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:14:02 Exam Text - User: root (Log out)
+19-10-2025 12:14:02 User data saved to data\users.txt
+19-10-2025 12:14:04 Loaded 4 questions from data/questions.docx
+19-10-2025 12:14:06 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 12:14:06 Exam Text - User: root (Log out)
+19-10-2025 12:14:06 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+19-10-2025 12:14:06 Exam Text - User: root (Log out)
+19-10-2025 12:14:06 User data saved to data\users.txt
+19-10-2025 12:14:08 Loaded 4 questions from data/questions.docx
+19-10-2025 12:14:10 Exam Text - User: root CHEAT ON THE EXAM!! Reason: ESC key detected
+19-10-2025 12:14:10 Exam Text - User: root (Log out)
+19-10-2025 12:14:10 Exam Text - User: root CHEAT ON THE EXAM!! Reason: ESC key detected
+19-10-2025 12:14:10 Exam Text - User: root (Log out)
+19-10-2025 12:14:10 User data saved to data\users.txt
+19-10-2025 12:14:15 Loaded 4 questions from data/questions.docx
+19-10-2025 12:14:21 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:14:21 Exam Text - User: root (Log out)
+19-10-2025 12:14:21 User data saved to data\users.txt
+19-10-2025 12:14:22 Exit app
+
+
+--- Start New Session: 19-10-2025 12:16:27 ---
+19-10-2025 12:16:27 Redirected console output to data/\app_log.txt
+19-10-2025 12:16:27 User data loaded from data\users.txt
+19-10-2025 12:16:32 Logined successfully as root
+19-10-2025 12:16:35 Loaded 4 questions from data/questions.docx
+19-10-2025 12:16:40 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:16:40 Exam Text - User: root (Log out)
+19-10-2025 12:16:40 User data saved to data\users.txt
+19-10-2025 12:16:53 Exit app
+
+
+--- Start New Session: 19-10-2025 12:17:06 ---
+19-10-2025 12:17:06 Redirected console output to data/\app_log.txt
+19-10-2025 12:17:06 User data loaded from data\users.txt
+19-10-2025 12:17:10 Logined successfully as root
+19-10-2025 12:17:13 Loaded 4 questions from data/questions.docx
+19-10-2025 12:17:17 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:17:17 Exam Text - User: root (Log out)
+19-10-2025 12:17:17 User data saved to data\users.txt
+19-10-2025 12:17:25 Exit app
+
+
+--- Start New Session: 19-10-2025 12:17:37 ---
+19-10-2025 12:17:37 Redirected console output to data/\app_log.txt
+19-10-2025 12:17:37 User data loaded from data\users.txt
+19-10-2025 12:17:41 Logined successfully as root
+19-10-2025 12:17:44 Loaded 4 questions from data/questions.docx
+19-10-2025 12:17:49 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:17:49 Exam Text - User: root (Log out)
+19-10-2025 12:17:49 User data saved to data\users.txt
+19-10-2025 12:17:53 Exit app
+
+
+--- Start New Session: 19-10-2025 12:19:15 ---
+19-10-2025 12:19:15 Redirected console output to data/\app_log.txt
+19-10-2025 12:19:16 User data loaded from data\users.txt
+19-10-2025 12:19:20 Logined successfully as root
+19-10-2025 12:19:23 Loaded 4 questions from data/questions.docx
+19-10-2025 12:19:26 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+19-10-2025 12:19:26 Exam Text - User: root (Log out)
+19-10-2025 12:19:26 User data saved to data\users.txt
+19-10-2025 12:19:28 Exit app
