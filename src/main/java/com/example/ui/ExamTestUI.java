@@ -51,7 +51,7 @@ public class ExamTestUI extends JFrame {
         // Panel Start
         panelStart = new JPanel();
         labelStart = new JLabel(
-                "                                                       Press the button to start the test");
+                "<                                                       >Press the button to start the test");
         labelStart.setFont(labelStart.getFont().deriveFont(25f));
         labelNote = new JLabel("Note: Using the MOUSE to complete the test. Do not minimize or switch to another window during the test.");
         labelNote.setHorizontalAlignment(JLabel.CENTER);
@@ -134,13 +134,12 @@ public class ExamTestUI extends JFrame {
     }
 
     public void showResult(double score) {
-        this.completed = true; // Đánh dấu đã hoàn thành bài thi
+        this.completed = true;
         JOptionPane.showMessageDialog(this, "You're " + String.format("%.2f", score) + "/10.0.");
         
         String status = (score >= 5) ? "PASS" : "FAIL";
-        logic.setStatus(status); // Cập nhật status vào logic
-        
-        // Log kết quả ra console (dùng upTime từ UI)
+        logic.setStatus(status);
+
         String logTime = upTime();
         String title = getTitle();
         System.out.println(logTime + " " + title + " " + status + "! Score: " + String.format("%.2f", score) + "/10.0");
@@ -149,12 +148,10 @@ public class ExamTestUI extends JFrame {
         this.dispose();
     }
     
-    // Phương thức hiển thị lỗi đọc file
     public void showFileError(String filePath, String message, String dialogTitle) {
         JOptionPane.showMessageDialog(this, message, dialogTitle, JOptionPane.ERROR_MESSAGE);
     }
     
-    // Phương thức lấy thời gian (giữ nguyên logic cũ)
     public String upTime() {
         LocalDateTime dt = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

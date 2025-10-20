@@ -160,4 +160,22 @@ public class DataProcess extends JFrame {
 		list.clear();
 		addUser(new User<String, String>("root", "admin", 0.0, null), false);
 	}
+
+    public boolean isAccountLocked(String username) {
+		for (User<String, String> user : list) {
+			if (user.getUser().equals(username)) {
+				return "LOCKED".equals(user.getStatus()) || "CHEAT".equals(user.getStatus());
+			}
+		}
+		return false;
+    }
+
+    public boolean isAccountCompleted(String username) {
+		for (User<String, String> user : list) {
+			if (user.getUser().equals(username)) {
+				return "PASS".equals(user.getStatus()) || "FAIL".equals(user.getStatus());
+			}
+		}
+		return false;
+    }
 }

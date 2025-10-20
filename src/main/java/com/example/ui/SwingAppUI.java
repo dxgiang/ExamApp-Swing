@@ -30,6 +30,7 @@ import main.java.com.example.auth.DataProcess;
 public class SwingAppUI extends JFrame {
     private static final long serialVersionUID = 1L;
     private static final Color BACKGROUND_COLOR = new Color(0x283C4F);
+    private static final String COPYRIGHT = "© • Exam App 2025 - Copyright by dxgiang • ©";
     public JPanel loginPanel, registerPanel, panelMN, panelM3, panelLoading;
     public JTextField user, reguser;
     public JPasswordField pass, regpass, repass;
@@ -94,7 +95,7 @@ public class SwingAppUI extends JFrame {
 
         hidePassButton = new JButton("⦿");
         hidePassButton.setBackground(BACKGROUND_COLOR);
-        hidePassButton.setFont(pass.getFont().deriveFont(11f));
+        hidePassButton.setFont(pass.getFont().deriveFont(10f));
 
         JPanel panel3 = new JPanel();
         panel3.add(pass);
@@ -117,7 +118,8 @@ public class SwingAppUI extends JFrame {
         panel4.add(loginButton);
         panel4.setBackground(Color.white);
 
-        labelNote = new JLabel("Note: If you enter wrong password 3 times, application will freeze few seconds!");
+        labelNote = new JLabel(
+                "<html>Note: If you enter wrong password 3 times,<br><div style='text-align:center;'>application will freeze few seconds!</div></html>");
         labelNote.setForeground(Color.red);
         labelNote.setFont(new Font("Serif", 0, 13));
 
@@ -125,7 +127,7 @@ public class SwingAppUI extends JFrame {
         panel0.add(labelNote);
         panel0.setBackground(Color.white);
 
-        labelCopyright = new JLabel("© • Exam App 2025 - Copyright by river0077 • ©");
+        labelCopyright = new JLabel(COPYRIGHT);
         labelCopyright.setFont(new Font("Serif", 0, 13));
         labelCopyright.setForeground(Color.black);
 
@@ -168,7 +170,7 @@ public class SwingAppUI extends JFrame {
 
         hideRegPassButton = new JButton("⦿");
         hideRegPassButton.setBackground(Color.white);
-        hideRegPassButton.setFont(regpass.getFont().deriveFont(9f));
+        hideRegPassButton.setFont(regpass.getFont().deriveFont(10f));
 
         JPanel panel7 = new JPanel();
         panel7.add(regpass);
@@ -205,7 +207,7 @@ public class SwingAppUI extends JFrame {
         panel9.setBackground(Color.white);
 
         JPanel panel10 = new JPanel();
-        labelCopyright = new JLabel("© • Exam App 2025 - Copyright by river0077 • ©");
+        labelCopyright = new JLabel(COPYRIGHT);
         labelCopyright.setFont(new Font("Serif", 0, 13));
         panel10.add(labelCopyright);
         panel10.setBackground(Color.white);
@@ -293,7 +295,7 @@ public class SwingAppUI extends JFrame {
         panelLoading.add(labelLoading, JLabel.CENTER);
 
         JPanel panel001 = new JPanel();
-        labelCopyright = new JLabel("© • Copyright by river0077");
+        labelCopyright = new JLabel(COPYRIGHT);
         panel001.add(labelCopyright);
         panel001.setBackground(Color.yellow);
 

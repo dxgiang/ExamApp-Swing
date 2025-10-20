@@ -16,12 +16,8 @@ public class SwingApp {
         }
         
         DataProcess loginSystem = new DataProcess();
-
-        // Khởi tạo giao diện (View)
         SwingAppUI ui = new SwingAppUI(loginSystem);
-
         new SwingAppController(ui, loginSystem);
-        
         ui.setVisible(true);
     }
 }

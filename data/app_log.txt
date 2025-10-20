@@ -1215,3 +1215,268 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.
 20-10-2025 21:47:38 Redirected console output to data/\app_log.txt
 20-10-2025 21:47:38 User data loaded from data\users.txt
 20-10-2025 21:47:53 Exit app
+
+
+--- Start New Session: 20-10-2025 21:56:42 ---
+20-10-2025 21:56:42 Redirected console output to data/\app_log.txt
+20-10-2025 21:56:42 User data loaded from data\users.txt
+20-10-2025 21:56:50 Loaded 4 questions from data/questions.docx
+20-10-2025 21:56:50 Login - User: giang (logined successfully)
+20-10-2025 21:56:55 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+20-10-2025 21:56:55 Exam Text - User: giang (Log out)
+20-10-2025 21:56:55 User data saved to data\users.txt
+20-10-2025 21:57:03 Logined successfully as root
+20-10-2025 21:57:11 User data saved to data\users.txt
+20-10-2025 21:57:11 Unlock - User: giang (unlocked successfully)
+20-10-2025 21:57:33 Logout - User: root (log out)
+20-10-2025 21:57:36 Exit app
+
+
+--- Start New Session: 20-10-2025 21:59:12 ---
+20-10-2025 21:59:12 Redirected console output to data/\app_log.txt
+20-10-2025 21:59:12 User data loaded from data\users.txt
+20-10-2025 21:59:18 Exit app
+
+
+--- Start New Session: 20-10-2025 21:59:53 ---
+20-10-2025 21:59:53 Redirected console output to data/\app_log.txt
+20-10-2025 21:59:53 User data loaded from data\users.txt
+20-10-2025 22:00:58 Exit app
+
+
+--- Start New Session: 20-10-2025 22:01:15 ---
+20-10-2025 22:01:15 Redirected console output to data/\app_log.txt
+20-10-2025 22:01:15 User data loaded from data\users.txt
+20-10-2025 22:02:06 Exit app
+
+
+--- Start New Session: 20-10-2025 22:10:18 ---
+20-10-2025 22:10:18 Redirected console output to data/\app_log.txt
+20-10-2025 22:10:18 User data loaded from data\users.txt
+20-10-2025 22:10:21 Exit app
+
+
+--- Start New Session: 20-10-2025 22:10:56 ---
+20-10-2025 22:10:56 Redirected console output to data/\app_log.txt
+20-10-2025 22:10:56 User data loaded from data\users.txt
+20-10-2025 22:11:00 Exit app
+
+
+--- Start New Session: 20-10-2025 22:11:17 ---
+20-10-2025 22:11:17 Redirected console output to data/\app_log.txt
+20-10-2025 22:11:17 User data loaded from data\users.txt
+20-10-2025 22:11:19 Exit app
+
+
+--- Start New Session: 20-10-2025 22:12:56 ---
+20-10-2025 22:12:56 Redirected console output to data/\app_log.txt
+20-10-2025 22:12:56 User data loaded from data\users.txt
+20-10-2025 22:12:59 Exit app
+
+
+--- Start New Session: 20-10-2025 22:13:07 ---
+20-10-2025 22:13:07 Redirected console output to data/\app_log.txt
+20-10-2025 22:13:07 User data loaded from data\users.txt
+20-10-2025 22:13:17 Exit app
+
+
+--- Start New Session: 20-10-2025 22:13:22 ---
+20-10-2025 22:13:22 Redirected console output to data/\app_log.txt
+20-10-2025 22:13:22 User data loaded from data\users.txt
+20-10-2025 22:13:25 Exit app
+
+
+--- Start New Session: 20-10-2025 22:13:36 ---
+20-10-2025 22:13:36 Redirected console output to data/\app_log.txt
+20-10-2025 22:13:36 User data loaded from data\users.txt
+20-10-2025 22:13:40 Exit app
+
+
+--- Start New Session: 20-10-2025 22:13:43 ---
+20-10-2025 22:13:43 Redirected console output to data/\app_log.txt
+20-10-2025 22:13:43 User data loaded from data\users.txt
+20-10-2025 22:13:45 Exit app
+
+
+--- Start New Session: 20-10-2025 22:13:57 ---
+20-10-2025 22:13:57 Redirected console output to data/\app_log.txt
+20-10-2025 22:13:57 User data loaded from data\users.txt
+20-10-2025 22:14:00 Exit app
+
+
+--- Start New Session: 20-10-2025 22:14:37 ---
+20-10-2025 22:14:37 Redirected console output to data/\app_log.txt
+20-10-2025 22:14:37 User data loaded from data\users.txt
+20-10-2025 22:14:46 Exit app
+
+
+--- Start New Session: 20-10-2025 22:14:58 ---
+20-10-2025 22:14:58 Redirected console output to data/\app_log.txt
+20-10-2025 22:14:58 User data loaded from data\users.txt
+20-10-2025 22:15:05 Exit app
+
+
+--- Start New Session: 20-10-2025 22:15:48 ---
+20-10-2025 22:15:48 Redirected console output to data/\app_log.txt
+20-10-2025 22:15:48 User data loaded from data\users.txt
+20-10-2025 22:15:54 Exit app
+
+
+--- Start New Session: 20-10-2025 22:21:22 ---
+20-10-2025 22:21:22 Redirected console output to data/\app_log.txt
+20-10-2025 22:21:22 User data loaded from data\users.txt
+20-10-2025 22:21:30 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:21:31 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:21:32 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:21:33 Login - User: giang Fail! (freeze 5 seconds, 1/3)
+20-10-2025 22:21:36 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:21:37 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:21:39 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:21:40 Login - User: giang Fail! (freeze 5 seconds, 2/3)
+20-10-2025 22:21:42 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:21:43 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:21:44 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:21:45 Login - User: giang Fail! (freeze 5 seconds, 3/3)
+20-10-2025 22:21:45 Login - User: giang Fail! (account locked)
+20-10-2025 22:21:46 User data saved to data\users.txt
+20-10-2025 22:21:47 Exit app
+
+
+--- Start New Session: 20-10-2025 22:23:29 ---
+20-10-2025 22:23:29 Redirected console output to data/\app_log.txt
+20-10-2025 22:23:29 User data loaded from data\users.txt
+20-10-2025 22:23:36 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:23:37 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:23:38 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:23:38 Login - User: giang Fail! (freeze 5 seconds, 1/3)
+20-10-2025 22:23:45 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:23:46 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:23:47 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:23:49 Login - User: giang Fail! (freeze 5 seconds, 2/3)
+20-10-2025 22:23:56 Login - User: giang Fail! (wrong password 1/3)
+20-10-2025 22:23:57 Login - User: giang Fail! (wrong password 2/3)
+20-10-2025 22:23:58 Login - User: giang Fail! (wrong password 3/3)
+20-10-2025 22:23:59 Login - User: giang Fail! (freeze 5 seconds, 3/3)
+20-10-2025 22:24:04 Login - User: giang Fail! (account locked)
+20-10-2025 22:24:05 User data saved to data\users.txt
+20-10-2025 22:24:06 Exit app
+
+
+--- Start New Session: 20-10-2025 22:24:12 ---
+20-10-2025 22:24:12 Redirected console output to data/\app_log.txt
+20-10-2025 22:24:12 User data loaded from data\users.txt
+20-10-2025 22:24:18 Loaded 4 questions from data/questions.docx
+20-10-2025 22:24:20 Login - User: giang (logined successfully)
+20-10-2025 22:24:25 Exam Text - User: giang PASS! Score: 7.50/10.0
+20-10-2025 22:24:25 Exam Text - User: giang (Log out)
+20-10-2025 22:24:25 User data saved to data\users.txt
+20-10-2025 22:24:29 Logined successfully as root
+20-10-2025 22:24:32 Exit app
+
+
+--- Start New Session: 20-10-2025 22:25:34 ---
+20-10-2025 22:25:34 Redirected console output to data/\app_log.txt
+20-10-2025 22:25:34 User data loaded from data\users.txt
+20-10-2025 22:25:39 Loaded 4 questions from data/questions.docx
+20-10-2025 22:25:40 Login - User: giang (logined successfully)
+20-10-2025 22:25:44 Exam Text - User: giang PASS! Score: 5.00/10.0
+20-10-2025 22:25:44 Exam Text - User: giang (Log out)
+20-10-2025 22:25:44 User data saved to data\users.txt
+20-10-2025 22:25:50 Loaded 4 questions from data/questions.docx
+20-10-2025 22:25:50 Login - User: giang (logined successfully)
+20-10-2025 22:25:57 Exam Text - User: giang FAIL! Score: 2.50/10.0
+20-10-2025 22:25:57 Exam Text - User: giang (Log out)
+20-10-2025 22:25:57 User data saved to data\users.txt
+20-10-2025 22:25:58 Exit app
+
+
+--- Start New Session: 20-10-2025 22:27:11 ---
+20-10-2025 22:27:11 Redirected console output to data/\app_log.txt
+20-10-2025 22:27:11 User data loaded from data\users.txt
+20-10-2025 22:27:15 Logined successfully as root
+20-10-2025 22:27:18 Logout - User: root (log out)
+20-10-2025 22:27:26 Loaded 4 questions from data/questions.docx
+20-10-2025 22:27:26 Login - User: river (logined successfully)
+20-10-2025 22:27:31 Exam Text - User: river CHEAT ON THE EXAM!! Reason: Windows key detected
+20-10-2025 22:27:31 Exam Text - User: river (Log out)
+20-10-2025 22:27:31 User data saved to data\users.txt
+20-10-2025 22:27:35 Logined successfully as root
+20-10-2025 22:27:39 Logout - User: root (log out)
+20-10-2025 22:27:48 Loaded 4 questions from data/questions.docx
+20-10-2025 22:27:49 Login - User: river (logined successfully)
+20-10-2025 22:27:53 Exam Text - User: river PASS! Score: 5.00/10.0
+20-10-2025 22:27:53 Exam Text - User: river (Log out)
+20-10-2025 22:27:53 User data saved to data\users.txt
+20-10-2025 22:27:53 Exit app
+
+
+--- Start New Session: 20-10-2025 22:34:45 ---
+20-10-2025 22:34:45 Redirected console output to data/\app_log.txt
+20-10-2025 22:34:45 User data loaded from data\users.txt
+20-10-2025 22:34:50 Login - User: river Fail! (account locked)
+20-10-2025 22:35:02 Login - User: giang Fail! (account locked)
+20-10-2025 22:35:04 Exit app
+
+
+--- Start New Session: 20-10-2025 22:37:29 ---
+20-10-2025 22:37:29 Redirected console output to data/\app_log.txt
+20-10-2025 22:37:30 User data loaded from data\users.txt
+20-10-2025 22:37:35 Login - User: river Fail! (account completed)
+20-10-2025 22:37:37 Exit app
+
+
+--- Start New Session: 20-10-2025 23:06:06 ---
+20-10-2025 23:06:06 Redirected console output to data/\app_log.txt
+20-10-2025 23:06:06 User data loaded from data\users.txt
+20-10-2025 23:06:12 Logined successfully as root
+20-10-2025 23:06:19 User data saved to data\users.txt
+20-10-2025 23:06:19 Unlock - User: giang (unlocked successfully)
+20-10-2025 23:06:23 User data saved to data\users.txt
+20-10-2025 23:06:24 Unlock - User: river (unlocked successfully)
+20-10-2025 23:06:26 Logout - User: root (log out)
+20-10-2025 23:07:03 Loaded 4 questions from data/questions.docx
+20-10-2025 23:07:03 Login - User: giang (logined successfully)
+20-10-2025 23:07:11 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
+20-10-2025 23:07:11 Exam Text - User: giang (Log out)
+20-10-2025 23:07:11 User data saved to data\users.txt
+20-10-2025 23:07:15 Login - User: giang Fail! (account locked)
+20-10-2025 23:07:30 Loaded 4 questions from data/questions.docx
+20-10-2025 23:07:31 Login - User: river (logined successfully)
+20-10-2025 23:07:35 Exam Text - User: river PASS! Score: 10.00/10.0
+20-10-2025 23:07:35 Exam Text - User: river (Log out)
+20-10-2025 23:07:35 User data saved to data\users.txt
+20-10-2025 23:07:44 Login - User: user1 Fail! (wrong password 1/3)
+20-10-2025 23:07:48 Loaded 4 questions from data/questions.docx
+20-10-2025 23:07:48 Login - User: user1 (logined successfully)
+20-10-2025 23:07:52 Exam Text - User: user1 FAIL! Score: 0.00/10.0
+20-10-2025 23:07:52 Exam Text - User: user1 (Log out)
+20-10-2025 23:07:52 User data saved to data\users.txt
+20-10-2025 23:07:57 Logined successfully as root
+20-10-2025 23:08:03 Logout - User: root (log out)
+20-10-2025 23:08:10 Login - User: root Fail! (wrong password 1/3)
+20-10-2025 23:08:11 Login - User: root Fail! (wrong password 2/3)
+20-10-2025 23:08:12 Login - User: root Fail! (wrong password 3/3)
+20-10-2025 23:08:12 Login - User: root Fail! (freeze 5 seconds, 1/3)
+20-10-2025 23:08:17 Login - User: root Fail! (wrong password 1/3)
+20-10-2025 23:08:19 Login - User: root Fail! (wrong password 2/3)
+20-10-2025 23:08:19 Login - User: root Fail! (wrong password 3/3)
+20-10-2025 23:08:20 Login - User: root Fail! (freeze 5 seconds, 2/3)
+20-10-2025 23:08:26 Login - User: root Fail! (wrong password 1/3)
+20-10-2025 23:08:26 Login - User: root Fail! (wrong password 2/3)
+20-10-2025 23:08:27 Login - User: root Fail! (wrong password 3/3)
+20-10-2025 23:08:27 Login - User: root Fail! (freeze 5 seconds, 3/3)
+20-10-2025 23:08:32 Login - User: root Fail! (account locked)
+20-10-2025 23:08:34 User data saved to data\users.txt
+20-10-2025 23:08:40 Logined successfully as root
+20-10-2025 23:08:51 User data saved to data\users.txt
+20-10-2025 23:08:52 Unlock - User: root (unlocked successfully)
+20-10-2025 23:08:55 Logout - User: root (log out)
+20-10-2025 23:09:03 Logined successfully as root
+20-10-2025 23:09:09 User data saved to data\users.txt
+20-10-2025 23:09:10 Unlock - User: giang (unlocked successfully)
+20-10-2025 23:09:15 User data saved to data\users.txt
+20-10-2025 23:09:15 Unlock - User: river (unlocked successfully)
+20-10-2025 23:09:23 User data saved to data\users.txt
+20-10-2025 23:09:24 Unlock - User: user1 (unlocked successfully)
+20-10-2025 23:09:27 Logout - User: root (log out)
+20-10-2025 23:09:35 Exit app
