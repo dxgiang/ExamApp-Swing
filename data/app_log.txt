@@ -983,3 +983,235 @@ Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot in
 19-10-2025 18:53:05 Unlock - User: giang (unlocked successfully)
 19-10-2025 18:53:07 Logout - User: root (log out)
 19-10-2025 18:53:12 Exit app
+
+
+--- Start New Session: 20-10-2025 20:56:13 ---
+20-10-2025 20:56:13 Redirected console output to data/\app_log.txt
+20-10-2025 20:56:14 User data loaded from data\users.txt
+20-10-2025 20:56:16 Exit app
+
+
+--- Start New Session: 20-10-2025 20:57:10 ---
+20-10-2025 20:57:10 Redirected console output to data/\app_log.txt
+20-10-2025 20:57:10 User data loaded from data\users.txt
+20-10-2025 20:57:15 Exit app
+
+
+--- Start New Session: 20-10-2025 20:57:28 ---
+20-10-2025 20:57:28 Redirected console output to data/\app_log.txt
+20-10-2025 20:57:28 User data loaded from data\users.txt
+20-10-2025 20:57:32 Exit app
+
+
+--- Start New Session: 20-10-2025 20:58:29 ---
+20-10-2025 20:58:29 Redirected console output to data/\app_log.txt
+20-10-2025 20:58:30 User data loaded from data\users.txt
+20-10-2025 20:58:34 Exit app
+
+
+--- Start New Session: 20-10-2025 20:58:56 ---
+20-10-2025 20:58:56 Redirected console output to data/\app_log.txt
+20-10-2025 20:58:57 User data loaded from data\users.txt
+20-10-2025 20:59:01 Exit app
+
+
+--- Start New Session: 20-10-2025 20:59:13 ---
+20-10-2025 20:59:13 Redirected console output to data/\app_log.txt
+20-10-2025 20:59:13 User data loaded from data\users.txt
+20-10-2025 20:59:18 Exit app
+
+
+--- Start New Session: 20-10-2025 20:59:29 ---
+20-10-2025 20:59:29 Redirected console output to data/\app_log.txt
+20-10-2025 20:59:29 User data loaded from data\users.txt
+20-10-2025 20:59:32 Exit app
+
+
+--- Start New Session: 20-10-2025 20:59:35 ---
+20-10-2025 20:59:35 Redirected console output to data/\app_log.txt
+20-10-2025 20:59:35 User data loaded from data\users.txt
+20-10-2025 20:59:38 Exit app
+
+
+--- Start New Session: 20-10-2025 21:00:00 ---
+20-10-2025 21:00:00 Redirected console output to data/\app_log.txt
+20-10-2025 21:00:00 User data loaded from data\users.txt
+20-10-2025 21:00:04 Exit app
+
+
+--- Start New Session: 20-10-2025 21:00:40 ---
+20-10-2025 21:00:40 Redirected console output to data/\app_log.txt
+20-10-2025 21:00:40 User data loaded from data\users.txt
+20-10-2025 21:00:43 Exit app
+
+
+--- Start New Session: 20-10-2025 21:27:10 ---
+20-10-2025 21:27:10 Redirected console output to data/\app_log.txt
+20-10-2025 21:27:10 User data loaded from data\users.txt
+20-10-2025 21:27:14 Exit app
+
+
+--- Start New Session: 20-10-2025 21:27:28 ---
+20-10-2025 21:27:28 Redirected console output to data/\app_log.txt
+20-10-2025 21:27:28 User data loaded from data\users.txt
+20-10-2025 21:27:30 Exit app
+
+
+--- Start New Session: 20-10-2025 21:28:01 ---
+20-10-2025 21:28:01 Redirected console output to data/\app_log.txt
+20-10-2025 21:28:01 User data loaded from data\users.txt
+20-10-2025 21:28:10 Exit app
+
+
+--- Start New Session: 20-10-2025 21:28:24 ---
+20-10-2025 21:28:24 Redirected console output to data/\app_log.txt
+20-10-2025 21:28:25 User data loaded from data\users.txt
+20-10-2025 21:28:32 Exit app
+
+
+--- Start New Session: 20-10-2025 21:29:22 ---
+20-10-2025 21:29:22 Redirected console output to data/\app_log.txt
+20-10-2025 21:29:23 User data loaded from data\users.txt
+20-10-2025 21:29:38 Exit app
+
+
+--- Start New Session: 20-10-2025 21:29:50 ---
+20-10-2025 21:29:50 Redirected console output to data/\app_log.txt
+20-10-2025 21:29:50 User data loaded from data\users.txt
+20-10-2025 21:29:53 Exit app
+
+
+--- Start New Session: 20-10-2025 21:29:57 ---
+20-10-2025 21:29:57 Redirected console output to data/\app_log.txt
+20-10-2025 21:29:57 User data loaded from data\users.txt
+20-10-2025 21:30:01 Exit app
+
+
+--- Start New Session: 20-10-2025 21:30:04 ---
+20-10-2025 21:30:04 Redirected console output to data/\app_log.txt
+20-10-2025 21:30:05 User data loaded from data\users.txt
+20-10-2025 21:30:09 Exit app
+
+
+--- Start New Session: 20-10-2025 21:30:12 ---
+20-10-2025 21:30:12 Redirected console output to data/\app_log.txt
+20-10-2025 21:30:12 User data loaded from data\users.txt
+20-10-2025 21:30:18 Exit app
+
+
+--- Start New Session: 20-10-2025 21:34:40 ---
+20-10-2025 21:34:40 Redirected console output to data/\app_log.txt
+20-10-2025 21:34:40 User data loaded from data\users.txt
+20-10-2025 21:34:44 Exit app
+
+
+--- Start New Session: 20-10-2025 21:34:51 ---
+20-10-2025 21:34:51 Redirected console output to data/\app_log.txt
+20-10-2025 21:34:51 User data loaded from data\users.txt
+20-10-2025 21:34:56 Exit app
+
+
+--- Start New Session: 20-10-2025 21:35:52 ---
+20-10-2025 21:35:52 Redirected console output to data/\app_log.txt
+20-10-2025 21:35:52 User data loaded from data\users.txt
+20-10-2025 21:35:54 Exit app
+
+
+--- Start New Session: 20-10-2025 21:36:02 ---
+20-10-2025 21:36:02 Redirected console output to data/\app_log.txt
+20-10-2025 21:36:02 User data loaded from data\users.txt
+20-10-2025 21:36:07 Exit app
+
+
+--- Start New Session: 20-10-2025 21:36:12 ---
+20-10-2025 21:36:12 Redirected console output to data/\app_log.txt
+20-10-2025 21:36:12 User data loaded from data\users.txt
+20-10-2025 21:36:15 Exit app
+
+
+--- Start New Session: 20-10-2025 21:37:59 ---
+20-10-2025 21:37:59 Redirected console output to data/\app_log.txt
+20-10-2025 21:37:59 User data loaded from data\users.txt
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JPasswordField.setBorder(javax.swing.border.Border)" because "this.pass" is null
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:88)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:66)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 20-10-2025 21:38:07 ---
+20-10-2025 21:38:07 Redirected console output to data/\app_log.txt
+20-10-2025 21:38:07 User data loaded from data\users.txt
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JPasswordField.setBorder(javax.swing.border.Border)" because "this.pass" is null
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:88)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:66)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 20-10-2025 21:38:21 ---
+20-10-2025 21:38:21 Redirected console output to data/\app_log.txt
+20-10-2025 21:38:21 User data loaded from data\users.txt
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JPasswordField.setBorder(javax.swing.border.Border)" because "this.pass" is null
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:88)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:66)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 20-10-2025 21:39:23 ---
+20-10-2025 21:39:23 Redirected console output to data/\app_log.txt
+20-10-2025 21:39:23 User data loaded from data\users.txt
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JPasswordField.setBorder(javax.swing.border.Border)" because "this.pass" is null
+	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:87)
+	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:66)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:21)
+	at main.java.com.example.MainApp.main(MainApp.java:50)
+
+
+--- Start New Session: 20-10-2025 21:39:34 ---
+20-10-2025 21:39:34 Redirected console output to data/\app_log.txt
+20-10-2025 21:39:35 User data loaded from data\users.txt
+20-10-2025 21:39:39 Exit app
+
+
+--- Start New Session: 20-10-2025 21:43:48 ---
+20-10-2025 21:43:48 Redirected console output to data/\app_log.txt
+20-10-2025 21:43:48 User data loaded from data\users.txt
+20-10-2025 21:44:20 Exit app
+
+
+--- Start New Session: 20-10-2025 21:45:26 ---
+20-10-2025 21:45:26 Redirected console output to data/\app_log.txt
+20-10-2025 21:45:26 User data loaded from data\users.txt
+20-10-2025 21:45:30 Exit app
+
+
+--- Start New Session: 20-10-2025 21:45:58 ---
+20-10-2025 21:45:58 Redirected console output to data/\app_log.txt
+20-10-2025 21:45:59 User data loaded from data\users.txt
+20-10-2025 21:46:01 Exit app
+
+
+--- Start New Session: 20-10-2025 21:46:13 ---
+20-10-2025 21:46:13 Redirected console output to data/\app_log.txt
+20-10-2025 21:46:13 User data loaded from data\users.txt
+20-10-2025 21:46:15 Exit app
+
+
+--- Start New Session: 20-10-2025 21:47:00 ---
+20-10-2025 21:47:00 Redirected console output to data/\app_log.txt
+20-10-2025 21:47:00 User data loaded from data\users.txt
+20-10-2025 21:47:04 Exit app
+
+
+--- Start New Session: 20-10-2025 21:47:21 ---
+20-10-2025 21:47:21 Redirected console output to data/\app_log.txt
+20-10-2025 21:47:21 User data loaded from data\users.txt
+20-10-2025 21:47:27 Exit app
+
+
+--- Start New Session: 20-10-2025 21:47:38 ---
+20-10-2025 21:47:38 Redirected console output to data/\app_log.txt
+20-10-2025 21:47:38 User data loaded from data\users.txt
+20-10-2025 21:47:53 Exit app

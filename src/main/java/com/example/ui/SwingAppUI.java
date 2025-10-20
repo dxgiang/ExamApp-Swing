@@ -29,7 +29,7 @@ import main.java.com.example.auth.DataProcess;
 
 public class SwingAppUI extends JFrame {
     private static final long serialVersionUID = 1L;
-
+    private static final Color BACKGROUND_COLOR = new Color(0x283C4F);
     public JPanel loginPanel, registerPanel, panelMN, panelM3, panelLoading;
     public JTextField user, reguser;
     public JPasswordField pass, regpass, repass;
@@ -60,7 +60,7 @@ public class SwingAppUI extends JFrame {
         setResizable(false);
         ImageIcon icon = new ImageIcon(getClass().getResource("/main/resources/common/icon.jpg"));
         setIconImage(icon.getImage());
-
+        setBackground(BACKGROUND_COLOR);
         initComponents();
 
     }
@@ -69,9 +69,12 @@ public class SwingAppUI extends JFrame {
         // --- UI LOGIN ---
         loginPanel = new JPanel();
         loginPanel.setLayout(new GridLayout(6, 1, 10, 10));
+        loginPanel.setBackground(Color.white);
 
         labelLogin = new JLabel("LOGIN");
         labelLogin.setFont(new Font("Serif", 1, 25));
+        labelLogin.setForeground(Color.black);
+        labelLogin.setBackground(Color.white);
 
         JPanel panel1 = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panel1.setBackground(Color.white);
@@ -90,8 +93,8 @@ public class SwingAppUI extends JFrame {
         pass.setBackground(Color.white);
 
         hidePassButton = new JButton("⦿");
-        hidePassButton.setBackground(Color.white);
-        hidePassButton.setFont(pass.getFont().deriveFont(9f));
+        hidePassButton.setBackground(BACKGROUND_COLOR);
+        hidePassButton.setFont(pass.getFont().deriveFont(11f));
 
         JPanel panel3 = new JPanel();
         panel3.add(pass);
@@ -124,6 +127,7 @@ public class SwingAppUI extends JFrame {
 
         labelCopyright = new JLabel("© • Exam App 2025 - Copyright by river0077 • ©");
         labelCopyright.setFont(new Font("Serif", 0, 13));
+        labelCopyright.setForeground(Color.black);
 
         JPanel panel00 = new JPanel();
         panel00.add(labelCopyright);
@@ -137,7 +141,7 @@ public class SwingAppUI extends JFrame {
         loginPanel.add(panel00);
         loginPanel.setBackground(Color.white);
         getContentPane().add(loginPanel);
-        getContentPane().setBackground(Color.white);
+        getContentPane().setBackground(BACKGROUND_COLOR);
 
         // --- UI REGISTER ---
         registerPanel = new JPanel();
