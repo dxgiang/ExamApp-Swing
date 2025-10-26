@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class DataProcess extends JFrame {
 	// Attributes
 	private static final long serialVersionUID = 1L;
-	private List<User<String, String>> list;
+	private List<User> list;
 	private LocalDateTime dt;
 	private static final String DATA_DIRECTORY = "data";
 	private static final String USER_DATA_FILE = DATA_DIRECTORY + File.separator + "users.txt";
@@ -29,9 +29,9 @@ public class DataProcess extends JFrame {
 	}
 
 	// Methods
-	public void addUser(User<String, String> userAdd, boolean showMes) {
+	public void addUser(User userAdd, boolean showMes) {
         for (int i = 0; i < list.size(); i++) {
-            User<String, String> user = list.get(i);
+            User user = list.get(i);
             if (user.getUser().equals(userAdd.getUser())) {
                 list.remove(i);
                 break;
@@ -47,7 +47,7 @@ public class DataProcess extends JFrame {
 	}
 
 	public boolean authenticate(String username, String password) {
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			if (user.getUser().equals(username) && user.getPass().equals(password)) {
 				return true;
 			}
@@ -56,7 +56,7 @@ public class DataProcess extends JFrame {
 	}
 
 	public boolean wrongPass(String username, String password) {
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			if (user.getUser().equals(username) && user.getPass().equals(password) == false) {
 				return true;
 			}
@@ -66,19 +66,19 @@ public class DataProcess extends JFrame {
 
 	public void printList() {
 		System.out.println("user          password");
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			user.printList();
 		}
 	}
 
-	public List<User<String, String>> getUserList() {
+	public List<User> getUserList() {
 		return list;
 	}
 
 	public void deleteUser(String username) {
 	    boolean found = false;
 	    for (int i = 0; i < list.size(); i++) {
-	        User<String, String> user = list.get(i);
+	        User user = list.get(i);
 	        if (user.getUser().equals(username)) {
 	            if (user.getUser().equals("root")) {
 	                JOptionPane.showMessageDialog(this, "YOU CAN'T DELETE ROOT ACCOUNT!");
@@ -100,7 +100,7 @@ public class DataProcess extends JFrame {
 
 
 	public boolean lockUser(String username) {
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			if (user.getUser().equals(username)) {
 				return true;
 			}
@@ -122,7 +122,7 @@ public class DataProcess extends JFrame {
 		}
 
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_DATA_FILE))) {
-			for (User<String, String> user : list) {
+			for (User user : list) {
 				writer.write(user.getUser() + "," + user.getPass() + "," + user.getScore() + "," + (user.getStatus() != null ? user.getStatus() : "null"));
 				writer.newLine();
 			}
@@ -143,7 +143,7 @@ public class DataProcess extends JFrame {
 					String password = parts[1];
 					double score = Double.parseDouble(parts[2]);
 					String status = parts[3].equals("null") ? null : parts[3];
-					list.add(new User<>(username, password, score, status));
+					list.add(new User(username, password, score, status));
 				}
 			}
 			System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
@@ -158,11 +158,11 @@ public class DataProcess extends JFrame {
 
 	private void addInitialUsers() {
 		list.clear();
-		addUser(new User<String, String>("root", "admin", 0.0, null), false);
+		addUser(new User("root", "admin", 0.0, null), false);
 	}
 
     public boolean isAccountLocked(String username) {
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			if (user.getUser().equals(username)) {
 				return "LOCKED".equals(user.getStatus()) || "CHEAT".equals(user.getStatus());
 			}
@@ -171,7 +171,7 @@ public class DataProcess extends JFrame {
     }
 
     public boolean isAccountCompleted(String username) {
-		for (User<String, String> user : list) {
+		for (User user : list) {
 			if (user.getUser().equals(username)) {
 				return "PASS".equals(user.getStatus()) || "FAIL".equals(user.getStatus());
 			}

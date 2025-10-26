@@ -255,7 +255,7 @@ public class SwingAppController implements ActionListener {
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
                     @Override
                     protected Void doInBackground() throws Exception {
-                        for (User<String, String> u : loginsystem.getUserList()) {
+                        for (User u : loginsystem.getUserList()) {
                             if (u.getUser().equals(username)) {
                                 u.setScore(currentExamLogic.getScore());
                                 u.setStatus(currentExamLogic.getStatus());
@@ -283,19 +283,9 @@ public class SwingAppController implements ActionListener {
                 wait(5000);
                 countWrong = 0;
                 countWrong2++;
-                new SwingWorker<Void, Void>() {
-                    @Override
-                    protected Void doInBackground() throws Exception {
-                        Thread.sleep(5000);
-                        return null;
-                    }
-                    @Override
-                    protected void done() {
-                        if (countWrong2 == 3) {
-                            handleAccountLockout(username);
-                        }
-                    }
-                }.execute();
+                if(countWrong2 == 3) {
+                    handleAccountLockout(username);
+                }
             }
         } else {
             JOptionPane.showMessageDialog(ui, "NOT FOUND ACCOUNT. Check your username again!");
@@ -305,14 +295,14 @@ public class SwingAppController implements ActionListener {
     private void handleAccountLockout(String username) {
         System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
         JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
-        countWrong2 = 0;
-        for (User<String, String> u : loginsystem.getUserList()) {
+        for (User u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 u.setStatus("LOCKED");
                 loginsystem.addUser(u, false);
                 return;
             }
         }
+        countWrong2 = 0;
     }
 
     private void handleCreateUser() {
@@ -328,14 +318,14 @@ public class SwingAppController implements ActionListener {
             JOptionPane.showMessageDialog(ui, "PASSWORDS DO NOT MATCH!");
             return;
         }
-        for (User<String, String> u : loginsystem.getUserList()) {
+        for (User u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS!");
                 return;
             }
         }
         
-        loginsystem.addUser(new User<String, String>(username, password, 0.0, null), false);
+        loginsystem.addUser(new User(username, password, 0.0, null), false);
         System.out.println(upTime() + " Register - User: " + username + " (registered successfully)");
         JOptionPane.showMessageDialog(ui, "REGISTER SUCCESSFULLY");
         
@@ -368,7 +358,7 @@ public class SwingAppController implements ActionListener {
                 ui.repaint();
                 
                 ui.tableModel.setRowCount(0);
-                for (User<String, String> u : loginsystem.getUserList()) {
+                for (User u : loginsystem.getUserList()) {
                     ui.tableModel.addRow(new Object[] { u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
                 }
             }
@@ -388,14 +378,14 @@ public class SwingAppController implements ActionListener {
             return;
         }
 
-        for (User<String, String> u : loginsystem.getUserList()) {
+        for (User u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS! Updating user details.");
                 break;
             }
         }
         
-        loginsystem.addUser(new User<String, String>(username, password, 0.0, null), true);
+        loginsystem.addUser(new User(username, password, 0.0, null), true);
         ui.printListButton.doClick();
     }
 
@@ -423,7 +413,7 @@ public class SwingAppController implements ActionListener {
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
                     @Override
                     protected Void doInBackground() throws Exception {
-                        for (User<String, String> u : loginsystem.getUserList()) {
+                        for (User u : loginsystem.getUserList()) {
                             if (u.getUser().equals("root")) {
                                 u.setScore(tempExamLogic.getScore()); 
                                 u.setStatus(tempExamLogic.getStatus());
@@ -480,7 +470,7 @@ public class SwingAppController implements ActionListener {
         boolean userFound = false;
         if (username == null || username.trim().isEmpty()) return;
         
-        for (User<String, String> u : loginsystem.getUserList()) {
+        for (User u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 userFound = true;
                 if (u.getStatus() == null) {
@@ -508,7 +498,7 @@ public class SwingAppController implements ActionListener {
         boolean userFound = false;
         if (username == null || username.trim().isEmpty()) return;
 
-        for (User<String, String> u : loginsystem.getUserList()) {
+        for (User u : loginsystem.getUserList()) {
             if (u.getUser().equals(username)) {
                 userFound = true;
                 if (u.getUser().equals("root")) {

@@ -1,8 +1,8 @@
 package main.java.com.example.auth;
 
-public class User<K, V> {
-	private K user;
-	private V pass;
+public class User {
+	private String user;
+	private String pass;
 	private double score;
 	private String status;
 
@@ -10,7 +10,7 @@ public class User<K, V> {
 		super();
 	}
 
-	public User(K user, V pass, double score, String status) {
+	public User(String user, String pass, double score, String status) {
 		super();
 		this.user = user;
 		this.pass = pass;
@@ -34,19 +34,19 @@ public class User<K, V> {
 		this.score = score;
 	}
 
-	public K getUser() {
+	public String getUser() {
 		return user;
 	}
 
-	public void setUser(K user) {
+	public void setUser(String user) {
 		this.user = user;
 	}
 
-	public V getPass() {
+	public String getPass() {
 		return pass;
 	}
 
-	public void setPass(V pass) {
+	public void setPass(String pass) {
 		this.pass = pass;
 	}
 
