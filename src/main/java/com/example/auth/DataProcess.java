@@ -178,4 +178,44 @@ public class DataProcess extends JFrame {
 		}
 		return false;
     }
+
+	public int countLocked() {
+		int count = 0;
+		for (User user : list) {
+			if ("LOCKED".equals(user.getStatus())) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public int countPassed() {
+		int count = 0;
+		for (User user : list) {
+			if ("PASS".equals(user.getStatus())) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public int countFailed() {
+		int count = 0;
+		for (User user : list) {
+			if ("FAIL".equals(user.getStatus())) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public int countCheated() {
+		int count = 0;
+		for (User user : list) {
+			if ("CHEAT".equals(user.getStatus())) {
+				count++;
+			}
+		}
+		return count;
+	}
 }

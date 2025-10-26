@@ -23,15 +23,15 @@ import main.java.com.example.ui.SwingAppUI;
 public class SwingAppController implements ActionListener {
     // Attributes
     private SwingAppUI ui;
-    private DataProcess loginsystem;
+    private DataProcess data;
     private int countWrong = 0;
     private int countWrong2 = 0;
     private LocalDateTime dt;
 
     // Constructor
-    public SwingAppController(SwingAppUI ui, DataProcess loginsystem) {
+    public SwingAppController(SwingAppUI ui, DataProcess data) {
         this.ui = ui;
-        this.loginsystem = loginsystem;
+        this.data = data;
 
         addListeners();
     }
@@ -189,17 +189,17 @@ public class SwingAppController implements ActionListener {
         String username = ui.user.getText();
         String password = new String(ui.pass.getPassword());
 
-        if (loginsystem.authenticate(username, password)) {
+        if (data.authenticate(username, password)) {
             if (username.equals("root")) {
                 handleRootLogin(username);
             } else {
-                if (loginsystem.isAccountLocked(username)) {
+                if (data.isAccountLocked(username)) {
                     JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT IS LOCKED! PLEASE CONTACT ADMIN!");
                     System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
                     ui.user.setText("");
                     ui.pass.setText("");
                     return;
-                } else if(loginsystem.isAccountCompleted(username)) {
+                } else if(data.isAccountCompleted(username)) {
                     JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS COMPLETED THE EXAM! PLEASE CONTACT ADMIN TO UNLOCK!");
                     System.out.println(upTime() + " Login - User: " + username + " Fail! (account completed)");
                     ui.user.setText("");
@@ -255,11 +255,11 @@ public class SwingAppController implements ActionListener {
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
                     @Override
                     protected Void doInBackground() throws Exception {
-                        for (User u : loginsystem.getUserList()) {
+                        for (User u : data.getUserList()) {
                             if (u.getUser().equals(username)) {
                                 u.setScore(currentExamLogic.getScore());
                                 u.setStatus(currentExamLogic.getStatus());
-                                loginsystem.addUser(u, false); 
+                                data.addUser(u, false); 
                                 break;
                             }
                         }
@@ -272,7 +272,7 @@ public class SwingAppController implements ActionListener {
     }
 
     private void handleFailedLogin(String username, String password) {
-        if (loginsystem.wrongPass(username, password)) {
+        if (data.wrongPass(username, password)) {
             JOptionPane.showMessageDialog(ui, "WRONG PASSWORD");
             System.out.println(upTime() + " Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
             countWrong++;
@@ -295,10 +295,10 @@ public class SwingAppController implements ActionListener {
     private void handleAccountLockout(String username) {
         System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
         JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
-        for (User u : loginsystem.getUserList()) {
+        for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 u.setStatus("LOCKED");
-                loginsystem.addUser(u, false);
+                data.addUser(u, false);
                 return;
             }
         }
@@ -318,14 +318,14 @@ public class SwingAppController implements ActionListener {
             JOptionPane.showMessageDialog(ui, "PASSWORDS DO NOT MATCH!");
             return;
         }
-        for (User u : loginsystem.getUserList()) {
+        for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS!");
                 return;
             }
         }
         
-        loginsystem.addUser(new User(username, password, 0.0, null), false);
+        data.addUser(new User(username, password, 0.0, null), false);
         System.out.println(upTime() + " Register - User: " + username + " (registered successfully)");
         JOptionPane.showMessageDialog(ui, "REGISTER SUCCESSFULLY");
         
@@ -354,11 +354,12 @@ public class SwingAppController implements ActionListener {
             protected void done() {
                 ui.getContentPane().remove(ui.panelLoading);
                 ui.getContentPane().add(ui.panelMN);
+                updateAnalysisLabel();
                 ui.revalidate();
                 ui.repaint();
                 
                 ui.tableModel.setRowCount(0);
-                for (User u : loginsystem.getUserList()) {
+                for (User u : data.getUserList()) {
                     ui.tableModel.addRow(new Object[] { u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
                 }
             }
@@ -378,21 +379,21 @@ public class SwingAppController implements ActionListener {
             return;
         }
 
-        for (User u : loginsystem.getUserList()) {
+        for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS! Updating user details.");
                 break;
             }
         }
         
-        loginsystem.addUser(new User(username, password, 0.0, null), true);
+        data.addUser(new User(username, password, 0.0, null), true);
         ui.printListButton.doClick();
     }
 
     private void handleDeleteUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username to delete:");
         if (username != null && !username.trim().isEmpty()) {
-            loginsystem.deleteUser(username);
+            data.deleteUser(username);
             ui.printListButton.doClick();
         } else {
             JOptionPane.showMessageDialog(ui, "Invalid username.");
@@ -413,11 +414,11 @@ public class SwingAppController implements ActionListener {
                 SwingWorker<Void, Void> worker = new SwingWorker<>() {
                     @Override
                     protected Void doInBackground() throws Exception {
-                        for (User u : loginsystem.getUserList()) {
+                        for (User u : data.getUserList()) {
                             if (u.getUser().equals("root")) {
                                 u.setScore(tempExamLogic.getScore()); 
                                 u.setStatus(tempExamLogic.getStatus());
-                                loginsystem.addUser(u, false);
+                                data.addUser(u, false);
                                 break;
                             }
                         }
@@ -470,7 +471,7 @@ public class SwingAppController implements ActionListener {
         boolean userFound = false;
         if (username == null || username.trim().isEmpty()) return;
         
-        for (User u : loginsystem.getUserList()) {
+        for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 userFound = true;
                 if (u.getStatus() == null) {
@@ -480,7 +481,7 @@ public class SwingAppController implements ActionListener {
                 } else if (!(u.getStatus() == null)) {
                     u.setStatus(null);
                     u.setScore(0.0);
-                    loginsystem.addUser(u, false);
+                    data.addUser(u, false);
                     JOptionPane.showMessageDialog(ui, "UNLOCKED SUCCESSFULLY! Score/Status reset.");
                     System.out.println(upTime() + " Unlock - User: " + username + " (unlocked successfully)");
                     ui.printListButton.doClick();
@@ -498,7 +499,7 @@ public class SwingAppController implements ActionListener {
         boolean userFound = false;
         if (username == null || username.trim().isEmpty()) return;
 
-        for (User u : loginsystem.getUserList()) {
+        for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 userFound = true;
                 if (u.getUser().equals("root")) {
@@ -512,7 +513,7 @@ public class SwingAppController implements ActionListener {
                 } else {
                     u.setStatus("LOCKED");
                     u.setScore(0.0);
-                    loginsystem.addUser(u, false);
+                    data.addUser(u, false);
                     JOptionPane.showMessageDialog(ui, "LOCKED SUCCESSFULLY! Score/Status reset.");
                     System.out.println(upTime() + " Lock - User: " + username + " (locked successfully)");
                     ui.printListButton.doClick();
@@ -523,6 +524,14 @@ public class SwingAppController implements ActionListener {
         if (!userFound) {
             JOptionPane.showMessageDialog(ui, "NOT FOUND ACCOUNT");
         }
+    }
+
+    public void updateAnalysisLabel() {
+        int locked = data.countLocked();
+        int passed = data.countPassed();
+        int failed = data.countFailed();
+        int cheated = data.countCheated();
+        ui.labelAnalysis.setText("Locked: " + locked + ", Passed: " + passed + ", Failed: " + failed + ", Cheated: " + cheated);
     }
 
     public void wait(int ms) {

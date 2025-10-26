@@ -45,7 +45,9 @@ public class SwingAppUI extends JFrame {
 
     public boolean isRoot = false;
     public JLabel labelLoading;
-    private JLabel labelLogin, labelRegister, labelNote, labelCopyright;
+    private JLabel labelLogin, labelRegister, labelNote;
+    public JLabel labelAnalysis;
+    private JLabel labelCopyright;
     private JMenuBar barmenu;
     public JMenu menuOption;
     public JMenu menuUser;
@@ -227,7 +229,7 @@ public class SwingAppUI extends JFrame {
         userTable.setEnabled(true);
         JScrollPane scrollPane = new JScrollPane(userTable);
         scrollPane.setBorder(BorderFactory.createLineBorder(Color.black));
-        scrollPane.setPreferredSize(new Dimension(450, 260));
+        scrollPane.setPreferredSize(new Dimension(450, 255));
 
         panelM3 = new JPanel();
         printListButton = new JButton("Print List");
@@ -294,9 +296,13 @@ public class SwingAppUI extends JFrame {
         }
         panelLoading.add(labelLoading, JLabel.CENTER);
 
-        JPanel panel001 = new JPanel();
-        labelCopyright = new JLabel(COPYRIGHT);
-        panel001.add(labelCopyright);
+        JPanel panel001 = new JPanel(new BorderLayout());
+        labelAnalysis = new JLabel("Locked: 0, Passed: 0, Failed: 0, Checked: 0", JLabel.CENTER);
+        labelCopyright.setFont(new Font("Serif", 0, 13));
+        labelCopyright.setForeground(Color.black);
+        labelCopyright = new JLabel(COPYRIGHT, JLabel.CENTER);
+        panel001.add(labelAnalysis, BorderLayout.NORTH);
+        panel001.add(labelCopyright, BorderLayout.SOUTH);
         panel001.setBackground(Color.yellow);
 
         // --- Menu ---
