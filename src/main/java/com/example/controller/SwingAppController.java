@@ -198,12 +198,14 @@ public class SwingAppController implements ActionListener {
                     System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
                     ui.user.setText("");
                     ui.pass.setText("");
+                    ui.user.requestFocus();
                     return;
                 } else if(data.isAccountCompleted(username)) {
                     JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS COMPLETED THE EXAM! PLEASE CONTACT ADMIN TO UNLOCK!");
                     System.out.println(upTime() + " Login - User: " + username + " Fail! (account completed)");
                     ui.user.setText("");
                     ui.pass.setText("");
+                    ui.user.requestFocus();
                     return;
                 }
                 handleRegularUserLogin(username);
@@ -299,6 +301,9 @@ public class SwingAppController implements ActionListener {
             if (u.getUser().equals(username)) {
                 u.setStatus("LOCKED");
                 data.addUser(u, false);
+                ui.user.setText("");
+                ui.pass.setText("");
+                ui.user.requestFocus();
                 return;
             }
         }
@@ -346,7 +351,7 @@ public class SwingAppController implements ActionListener {
         SwingWorker<Void, Void> worker = new SwingWorker<>() {
             @Override
             protected Void doInBackground() throws Exception {
-                Thread.sleep(1000);
+                Thread.sleep(500);
                 return null;
             }
 
@@ -428,6 +433,9 @@ public class SwingAppController implements ActionListener {
                 worker.execute();
             }
         });
+        if(tempExamUI.isCompleted() == true) {
+            ui.printListButton.doClick();
+        }
     }
 
     private void handleLogout() {

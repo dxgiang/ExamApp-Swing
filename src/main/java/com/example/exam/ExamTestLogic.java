@@ -49,10 +49,10 @@ public class ExamTestLogic {
     }
 
     
-    public void processQuestion(int luaChon) {
+    public void processQuestion(int chosen) {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
-            if (luaChon == ch.getIndexRightAns()) {
+            if (chosen == ch.getIndexRightAns()) {
                 score += (double) 10 / listQuestion.size(); 
             }
             index++;

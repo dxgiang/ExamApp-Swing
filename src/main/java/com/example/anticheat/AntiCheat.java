@@ -31,7 +31,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
+        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { 
             int keyCode = e.getKeyCode();
             
             if (keyCode == KeyEvent.VK_WINDOWS) {
@@ -54,7 +54,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { 
+        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { 
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_WINDOWS) {
                 windowsPressed = false;
@@ -76,7 +76,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void windowLostFocus(WindowEvent e) {
-        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) {
+        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) {
             if (windowsPressed) {
                 enforceCheatPenalty("Windows key detected");
             } else if (escapePressed) {
@@ -90,7 +90,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     }
 
     private void enforceCheatPenalty(String reason) {
-        if (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted()) { // Double check status
+        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { // Double check status
             cheatingApplied = true;
             JOptionPane.showMessageDialog(examTestUI, "You're caught cheating on the exam! Reason: " + reason);
             System.out.println(

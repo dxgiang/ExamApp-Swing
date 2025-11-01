@@ -297,7 +297,7 @@ public class SwingAppUI extends JFrame {
         panelLoading.add(labelLoading, JLabel.CENTER);
 
         JPanel panel001 = new JPanel(new BorderLayout());
-        labelAnalysis = new JLabel("Locked: 0, Passed: 0, Failed: 0, Checked: 0", JLabel.CENTER);
+        labelAnalysis = new JLabel("Locked: 0, Passed: 0, Failed: 0, Cheated: 0", JLabel.CENTER);
         labelCopyright.setFont(new Font("Serif", 0, 13));
         labelCopyright.setForeground(Color.black);
         labelCopyright = new JLabel(COPYRIGHT, JLabel.CENTER);

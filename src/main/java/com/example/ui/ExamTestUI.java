@@ -24,7 +24,7 @@ public class ExamTestUI extends JFrame {
     private JLabel labelStart, labelNote, labelQues;
     private JButton start, ans1, ans2, ans3, ans4;
     private String userName;
-    private boolean completed = false;
+    private boolean completed = false, started = false;
 
     public ExamTestUI() {
         this.logic = new ExamTestLogic(this);
@@ -51,20 +51,19 @@ public class ExamTestUI extends JFrame {
         // Panel Start
         panelStart = new JPanel();
         labelStart = new JLabel(
-                "<                                                       >Press the button to start the test");
-        labelStart.setFont(labelStart.getFont().deriveFont(25f));
+                "                                           Press the button to start the test >>");
+        labelStart.setFont(labelStart.getFont().deriveFont(30f));
         labelNote = new JLabel("Note: Using the MOUSE to complete the test. Do not minimize or switch to another window during the test.");
         labelNote.setHorizontalAlignment(JLabel.CENTER);
         labelNote.setBorder(new LineBorder(Color.BLACK, 1, true));
-        labelNote.setFont(labelNote.getFont().deriveFont(25f));
+        labelNote.setFont(labelNote.getFont().deriveFont(30f));
         labelNote.setForeground(Color.RED);
         labelNote.setBackground(Color.YELLOW);
         panelStart.setLayout(new BorderLayout());
-        start = new JButton("===Start===");
+        start = new JButton(">===Start===<");
         start.setFont(start.getFont().deriveFont(25f));
         start.setBackground(Color.ORANGE);
         panelStart.add(labelStart, BorderLayout.WEST);
-        panelStart.add(labelNote, BorderLayout.CENTER);
         panelStart.add(labelNote, BorderLayout.SOUTH);
         panelStart.add(start, BorderLayout.LINE_END);
         panelStart.setBackground(Color.GREEN);
@@ -102,6 +101,7 @@ public class ExamTestUI extends JFrame {
             panelStart.setVisible(false);
             getContentPane().add(panelExamTest, BorderLayout.CENTER);
             panelExamTest.setVisible(true);
+            started = true;
             logic.showQuestion();
         });
         
@@ -122,15 +122,15 @@ public class ExamTestUI extends JFrame {
 
     public void displayQuestion(Question ch) {
         labelQues.setText(ch.getQuestion());
-        labelQues.setFont(labelQues.getFont().deriveFont(17f));
+        labelQues.setFont(labelQues.getFont().deriveFont(35f));
         ans1.setText(ch.getAns1());
-        ans1.setFont(ans1.getFont().deriveFont(15f));
+        ans1.setFont(ans1.getFont().deriveFont(35f));
         ans2.setText(ch.getAns2());
-        ans2.setFont(ans2.getFont().deriveFont(15f));
+        ans2.setFont(ans2.getFont().deriveFont(35f));
         ans3.setText(ch.getAns3());
-        ans3.setFont(ans3.getFont().deriveFont(15f));
+        ans3.setFont(ans3.getFont().deriveFont(35f));
         ans4.setText(ch.getAns4());
-        ans4.setFont(ans4.getFont().deriveFont(15f));
+        ans4.setFont(ans4.getFont().deriveFont(35f));
     }
 
     public void showResult(double score) {
@@ -169,5 +169,8 @@ public class ExamTestUI extends JFrame {
     }
     public boolean isCompleted() {
         return completed;
+    }
+    public boolean isStarted() {
+        return started;
     }
 }
