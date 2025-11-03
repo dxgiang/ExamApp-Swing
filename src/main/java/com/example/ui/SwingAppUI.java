@@ -38,8 +38,8 @@ public class SwingAppUI extends JFrame {
             delUserButton, showAppButton, unlockButton, lockButton, logoutButton,
             hidePassButton, hideRePassButton, hideRegPassButton;
     public JMenuItem itemPrintList, itemAddUser, itemDelUser, itemShowApp, itemUnlock, itemLock, itemLogout,
-            itemNonRoot,
-            itemLogin, itemRegister, itemExit, itemAbout;
+            itemLogin, itemRegister, itemExit, itemAbout, itemEditQues, itemEditUser, itemCheckLog;
+    public JMenuItem itemNonRoot = new JMenuItem("You can not access this!"), itemNonRootClone = new JMenuItem("You can not access this!");
     public JTable userTable;
     public DefaultTableModel tableModel;
 
@@ -49,9 +49,7 @@ public class SwingAppUI extends JFrame {
     public JLabel labelAnalysis;
     private JLabel labelCopyright;
     private JMenuBar barmenu;
-    public JMenu menuOption;
-    public JMenu menuUser;
-    public JMenu menuHelp;
+    public JMenu menuOption, menuUser, menuSettings, menuHelp;
 
     public SwingAppUI(DataProcess loginsystem) throws HeadlessException {
         super();
@@ -306,16 +304,17 @@ public class SwingAppUI extends JFrame {
         panel001.setBackground(Color.yellow);
 
         // --- Menu ---
+        itemNonRoot.setEnabled(false);
         barmenu = new JMenuBar();
         menuOption = new JMenu("Option");
         menuUser = new JMenu("User");
         menuHelp = new JMenu("Help");
+        menuSettings = new JMenu("Settings");
         menuOption.setMnemonic(KeyEvent.VK_O);
         menuUser.setMnemonic(KeyEvent.VK_U);
         menuHelp.setMnemonic(KeyEvent.VK_H);
+        menuSettings.setMnemonic(KeyEvent.VK_S);
 
-        itemNonRoot = new JMenuItem("You can not access this!");
-        itemNonRoot.setEnabled(false);
         menuUser.add(itemNonRoot);
 
         itemLogin = new JMenuItem("Login");
@@ -384,13 +383,37 @@ public class SwingAppUI extends JFrame {
 
         itemAbout = new JMenuItem("About");
         ImageIcon iconAbout = new ImageIcon(getClass().getResource("/main/resources/common/about.png"));
+        itemAbout.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.ALT_MASK));
         iconAbout = new ImageIcon(iconAbout.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
         itemAbout.setIcon(iconAbout);
         menuHelp.add(itemAbout);
 
+        itemNonRootClone.setEnabled(false);
+        menuSettings.add(itemNonRootClone);
+        itemEditQues = new JMenuItem("Edit Questions");
+        ImageIcon iconQues = new ImageIcon(getClass().getResource("/main/resources/ui/question.png"));
+        itemEditQues.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
+        iconQues = new ImageIcon(iconQues.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+        itemEditQues.setIcon(iconQues);
+
+
+        itemEditUser = new JMenuItem("Edit Users");
+        ImageIcon iconUser = new ImageIcon(getClass().getResource("/main/resources/ui/user.png"));
+        itemEditUser.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, ActionEvent.CTRL_MASK));
+        iconUser = new ImageIcon(iconUser.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+        itemEditUser.setIcon(iconUser);
+
+        itemCheckLog = new JMenuItem("Check Log");
+        ImageIcon iconLog = new ImageIcon(getClass().getResource("/main/resources/ui/log.png"));
+        itemCheckLog.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));
+        iconLog = new ImageIcon(iconLog.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+        itemCheckLog.setIcon(iconLog);
+
+
         barmenu.add(menuOption);
-        barmenu.add(menuUser);
         barmenu.add(menuHelp);
+        barmenu.add(menuUser);
+        barmenu.add(menuSettings);
         setJMenuBar(barmenu);
 
         panelMN = new JPanel(new BorderLayout());

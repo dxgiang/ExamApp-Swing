@@ -20,12 +20,13 @@ public class ExamTestLogic {
     private String status = null;
     private List<Question> listQuestion;
     private LocalDateTime dt;
+    private static final String DATA_DIRECTORY = "data/questions.docx";
 
     // Constructor
     public ExamTestLogic(ExamTestUI ui) {
         this.ui = ui;
         listQuestion = new ArrayList<Question>();
-        loadQuestionsFromWord("data/questions.docx");
+        loadQuestionsFromWord(DATA_DIRECTORY);
     }
 
     public double getScore() {
@@ -109,5 +110,8 @@ public class ExamTestLogic {
                              "Error formatting the correct answer in the question file. Please check the Word file again.", 
                              "Error formating");
         }
+    }
+    public static String getDataFilePath() {
+        return DATA_DIRECTORY;
     }
 }

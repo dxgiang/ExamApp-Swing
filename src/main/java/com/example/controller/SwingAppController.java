@@ -1,9 +1,11 @@
 package main.java.com.example.controller;
 
+import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -13,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.SwingWorker;
 
+import main.java.com.example.MainApp;
 import main.java.com.example.auth.DataProcess;
 import main.java.com.example.auth.User;
 import main.java.com.example.exam.ExamTestLogic;
@@ -70,6 +73,11 @@ public class SwingAppController implements ActionListener {
         ui.itemUnlock.addActionListener(e -> ui.unlockButton.doClick());
         ui.itemLock.addActionListener(e -> ui.lockButton.doClick());
         ui.itemLogout.addActionListener(e -> ui.logoutButton.doClick());
+
+        ui.itemEditQues.addActionListener(e -> openFile(ExamTestLogic.getDataFilePath()));
+        ui.itemEditUser.addActionListener(e -> openFile(data.getDataFilePath()));
+        ui.itemCheckLog.addActionListener(e -> openFile(MainApp.getLogFilePath()));
+
         ui.hidePassButton.addActionListener(e -> togglePasswordVisibility(ui.pass, ui.hidePassButton));
         ui.hideRePassButton.addActionListener(e -> togglePasswordVisibility(ui.repass, ui.hideRePassButton));
         ui.hideRegPassButton.addActionListener(e -> togglePasswordVisibility(ui.regpass, ui.hideRegPassButton));
@@ -152,6 +160,10 @@ public class SwingAppController implements ActionListener {
         ui.menuUser.remove(ui.itemLock);
         ui.menuUser.remove(ui.itemLogout);
         ui.menuUser.add(ui.itemNonRoot);
+        ui.menuSettings.remove(ui.itemEditQues);
+        ui.menuSettings.remove(ui.itemEditUser);
+        ui.menuSettings.remove(ui.itemCheckLog);
+        ui.menuSettings.add(ui.itemNonRootClone);
     }
 
     private void togglePasswordVisibility(JPasswordField field, JButton button) {
@@ -225,6 +237,7 @@ public class SwingAppController implements ActionListener {
         ui.getContentPane().remove(ui.registerPanel);
         
         ui.menuUser.remove(ui.itemNonRoot);
+        ui.menuSettings.remove(ui.itemNonRootClone);
         ui.menuUser.add(ui.itemPrintList);
         ui.menuUser.add(ui.itemAddUser);
         ui.menuUser.add(ui.itemDelUser);
@@ -232,6 +245,9 @@ public class SwingAppController implements ActionListener {
         ui.menuUser.add(ui.itemUnlock);
         ui.menuUser.add(ui.itemLock);
         ui.menuUser.add(ui.itemLogout);
+        ui.menuSettings.add(ui.itemEditQues);
+        ui.menuSettings.add(ui.itemEditUser);
+        ui.menuSettings.add(ui.itemCheckLog);
         
         ui.setTitle("Management");
         ui.getContentPane().add(ui.panelMN);
@@ -243,7 +259,7 @@ public class SwingAppController implements ActionListener {
     private void handleRegularUserLogin(String username) {
         ExamTestUI currentExamTestUI = new ExamTestUI(); 
         ExamTestLogic currentExamLogic = currentExamTestUI.logic;
-        JOptionPane.showMessageDialog(ui, "LOGIN SUCCESSFULLY");
+        JOptionPane.showMessageDialog(ui, "LOGIN SUCCESSFULLY. User: " + username);
         System.out.println(upTime() + " Login - User: " + username + " (logined successfully)");
         countWrong = 0;
         ui.user.setText("");
@@ -387,7 +403,7 @@ public class SwingAppController implements ActionListener {
         for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS! Updating user details.");
-                break;
+                return;
             }
         }
         
@@ -429,13 +445,13 @@ public class SwingAppController implements ActionListener {
                         }
                         return null;
                     }
+                    protected void done() {
+                            ui.printListButton.doClick();
+                    }
                 };
                 worker.execute();
             }
         });
-        if(tempExamUI.isCompleted() == true) {
-            ui.printListButton.doClick();
-        }
     }
 
     private void handleLogout() {
@@ -555,5 +571,17 @@ public class SwingAppController implements ActionListener {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String dtfor = dt.format(format);
         return dtfor;
+    }
+    public void openFile(String filePath) {
+        try {
+            File file = new File(filePath);
+            if (file.exists()) {
+                Desktop.getDesktop().open(file);
+            } else {
+                JOptionPane.showMessageDialog(ui, "File not found: " + filePath);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(ui, "Error opening file: " + e.getMessage());
+        }
     }
 }

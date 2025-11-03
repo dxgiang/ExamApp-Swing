@@ -218,4 +218,7 @@ public class DataProcess extends JFrame {
 		}
 		return count;
 	}
+	public String getDataFilePath() {
+		return USER_DATA_FILE;
+	}
 }
