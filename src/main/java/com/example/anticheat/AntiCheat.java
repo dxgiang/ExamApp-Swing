@@ -17,6 +17,8 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     private boolean windowsPressed = false;
     private boolean escapePressed = false;
     private boolean prtScrPressed = false;
+    private boolean altPressed = false;
+    private boolean tabPressed = false;
     private volatile boolean cheatingApplied = false;
 
     public AntiCheat(ExamTestUI examTestUI, ExamTestLogic examTestLogic) {
@@ -40,6 +42,10 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
                 escapePressed = true;
             } else if (keyCode == KeyEvent.VK_PRINTSCREEN) {
                 prtScrPressed = true;
+            } else if(keyCode == KeyEvent.VK_ALT) {
+                altPressed = true;
+            } else if(keyCode == KeyEvent.VK_TAB) {
+                tabPressed = true;
             }
 
             if (windowsPressed) {
@@ -48,6 +54,8 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
                 enforceCheatPenalty("ESC key detected");
             } else if (prtScrPressed) {
                 enforceCheatPenalty("Print Screen key detected");
+            } else if (altPressed && tabPressed) {
+                enforceCheatPenalty("Alt + Tab detected");
             }
         }
     }
@@ -62,6 +70,10 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
                 escapePressed = false;
             } else if (keyCode == KeyEvent.VK_PRINTSCREEN) {
                 prtScrPressed = false;
+            } else if(keyCode == KeyEvent.VK_ALT || e.isAltDown()) {
+                altPressed = false;
+            } else if(keyCode == KeyEvent.VK_TAB) {
+                tabPressed = false;
             }
         }
     }
@@ -83,8 +95,10 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
                 enforceCheatPenalty("ESC key detected");
             } else if (prtScrPressed) {
                 enforceCheatPenalty("Print Screen key detected");
-            } else {
-                enforceCheatPenalty("Window lost focus(Alt + Tab, Minimize or Click outside)");
+            } else if (altPressed) {
+                enforceCheatPenalty("Alt + Tab detected");
+            }else {
+                enforceCheatPenalty("Window lost focus(Minimize or Click outside)");
             }
         }
     }
