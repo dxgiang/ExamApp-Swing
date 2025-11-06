@@ -167,9 +167,11 @@ public class ExamTestUI extends JFrame {
         }
         new ExamTestUI().setVisible(true);
     }
+
     public boolean isCompleted() {
         return completed;
     }
+    
     public boolean isStarted() {
         return started;
     }

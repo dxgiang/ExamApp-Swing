@@ -53,7 +53,7 @@ public class ExamTestLogic {
     public void processQuestion(int chosen) {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
-            if (chosen == ch.getIndexRightAns()) {
+            if (chosen == ch.getIndexRightAnswer()) {
                 score += (double) 10 / listQuestion.size(); 
             }
             index++;
@@ -111,6 +111,7 @@ public class ExamTestLogic {
                              "Error formating");
         }
     }
+
     public static String getDataFilePath() {
         return DATA_DIRECTORY;
     }

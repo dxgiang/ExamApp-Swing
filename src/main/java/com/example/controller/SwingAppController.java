@@ -572,6 +572,7 @@ public class SwingAppController implements ActionListener {
         String dtfor = dt.format(format);
         return dtfor;
     }
+    
     public void openFile(String filePath) {
         try {
             File file = new File(filePath);

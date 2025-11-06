@@ -12,7 +12,8 @@ public class SwingApp {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         } catch (Exception e) {
-            System.out.println("The Window look and feel do not support on your OS");
+            String OS_NAME = System.getProperty("os.name");
+            System.out.println("The Window look and feel do not support on your OS (" + OS_NAME + ").");
         }
         
         DataProcess loginSystem = new DataProcess();

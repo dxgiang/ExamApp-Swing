@@ -48,6 +48,7 @@ public class MainApp {
         
         SwingApp.main(args);
     }
+    
     public static String getLogFilePath() {
         return LOG_DIRECTORY + File.separator + SINGLE_LOG_FILE_NAME;
     }

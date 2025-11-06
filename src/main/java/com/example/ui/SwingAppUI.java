@@ -409,7 +409,6 @@ public class SwingAppUI extends JFrame {
         iconLog = new ImageIcon(iconLog.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
         itemCheckLog.setIcon(iconLog);
 
-
         barmenu.add(menuOption);
         barmenu.add(menuHelp);
         barmenu.add(menuUser);

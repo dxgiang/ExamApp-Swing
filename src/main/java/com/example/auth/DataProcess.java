@@ -65,7 +65,7 @@ public class DataProcess extends JFrame {
 	}
 
 	public void printList() {
-		System.out.println("user          password");
+		System.out.println("user         password");
 		for (User user : list) {
 			user.printList();
 		}

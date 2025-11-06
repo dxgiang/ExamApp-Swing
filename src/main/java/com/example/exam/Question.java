@@ -6,15 +6,15 @@ public class Question {
 	private String ans2;
 	private String ans3;
 	private String ans4;
-	private int indexRightAns;
+	private int indexRightAnswer;
 
-	public Question(String question, String ans1, String ans2, String ans3, String ans4, int indexRightAns) {
+	public Question(String question, String ans1, String ans2, String ans3, String ans4, int indexRightAnswer) {
 		this.question = question;
 		this.ans1 = ans1;
 		this.ans2 = ans2;
 		this.ans3 = ans3;
 		this.ans4 = ans4;
-		this.indexRightAns = indexRightAns;
+		this.indexRightAnswer = indexRightAnswer;
 	}
 
 	public String getQuestion() {
@@ -57,11 +57,11 @@ public class Question {
 		this.ans4 = ans4;
 	}
 
-	public int getIndexRightAns() {
-		return indexRightAns;
+	public int getIndexRightAnswer() {
+		return indexRightAnswer;
 	}
 
-	public void setIndexRightAns(int indexRightAns) {
-		this.indexRightAns = indexRightAns;
+	public void setIndexRightAnswer(int indexRightAns) {
+		this.indexRightAnswer = indexRightAns;
 	}
 }
