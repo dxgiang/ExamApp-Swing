@@ -40,5 +40,5 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/river0077/ExamApp-Swing
+git clone https://github.com/dxgiang/ExamApp-Swing
 cd ExamApp-Swing
