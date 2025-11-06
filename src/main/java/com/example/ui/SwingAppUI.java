@@ -53,7 +53,7 @@ public class SwingAppUI extends JFrame {
 
     public SwingAppUI(DataProcess loginsystem) throws HeadlessException {
         super();
-        setSize(550, 380);
+        setSize(580, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());

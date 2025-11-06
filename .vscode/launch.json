@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "main.java.com.example.MainApp",
+            "projectName": "AppExam",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "ExamTestUI",
+            "request": "launch",
+            "mainClass": "main.java.com.example.ui.ExamTestUI",
+            "projectName": "AppExam",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "SwingApp",
+            "request": "launch",
+            "mainClass": "main.java.com.example.ui.SwingApp",
+            "projectName": "AppExam",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

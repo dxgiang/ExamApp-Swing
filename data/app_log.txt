@@ -1,728 +1,185 @@
 
 
---- Start New Session: 01-11-2025 18:59:00 ---
-01-11-2025 18:59:00 Redirected console output to data/\app_log.txt
-01-11-2025 18:59:00 User data loaded from data\users.txt
-
-
---- Start New Session: 01-11-2025 18:59:05 ---
-01-11-2025 18:59:05 Redirected console output to data/\app_log.txt
-01-11-2025 18:59:05 User data loaded from data\users.txt
-01-11-2025 18:59:11 Logined successfully as root
-01-11-2025 18:59:19 User data saved to data\users.txt
-01-11-2025 18:59:20 Add User - User: ja (Added user successfully)
-01-11-2025 18:59:42 User data saved to data\users.txt
-01-11-2025 18:59:42 Register - User: ja (registered successfully)
-01-11-2025 18:59:48 Loaded 4 questions from data/questions.docx
-01-11-2025 18:59:49 Login - User: ja (logined successfully)
-01-11-2025 18:59:52 Exam Text - User: ja PASS! Score: 5.00/10.0
-01-11-2025 18:59:52 Exam Text - User: ja (Log out)
-01-11-2025 18:59:52 User data saved to data\users.txt
-01-11-2025 18:59:54 Exit app
-01-11-2025 19:00:04 Logout - User: root (log out)
-01-11-2025 19:00:11 Loaded 4 questions from data/questions.docx
-01-11-2025 19:00:12 Login - User: ja (logined successfully)
-01-11-2025 19:00:18 Exam Text - User: ja CHEAT ON THE EXAM!! Reason: ESC key detected
-01-11-2025 19:00:18 Exam Text - User: ja (Log out)
-01-11-2025 19:00:18 User data saved to data\users.txt
-01-11-2025 19:00:21 Logined successfully as root
-01-11-2025 19:00:27 Exit app
-
-
---- Start New Session: 01-11-2025 19:50:11 ---
-01-11-2025 19:50:11 Redirected console output to data/\app_log.txt
-01-11-2025 19:50:11 User data loaded from data\users.txt
-01-11-2025 19:50:16 Logined successfully as root
-01-11-2025 19:50:24 User data saved to data\users.txt
-01-11-2025 19:50:25 Delete User - User: ja (deleted successfully)
-01-11-2025 20:00:06 Exit app
-
-
---- Start New Session: 02-11-2025 21:30:33 ---
-02-11-2025 21:30:33 Redirected console output to data/\app_log.txt
-02-11-2025 21:30:33 User data loaded from data\users.txt
-02-11-2025 21:30:38 Logined successfully as root
-02-11-2025 21:30:59 User data saved to data\users.txt
-02-11-2025 21:31:00 Unlock - User: giang (unlocked successfully)
-02-11-2025 21:31:06 User data saved to data\users.txt
-02-11-2025 21:31:06 Unlock - User: root (unlocked successfully)
-02-11-2025 21:31:12 Logout - User: root (log out)
-02-11-2025 21:31:24 Login - User: giang Fail! (wrong password 1/3)
-02-11-2025 21:31:25 Login - User: giang Fail! (wrong password 2/3)
-02-11-2025 21:31:27 Login - User: giang Fail! (wrong password 3/3)
-02-11-2025 21:31:28 Login - User: giang Fail! (freeze 5 seconds, 1/3)
-02-11-2025 21:31:35 Login - User: giang Fail! (wrong password 1/3)
-02-11-2025 21:31:37 Login - User: giang Fail! (wrong password 2/3)
-02-11-2025 21:31:38 Login - User: giang Fail! (wrong password 3/3)
-02-11-2025 21:31:38 Login - User: giang Fail! (freeze 5 seconds, 2/3)
-02-11-2025 21:31:46 Login - User: giang Fail! (wrong password 1/3)
-02-11-2025 21:31:47 Login - User: giang Fail! (wrong password 2/3)
-02-11-2025 21:31:48 Login - User: giang Fail! (wrong password 3/3)
-02-11-2025 21:31:49 Login - User: giang Fail! (freeze 5 seconds, 3/3)
-02-11-2025 21:31:54 Login - User: giang Fail! (account locked)
-02-11-2025 21:31:58 User data saved to data\users.txt
-02-11-2025 21:32:06 Login - User: giang Fail! (account locked)
-02-11-2025 21:32:10 Logined successfully as root
-02-11-2025 21:32:29 Lock - User: giang (already locked)
-02-11-2025 21:32:33 User data saved to data\users.txt
-02-11-2025 21:32:33 Unlock - User: giang (unlocked successfully)
-02-11-2025 21:32:35 Logout - User: root (log out)
-02-11-2025 21:34:24 Logined successfully as root
-02-11-2025 21:34:37 Loaded 4 questions from data/questions.docx
-02-11-2025 21:34:42 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
-02-11-2025 21:34:42 Exam Text - User: root (Log out)
-02-11-2025 21:34:42 User data saved to data\users.txt
-02-11-2025 21:34:44 Loaded 4 questions from data/questions.docx
-02-11-2025 21:34:51 Exam Text - User: root PASS! Score: 5.00/10.0
-02-11-2025 21:34:51 Exam Text - User: root (Log out)
-02-11-2025 21:34:51 User data saved to data\users.txt
-02-11-2025 21:34:56 Logout - User: root (log out)
-02-11-2025 21:35:01 Exit app
-
-
---- Start New Session: 02-11-2025 21:40:51 ---
-02-11-2025 21:40:51 Redirected console output to data/\app_log.txt
-02-11-2025 21:40:51 User data loaded from data\users.txt
-02-11-2025 21:40:56 Logined successfully as root
-02-11-2025 21:41:03 User data saved to data\users.txt
-02-11-2025 21:41:03 Unlock - User: root (unlocked successfully)
-02-11-2025 21:41:05 Loaded 4 questions from data/questions.docx
-02-11-2025 21:41:11 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
-02-11-2025 21:41:11 Exam Text - User: root (Log out)
-02-11-2025 21:41:11 User data saved to data\users.txt
-02-11-2025 21:41:17 Logout - User: root (log out)
-02-11-2025 21:41:20 Exit app
-
-
---- Start New Session: 02-11-2025 21:43:31 ---
-02-11-2025 21:43:31 Redirected console output to data/\app_log.txt
-02-11-2025 21:43:31 User data loaded from data\users.txt
-02-11-2025 21:43:36 Logined successfully as root
-02-11-2025 21:43:39 Loaded 4 questions from data/questions.docx
-02-11-2025 21:43:41 Exam Text - User: root PASS! Score: 5.00/10.0
-02-11-2025 21:43:41 Exam Text - User: root (Log out)
-02-11-2025 21:43:41 User data saved to data\users.txt
-02-11-2025 21:43:46 Loaded 4 questions from data/questions.docx
-02-11-2025 21:43:50 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
-02-11-2025 21:43:50 Exam Text - User: root (Log out)
-02-11-2025 21:43:50 User data saved to data\users.txt
-02-11-2025 21:43:53 Logout - User: root (log out)
-02-11-2025 21:43:57 Exit app
-
-
---- Start New Session: 03-11-2025 16:59:58 ---
-03-11-2025 16:59:58 Redirected console output to data/\app_log.txt
-03-11-2025 16:59:58 User data loaded from data\users.txt
-03-11-2025 17:00:03 Logined successfully as root
-03-11-2025 17:00:07 Loaded 4 questions from data/questions.docx
-03-11-2025 17:00:10 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
-03-11-2025 17:00:10 Exam Text - User: root (Log out)
-03-11-2025 17:00:10 User data saved to data\users.txt
-03-11-2025 17:00:15 Exit app
-
-
---- Start New Session: 03-11-2025 17:03:13 ---
-03-11-2025 17:03:13 Redirected console output to data/\app_log.txt
-03-11-2025 17:03:13 User data loaded from data\users.txt
-03-11-2025 17:03:17 Logined successfully as root
-03-11-2025 17:03:20 Loaded 4 questions from data/questions.docx
-03-11-2025 17:03:22 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
-03-11-2025 17:03:22 Exam Text - User: root (Log out)
-03-11-2025 17:03:22 User data saved to data\users.txt
-03-11-2025 17:03:30 Logout - User: root (log out)
-03-11-2025 17:03:46 Exit app
-
-
---- Start New Session: 03-11-2025 17:45:12 ---
-03-11-2025 17:45:12 Redirected console output to data/\app_log.txt
-03-11-2025 17:45:12 User data loaded from data\users.txt
-03-11-2025 17:45:17 Logined successfully as root
-03-11-2025 17:45:23 User data saved to data\users.txt
-03-11-2025 17:45:23 Unlock - User: root (unlocked successfully)
-03-11-2025 17:45:36 User data saved to data\users.txt
-03-11-2025 17:45:37 Add User - User: haha (Added user successfully)
-03-11-2025 17:45:42 Loaded 4 questions from data/questions.docx
-03-11-2025 17:45:45 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
-03-11-2025 17:45:45 Exam Text - User: root (Log out)
-03-11-2025 17:45:45 User data saved to data\users.txt
-03-11-2025 17:45:58 User data saved to data\users.txt
-03-11-2025 17:45:59 Delete User - User: haha (deleted successfully)
-03-11-2025 17:46:04 User data saved to data\users.txt
-03-11-2025 17:46:04 Unlock - User: root (unlocked successfully)
-03-11-2025 17:46:07 Logout - User: root (log out)
-03-11-2025 17:47:19 Exit app
-
-
---- Start New Session: 03-11-2025 17:48:13 ---
-03-11-2025 17:48:13 Redirected console output to data/\app_log.txt
-03-11-2025 17:48:13 User data loaded from data\users.txt
-03-11-2025 17:48:30 Logined successfully as root
-03-11-2025 17:48:54 Logout - User: root (log out)
-03-11-2025 17:49:11 Logined successfully as root
-03-11-2025 17:49:20 Logout - User: root (log out)
-03-11-2025 17:49:25 Exit app
-
-
---- Start New Session: 03-11-2025 17:57:43 ---
-03-11-2025 17:57:43 Redirected console output to data/\app_log.txt
-03-11-2025 17:57:43 User data loaded from data\users.txt
-03-11-2025 17:57:47 Logined successfully as root
-03-11-2025 17:57:50 Logout - User: root (log out)
-03-11-2025 17:57:58 Loaded 4 questions from data/questions.docx
-03-11-2025 17:58:12 Login - User: giang (logined successfully)
-03-11-2025 17:58:28 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Windows key detected
-03-11-2025 17:58:28 Exam Text - User: giang (Log out)
-03-11-2025 17:58:28 User data saved to data\users.txt
-03-11-2025 17:59:20 Login - User: giang Fail! (account locked)
-03-11-2025 17:59:27 Loaded 4 questions from data/questions.docx
-03-11-2025 17:59:28 Login - User: user1 (logined successfully)
-03-11-2025 17:59:42 Exam Text - User: user1 CHEAT ON THE EXAM!! Reason: Window lost focus(Alt + Tab, Minimize or Click outside)
-03-11-2025 17:59:42 Exam Text - User: user1 (Log out)
-03-11-2025 17:59:42 User data saved to data\users.txt
-03-11-2025 18:00:29 Logined successfully as root
-03-11-2025 18:01:29 User data saved to data\users.txt
-03-11-2025 18:01:31 Add User - User: giang (Added user successfully)
-03-11-2025 18:01:47 User data saved to data\users.txt
-03-11-2025 18:01:49 Add User - User: giang (Added user successfully)
-03-11-2025 18:01:51 Exit app
-
-
---- Start New Session: 03-11-2025 18:02:29 ---
-03-11-2025 18:02:29 Redirected console output to data/\app_log.txt
-03-11-2025 18:02:29 User data loaded from data\users.txt
-03-11-2025 18:02:33 Logined successfully as root
-03-11-2025 18:02:43 Exit app
-
-
---- Start New Session: 03-11-2025 18:03:06 ---
-03-11-2025 18:03:06 Redirected console output to data/\app_log.txt
-03-11-2025 18:03:06 User data loaded from data\users.txt
-03-11-2025 18:03:11 Logined successfully as root
-03-11-2025 18:04:04 Exit app
-
-
---- Start New Session: 03-11-2025 18:04:36 ---
-03-11-2025 18:04:36 Redirected console output to data/\app_log.txt
-03-11-2025 18:04:36 User data loaded from data\users.txt
-03-11-2025 18:05:41 Exit app
-
-
---- Start New Session: 03-11-2025 18:10:29 ---
-03-11-2025 18:10:29 Redirected console output to data/\app_log.txt
-03-11-2025 18:10:29 User data loaded from data\users.txt
-03-11-2025 18:10:32 Exit app
-
-
---- Start New Session: 03-11-2025 18:10:36 ---
-03-11-2025 18:10:36 Redirected console output to data/\app_log.txt
-03-11-2025 18:10:36 User data loaded from data\users.txt
-03-11-2025 18:10:41 Logined successfully as root
-03-11-2025 18:12:05 Exit app
-
-
---- Start New Session: 03-11-2025 18:16:25 ---
-03-11-2025 18:16:25 Redirected console output to data/\app_log.txt
-03-11-2025 18:16:25 User data loaded from data\users.txt
-03-11-2025 18:16:31 Exit app
-
-
---- Start New Session: 03-11-2025 18:16:59 ---
-03-11-2025 18:16:59 Redirected console output to data/\app_log.txt
-03-11-2025 18:16:59 User data loaded from data\users.txt
-03-11-2025 18:17:15 Exit app
-
-
---- Start New Session: 03-11-2025 18:20:55 ---
-03-11-2025 18:20:55 Redirected console output to data/\app_log.txt
-03-11-2025 18:20:55 User data loaded from data\users.txt
-03-11-2025 18:21:04 Exit app
-
-
---- Start New Session: 03-11-2025 18:25:53 ---
-03-11-2025 18:25:53 Redirected console output to data/\app_log.txt
-03-11-2025 18:25:53 User data loaded from data\users.txt
-03-11-2025 18:25:59 Exit app
-
-
---- Start New Session: 03-11-2025 18:26:55 ---
-03-11-2025 18:26:55 Redirected console output to data/\app_log.txt
-03-11-2025 18:26:55 User data loaded from data\users.txt
-03-11-2025 18:27:11 Exit app
-
-
---- Start New Session: 03-11-2025 18:27:51 ---
-03-11-2025 18:27:51 Redirected console output to data/\app_log.txt
-03-11-2025 18:27:51 User data loaded from data\users.txt
-03-11-2025 18:27:56 Exit app
-
-
---- Start New Session: 03-11-2025 18:28:33 ---
-03-11-2025 18:28:33 Redirected console output to data/\app_log.txt
-03-11-2025 18:28:33 User data loaded from data\users.txt
-03-11-2025 18:28:38 Exit app
-
-
---- Start New Session: 03-11-2025 18:30:52 ---
-03-11-2025 18:30:52 Redirected console output to data/\app_log.txt
-03-11-2025 18:30:52 User data loaded from data\users.txt
-03-11-2025 18:31:00 Exit app
-
-
---- Start New Session: 03-11-2025 18:31:35 ---
-03-11-2025 18:31:35 Redirected console output to data/\app_log.txt
-03-11-2025 18:31:35 User data loaded from data\users.txt
-03-11-2025 18:31:48 Exit app
-
-
---- Start New Session: 03-11-2025 18:32:46 ---
-03-11-2025 18:32:46 Redirected console output to data/\app_log.txt
-03-11-2025 18:32:46 User data loaded from data\users.txt
-03-11-2025 18:32:54 Exit app
-
-
---- Start New Session: 03-11-2025 18:32:59 ---
-03-11-2025 18:32:59 Redirected console output to data/\app_log.txt
-03-11-2025 18:32:59 User data loaded from data\users.txt
-03-11-2025 18:33:04 Exit app
-
-
---- Start New Session: 03-11-2025 18:34:03 ---
-03-11-2025 18:34:03 Redirected console output to data/\app_log.txt
-03-11-2025 18:34:03 User data loaded from data\users.txt
-03-11-2025 18:34:35 Exit app
-
-
---- Start New Session: 03-11-2025 18:34:56 ---
-03-11-2025 18:34:56 Redirected console output to data/\app_log.txt
-03-11-2025 18:34:56 User data loaded from data\users.txt
-03-11-2025 18:35:01 Exit app
-
-
---- Start New Session: 03-11-2025 18:35:04 ---
-03-11-2025 18:35:04 Redirected console output to data/\app_log.txt
-03-11-2025 18:35:04 User data loaded from data\users.txt
-03-11-2025 18:35:10 Exit app
-
-
---- Start New Session: 03-11-2025 18:37:28 ---
-03-11-2025 18:37:28 Redirected console output to data/\app_log.txt
-03-11-2025 18:37:28 User data loaded from data\users.txt
-03-11-2025 18:37:33 Exit app
-
-
---- Start New Session: 03-11-2025 18:37:44 ---
-03-11-2025 18:37:44 Redirected console output to data/\app_log.txt
-03-11-2025 18:37:44 User data loaded from data\users.txt
-03-11-2025 18:37:49 Exit app
-
-
---- Start New Session: 03-11-2025 18:50:53 ---
-03-11-2025 18:50:53 Redirected console output to data/\app_log.txt
-03-11-2025 18:50:53 User data loaded from data\users.txt
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problems: 
-	The method getDataFilePath() is undefined for the type ExamTestLogic
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:122)
-	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
-	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
-	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
-	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1804)
-	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2962)
-	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:3010)
-	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2924)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6353)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1829)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:874)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1136)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1011)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:839)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4839)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problems: 
-	The method getDataFilePath() is undefined for the type ExamTestLogic
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:122)
-	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
-	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
-	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
-	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1804)
-	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2962)
-	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:3010)
-	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2924)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6353)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1829)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:874)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1136)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1011)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:839)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4839)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problems: 
-	The method getDataFilePath() is undefined for the type ExamTestLogic
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:122)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-03-11-2025 18:51:08 Exit app
-
-
---- Start New Session: 03-11-2025 18:53:16 ---
-03-11-2025 18:53:16 Redirected console output to data/\app_log.txt
-03-11-2025 18:53:16 User data loaded from data\users.txt
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
-	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
-	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
-	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1804)
-	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2962)
-	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:3010)
-	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2924)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6353)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1829)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:874)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1136)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1011)
-	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:839)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4839)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:124)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6341)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2260)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4916)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4559)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4500)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-03-11-2025 18:53:29 Exit app
-
-
---- Start New Session: 03-11-2025 18:54:32 ---
-03-11-2025 18:54:32 Redirected console output to data/\app_log.txt
-03-11-2025 18:54:33 User data loaded from data\users.txt
-Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
-	The method getDataFilePath() is undefined for the type DataProcess
-
-	at main.java.com.example.controller.SwingAppController.<init>(SwingAppController.java:78)
-	at main.java.com.example.ui.SwingApp.main(SwingApp.java:20)
+--- Start New Session: 06-11-2025 20:55:16 ---
+06-11-2025 20:55:16 Redirected console output to data//app_log.txt
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.MainApp.main(MainApp.java:45)
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:13)
 	at main.java.com.example.MainApp.main(MainApp.java:50)
+06-11-2025 20:55:16 User data loaded from data/users.txt
+06-11-2025 20:55:24 Logined successfully as root
+06-11-2025 20:55:59 Exit app
 
 
---- Start New Session: 03-11-2025 18:55:39 ---
-03-11-2025 18:55:39 Redirected console output to data/\app_log.txt
-03-11-2025 18:55:39 User data loaded from data\users.txt
-03-11-2025 18:55:44 Logined successfully as root
-03-11-2025 18:55:53 Exit app
-
-
---- Start New Session: 03-11-2025 18:56:20 ---
-03-11-2025 18:56:20 Redirected console output to data/\app_log.txt
-03-11-2025 18:56:20 User data loaded from data\users.txt
-03-11-2025 18:56:28 Logined successfully as root
-03-11-2025 18:56:32 Exit app
-
-
---- Start New Session: 03-11-2025 18:56:38 ---
-03-11-2025 18:56:38 Redirected console output to data/\app_log.txt
-03-11-2025 18:56:38 User data loaded from data\users.txt
-03-11-2025 18:56:43 Logined successfully as root
-03-11-2025 18:56:49 Exit app
-
-
---- Start New Session: 03-11-2025 18:57:46 ---
-03-11-2025 18:57:46 Redirected console output to data/\app_log.txt
-03-11-2025 18:57:46 User data loaded from data\users.txt
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JMenuItem.setEnabled(boolean)" because "this.itemNonRoot" is null
-	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:307)
-	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:65)
-	at main.java.com.example.ui.SwingApp.main(SwingApp.java:19)
+--- Start New Session: 06-11-2025 20:57:35 ---
+06-11-2025 20:57:35 Redirected console output to data//app_log.txt
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.MainApp.main(MainApp.java:45)
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:13)
 	at main.java.com.example.MainApp.main(MainApp.java:50)
+06-11-2025 20:57:35 User data loaded from data/users.txt
+06-11-2025 20:57:42 Exit app
 
 
---- Start New Session: 03-11-2025 18:58:17 ---
-03-11-2025 18:58:17 Redirected console output to data/\app_log.txt
-03-11-2025 18:58:17 User data loaded from data\users.txt
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JMenuItem.setEnabled(boolean)" because "this.itemNonRoot" is null
-	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:307)
-	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:65)
-	at main.java.com.example.ui.SwingApp.main(SwingApp.java:19)
+--- Start New Session: 06-11-2025 20:58:41 ---
+06-11-2025 20:58:41 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:13)
 	at main.java.com.example.MainApp.main(MainApp.java:50)
+06-11-2025 20:58:41 User data loaded from data/users.txt
+06-11-2025 20:58:46 Exit app
 
 
---- Start New Session: 03-11-2025 18:58:38 ---
-03-11-2025 18:58:38 Redirected console output to data/\app_log.txt
-03-11-2025 18:58:38 User data loaded from data\users.txt
-Exception in thread "main" java.lang.NullPointerException: Cannot invoke "javax.swing.JMenuItem.setEnabled(boolean)" because "this.itemNonRoot" is null
-	at main.java.com.example.ui.SwingAppUI.initComponents(SwingAppUI.java:307)
-	at main.java.com.example.ui.SwingAppUI.<init>(SwingAppUI.java:65)
-	at main.java.com.example.ui.SwingApp.main(SwingApp.java:19)
-	at main.java.com.example.MainApp.main(MainApp.java:50)
+--- Start New Session: 06-11-2025 20:59:12 ---
+06-11-2025 20:59:12 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.base/java.lang.Class.forName(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(Unknown Source)
+	at java.desktop/javax.swing.UIManager.setLookAndFeel(Unknown Source)
+	at main.java.com.example.ui.SwingApp.main(SwingApp.java:13)
+	at main.java.com.example.MainApp.main(MainApp.java:49)
+06-11-2025 20:59:12 User data loaded from data/users.txt
+06-11-2025 20:59:25 Logined successfully as root
+06-11-2025 20:59:37 Loaded 4 questions from data/questions.docx
+06-11-2025 21:00:06 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:00:06 Exam Text - User: root (Log out)
+06-11-2025 21:00:06 User data saved to data/users.txt
+06-11-2025 21:00:13 Exit app
 
 
---- Start New Session: 03-11-2025 18:59:55 ---
-03-11-2025 18:59:55 Redirected console output to data/\app_log.txt
-03-11-2025 18:59:55 User data loaded from data\users.txt
-03-11-2025 19:00:06 Logined successfully as root
-03-11-2025 19:00:29 Logout - User: root (log out)
-03-11-2025 19:00:59 Exit app
+--- Start New Session: 06-11-2025 21:02:15 ---
+06-11-2025 21:02:15 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:02:15 User data loaded from data/users.txt
+06-11-2025 21:02:20 Logined successfully as root
+06-11-2025 21:02:30 Logout - User: root (log out)
+06-11-2025 21:02:34 Exit app
 
 
---- Start New Session: 03-11-2025 19:01:35 ---
-03-11-2025 19:01:35 Redirected console output to data/\app_log.txt
-03-11-2025 19:01:35 User data loaded from data\users.txt
-03-11-2025 19:01:39 Logined successfully as root
-03-11-2025 19:01:43 Logout - User: root (log out)
-03-11-2025 19:01:57 Logined successfully as root
-03-11-2025 19:02:34 Logout - User: root (log out)
-03-11-2025 19:02:48 Logined successfully as root
-03-11-2025 19:03:30 Exit app
+--- Start New Session: 06-11-2025 21:03:58 ---
+06-11-2025 21:03:58 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:03:58 User data loaded from data/users.txt
+06-11-2025 21:04:04 Logined successfully as root
+06-11-2025 21:04:09 Exit app
 
 
---- Start New Session: 03-11-2025 21:32:02 ---
-03-11-2025 21:32:02 Redirected console output to data/\app_log.txt
-03-11-2025 21:32:02 User data loaded from data\users.txt
-03-11-2025 21:32:18 Logined successfully as root
-03-11-2025 21:32:35 Exit app
+--- Start New Session: 06-11-2025 21:04:13 ---
+06-11-2025 21:04:13 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:04:13 User data loaded from data/users.txt
+06-11-2025 21:04:18 Logined successfully as root
+06-11-2025 21:04:24 Exit app
+
+
+--- Start New Session: 06-11-2025 21:04:29 ---
+06-11-2025 21:04:29 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:04:29 User data loaded from data/users.txt
+06-11-2025 21:04:36 Logined successfully as root
+06-11-2025 21:05:22 Exit app
+
+
+--- Start New Session: 06-11-2025 21:05:48 ---
+06-11-2025 21:05:48 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:05:48 User data loaded from data/users.txt
+06-11-2025 21:05:53 Logined successfully as root
+06-11-2025 21:06:18 User data saved to data/users.txt
+06-11-2025 21:06:18 Unlock - User: root (unlocked successfully)
+06-11-2025 21:06:25 Unlock - User: giang (not locked)
+06-11-2025 21:06:34 User data saved to data/users.txt
+06-11-2025 21:06:35 Unlock - User: user1 (unlocked successfully)
+06-11-2025 21:06:40 Loaded 4 questions from data/questions.docx
+06-11-2025 21:07:15 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:07:15 Exam Text - User: root (Log out)
+06-11-2025 21:07:15 User data saved to data/users.txt
+06-11-2025 21:07:20 Loaded 4 questions from data/questions.docx
+06-11-2025 21:07:33 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:07:33 Exam Text - User: root (Log out)
+06-11-2025 21:07:33 User data saved to data/users.txt
+06-11-2025 21:07:48 Loaded 4 questions from data/questions.docx
+06-11-2025 21:07:55 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:07:55 Exam Text - User: root (Log out)
+06-11-2025 21:07:55 User data saved to data/users.txt
+06-11-2025 21:08:02 User data saved to data/users.txt
+06-11-2025 21:08:03 Unlock - User: root (unlocked successfully)
+06-11-2025 21:08:26 Loaded 4 questions from data/questions.docx
+06-11-2025 21:08:33 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:08:33 Exam Text - User: root (Log out)
+06-11-2025 21:08:33 User data saved to data/users.txt
+06-11-2025 21:08:36 Exit app
+
+
+--- Start New Session: 06-11-2025 21:09:54 ---
+06-11-2025 21:09:54 Redirected console output to data//app_log.txt
+The Window look and feel do not support on your OS
+The Window look and feel do not support on your OS
+06-11-2025 21:09:54 User data loaded from data/users.txt
+06-11-2025 21:09:59 Logined successfully as root
+06-11-2025 21:10:04 Loaded 4 questions from data/questions.docx
+06-11-2025 21:10:10 Exam Text - User: root CHEAT ON THE EXAM!! Reason: ESC key detected
+06-11-2025 21:10:10 Exam Text - User: root (Log out)
+06-11-2025 21:10:10 User data saved to data/users.txt
+06-11-2025 21:10:14 Loaded 4 questions from data/questions.docx
+06-11-2025 21:10:19 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+06-11-2025 21:10:19 Exam Text - User: root (Log out)
+06-11-2025 21:10:19 User data saved to data/users.txt
+06-11-2025 21:10:26 User data saved to data/users.txt
+06-11-2025 21:10:26 Unlock - User: root (unlocked successfully)
+06-11-2025 21:10:29 Logout - User: root (log out)
+06-11-2025 21:10:40 Exit app

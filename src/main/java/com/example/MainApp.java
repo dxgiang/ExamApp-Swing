@@ -30,7 +30,6 @@ public class MainApp {
 
             PrintStream fileOut = new PrintStream(new FileOutputStream(logFilePath, true));
             fileOut.printf("\n\n--- Start New Session: %s ---\n", timestamp);
-            
             System.setOut(fileOut);
             System.setErr(fileOut);
             
@@ -44,7 +43,7 @@ public class MainApp {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("The Window look and feel do not support on your OS");
         }
         
         SwingApp.main(args);
