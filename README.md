@@ -42,3 +42,7 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 ```bash
 git clone https://github.com/dxgiang/ExamApp-Swing
 cd ExamApp-Swing
+```
+---
+## Diagram
+Click [here](https://www.mermaidchart.com/d/6598724a-e615-4ba3-9f90-4200e8ae23c7) to see the diagram
