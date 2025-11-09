@@ -3,6 +3,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CheatNotificationUI",
+            "request": "launch",
+            "mainClass": "main.java.com.example.ui.CheatNotificationUI",
+            "projectName": "AppExam",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",

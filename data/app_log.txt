@@ -46,3 +46,296 @@ The Window look and feel do not support on your OS
 06-11-2025 21:26:43 Logout - User: root (log out)
 06-11-2025 21:26:51 Exit app
 
+
+
+--- Start New Session: 09-11-2025 19:12:35 ---
+09-11-2025 19:12:35 Redirected console output to data/\app_log.txt
+
+
+--- Start New Session: 09-11-2025 19:12:39 ---
+09-11-2025 19:12:39 Redirected console output to data/\app_log.txt
+
+
+--- Start New Session: 09-11-2025 19:12:43 ---
+09-11-2025 19:12:43 Redirected console output to data/\app_log.txt
+09-11-2025 19:12:48 User data loaded from data\users.txt
+09-11-2025 19:12:48 Logined successfully as root
+09-11-2025 19:12:49 User data loaded from data\users.txt
+09-11-2025 19:12:49 User data loaded from data\users.txt
+09-11-2025 19:12:49 User data loaded from data\users.txt
+09-11-2025 19:12:49 User data loaded from data\users.txt
+09-11-2025 19:12:49 User data loaded from data\users.txt
+09-11-2025 19:12:55 User data loaded from data\users.txt
+09-11-2025 19:12:55 User data loaded from data\users.txt
+09-11-2025 19:12:55 User data loaded from data\users.txt
+09-11-2025 19:12:56 Loaded 4 questions from data/questions.docx
+09-11-2025 19:12:56 Login - User: giang (logined successfully)
+09-11-2025 19:13:00 Exam Text - User: giang PASS! Score: 5.00/10.0
+09-11-2025 19:13:00 Exam Text - User: giang (Log out)
+09-11-2025 19:13:00 User data loaded from data\users.txt
+09-11-2025 19:13:00 User data loaded from data\users.txt
+09-11-2025 19:13:00 User data saved to data\users.txt
+09-11-2025 19:13:03 User data loaded from data\users.txt
+09-11-2025 19:13:03 User data loaded from data\users.txt
+09-11-2025 19:13:03 User data loaded from data\users.txt
+09-11-2025 19:13:03 User data loaded from data\users.txt
+09-11-2025 19:13:03 User data loaded from data\users.txt
+09-11-2025 19:13:08 Exit app
+09-11-2025 19:13:13 User data loaded from data\users.txt
+09-11-2025 19:13:13 User data loaded from data\users.txt
+09-11-2025 19:13:13 User data loaded from data\users.txt
+09-11-2025 19:13:13 Loaded 4 questions from data/questions.docx
+09-11-2025 19:13:14 Login - User: river (logined successfully)
+09-11-2025 19:13:18 Exam Text - User: river CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 19:13:18 Exam Text - User: river (Log out)
+09-11-2025 19:13:18 User data loaded from data\users.txt
+09-11-2025 19:13:18 User data loaded from data\users.txt
+09-11-2025 19:13:18 User data saved to data\users.txt
+09-11-2025 19:13:20 User data loaded from data\users.txt
+09-11-2025 19:13:20 User data loaded from data\users.txt
+09-11-2025 19:13:20 User data loaded from data\users.txt
+09-11-2025 19:13:20 User data loaded from data\users.txt
+09-11-2025 19:13:20 User data loaded from data\users.txt
+09-11-2025 19:13:22 Logout - User: root (log out)
+09-11-2025 19:13:25 Exit app
+09-11-2025 19:13:26 Exit app
+
+
+--- Start New Session: 09-11-2025 19:15:08 ---
+09-11-2025 19:15:08 Redirected console output to data/\app_log.txt
+
+
+--- Start New Session: 09-11-2025 19:15:15 ---
+09-11-2025 19:15:15 Redirected console output to data/\app_log.txt
+
+
+--- Start New Session: 09-11-2025 19:15:19 ---
+09-11-2025 19:15:19 Redirected console output to data/\app_log.txt
+09-11-2025 19:15:26 User data loaded from data\users.txt
+09-11-2025 19:15:26 Logined successfully as root
+09-11-2025 19:15:27 User data loaded from data\users.txt
+09-11-2025 19:15:27 User data loaded from data\users.txt
+09-11-2025 19:15:27 User data loaded from data\users.txt
+09-11-2025 19:15:27 User data loaded from data\users.txt
+09-11-2025 19:15:27 User data loaded from data\users.txt
+09-11-2025 19:15:34 User data loaded from data\users.txt
+09-11-2025 19:15:34 User data loaded from data\users.txt
+09-11-2025 19:15:34 User data loaded from data\users.txt
+09-11-2025 19:15:34 Login - User: giang Fail! (account completed)
+09-11-2025 19:15:39 User data loaded from data\users.txt
+09-11-2025 19:15:39 User data loaded from data\users.txt
+09-11-2025 19:15:39 User data saved to data\users.txt
+09-11-2025 19:15:39 Unlock - User: giang (unlocked successfully)
+09-11-2025 19:15:40 User data loaded from data\users.txt
+09-11-2025 19:15:40 User data loaded from data\users.txt
+09-11-2025 19:15:40 User data loaded from data\users.txt
+09-11-2025 19:15:40 User data loaded from data\users.txt
+09-11-2025 19:15:40 User data loaded from data\users.txt
+09-11-2025 19:15:45 User data loaded from data\users.txt
+09-11-2025 19:15:45 User data loaded from data\users.txt
+09-11-2025 19:15:45 User data loaded from data\users.txt
+09-11-2025 19:15:46 Loaded 4 questions from data/questions.docx
+09-11-2025 19:15:47 Login - User: giang (logined successfully)
+09-11-2025 19:15:50 Exam Text - User: giang FAIL! Score: 2.50/10.0
+09-11-2025 19:15:50 Exam Text - User: giang (Log out)
+09-11-2025 19:15:50 User data loaded from data\users.txt
+09-11-2025 19:15:50 User data loaded from data\users.txt
+09-11-2025 19:15:50 User data saved to data\users.txt
+09-11-2025 19:15:53 User data loaded from data\users.txt
+09-11-2025 19:15:53 User data loaded from data\users.txt
+09-11-2025 19:15:53 User data loaded from data\users.txt
+09-11-2025 19:15:53 User data loaded from data\users.txt
+09-11-2025 19:15:53 User data loaded from data\users.txt
+09-11-2025 19:15:56 Logout - User: root (log out)
+09-11-2025 19:15:59 Exit app
+09-11-2025 19:16:04 User data loaded from data\users.txt
+09-11-2025 19:16:04 Logined successfully as root
+09-11-2025 19:16:05 User data loaded from data\users.txt
+09-11-2025 19:16:05 User data loaded from data\users.txt
+09-11-2025 19:16:05 User data loaded from data\users.txt
+09-11-2025 19:16:05 User data loaded from data\users.txt
+09-11-2025 19:16:05 User data loaded from data\users.txt
+09-11-2025 19:16:08 User data loaded from data\users.txt
+09-11-2025 19:16:08 User data loaded from data\users.txt
+09-11-2025 19:16:08 User data loaded from data\users.txt
+09-11-2025 19:16:08 User data loaded from data\users.txt
+09-11-2025 19:16:08 User data loaded from data\users.txt
+09-11-2025 19:16:13 User data loaded from data\users.txt
+09-11-2025 19:16:13 User data loaded from data\users.txt
+09-11-2025 19:16:13 User data saved to data\users.txt
+09-11-2025 19:16:13 Unlock - User: river (unlocked successfully)
+09-11-2025 19:16:14 User data loaded from data\users.txt
+09-11-2025 19:16:14 User data loaded from data\users.txt
+09-11-2025 19:16:14 User data loaded from data\users.txt
+09-11-2025 19:16:14 User data loaded from data\users.txt
+09-11-2025 19:16:14 User data loaded from data\users.txt
+09-11-2025 19:16:17 User data loaded from data\users.txt
+09-11-2025 19:16:17 User data loaded from data\users.txt
+09-11-2025 19:16:17 User data saved to data\users.txt
+09-11-2025 19:16:17 Unlock - User: giang (unlocked successfully)
+09-11-2025 19:16:18 User data loaded from data\users.txt
+09-11-2025 19:16:18 User data loaded from data\users.txt
+09-11-2025 19:16:18 User data loaded from data\users.txt
+09-11-2025 19:16:18 User data loaded from data\users.txt
+09-11-2025 19:16:18 User data loaded from data\users.txt
+09-11-2025 19:16:19 Logout - User: root (log out)
+09-11-2025 19:16:28 User data loaded from data\users.txt
+09-11-2025 19:16:28 Logined successfully as root
+09-11-2025 19:16:29 User data loaded from data\users.txt
+09-11-2025 19:16:29 User data loaded from data\users.txt
+09-11-2025 19:16:29 User data loaded from data\users.txt
+09-11-2025 19:16:29 User data loaded from data\users.txt
+09-11-2025 19:16:29 User data loaded from data\users.txt
+09-11-2025 19:16:51 Logout - User: root (log out)
+09-11-2025 19:16:55 Exit app
+09-11-2025 19:16:58 Exit app
+
+
+--- Start New Session: 09-11-2025 20:10:21 ---
+09-11-2025 20:10:21 Redirected console output to data/\app_log.txt
+09-11-2025 20:10:26 User data loaded from data\users.txt
+09-11-2025 20:10:26 Logined successfully as root
+09-11-2025 20:10:27 User data loaded from data\users.txt
+09-11-2025 20:10:27 User data loaded from data\users.txt
+09-11-2025 20:10:27 User data loaded from data\users.txt
+09-11-2025 20:10:27 User data loaded from data\users.txt
+09-11-2025 20:10:27 User data loaded from data\users.txt
+09-11-2025 20:10:30 Loaded 4 questions from data/questions.docx
+09-11-2025 20:10:33 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 20:10:33 Exam Text - User: root (Log out)
+09-11-2025 20:10:33 User data loaded from data\users.txt
+09-11-2025 20:10:33 User data loaded from data\users.txt
+09-11-2025 20:10:33 User data saved to data\users.txt
+09-11-2025 20:10:34 User data loaded from data\users.txt
+09-11-2025 20:10:34 User data loaded from data\users.txt
+09-11-2025 20:10:34 User data loaded from data\users.txt
+09-11-2025 20:10:34 User data loaded from data\users.txt
+09-11-2025 20:10:34 User data loaded from data\users.txt
+09-11-2025 20:10:56 Exit app
+
+
+--- Start New Session: 09-11-2025 20:13:18 ---
+09-11-2025 20:13:18 Redirected console output to data/\app_log.txt
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:23 Logined successfully as root
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:23 User data loaded from data\users.txt
+09-11-2025 20:13:27 Loaded 4 questions from data/questions.docx
+09-11-2025 20:13:32 Exam Text - User: root PASS! Score: 5.00/10.0
+09-11-2025 20:13:32 Exam Text - User: root (Log out)
+09-11-2025 20:13:32 User data loaded from data\users.txt
+09-11-2025 20:13:32 User data loaded from data\users.txt
+09-11-2025 20:13:32 User data saved to data\users.txt
+09-11-2025 20:13:33 User data loaded from data\users.txt
+09-11-2025 20:13:33 User data loaded from data\users.txt
+09-11-2025 20:13:33 User data loaded from data\users.txt
+09-11-2025 20:13:33 User data loaded from data\users.txt
+09-11-2025 20:13:33 User data loaded from data\users.txt
+09-11-2025 20:13:48 Loaded 4 questions from data/questions.docx
+09-11-2025 20:13:49 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 20:13:49 Exam Text - User: root (Log out)
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data saved to data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:13:50 User data loaded from data\users.txt
+09-11-2025 20:14:32 Exit app
+
+
+--- Start New Session: 09-11-2025 20:20:03 ---
+09-11-2025 20:20:03 Redirected console output to data/\app_log.txt
+09-11-2025 20:20:08 User data loaded from data\users.txt
+09-11-2025 20:20:08 Logined successfully as root
+09-11-2025 20:20:08 User data loaded from data\users.txt
+09-11-2025 20:20:08 User data loaded from data\users.txt
+09-11-2025 20:20:08 User data loaded from data\users.txt
+09-11-2025 20:20:08 User data loaded from data\users.txt
+09-11-2025 20:20:09 User data loaded from data\users.txt
+09-11-2025 20:20:11 Loaded 4 questions from data/questions.docx
+09-11-2025 20:20:13 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 20:20:13 Exam Text - User: root (Log out)
+09-11-2025 20:20:13 User data loaded from data\users.txt
+09-11-2025 20:20:13 User data loaded from data\users.txt
+09-11-2025 20:20:13 User data saved to data\users.txt
+09-11-2025 20:20:14 User data loaded from data\users.txt
+09-11-2025 20:20:14 User data loaded from data\users.txt
+09-11-2025 20:20:14 User data loaded from data\users.txt
+09-11-2025 20:20:14 User data loaded from data\users.txt
+09-11-2025 20:20:14 User data loaded from data\users.txt
+09-11-2025 20:32:53 Logout - User: root (log out)
+09-11-2025 20:33:04 User data loaded from data\users.txt
+09-11-2025 20:33:04 User data loaded from data\users.txt
+09-11-2025 20:33:04 User data loaded from data\users.txt
+09-11-2025 20:33:04 Loaded 4 questions from data/questions.docx
+09-11-2025 20:33:04 Login - User: giang (logined successfully)
+09-11-2025 20:33:14 Exam Text - User: giang CHEAT ON THE EXAM!! Reason: Window lost focus(Minimize or Click outside)
+09-11-2025 20:33:14 Exam Text - User: giang (Log out)
+09-11-2025 20:33:14 User data loaded from data\users.txt
+09-11-2025 20:33:14 User data loaded from data\users.txt
+09-11-2025 20:33:14 User data saved to data\users.txt
+09-11-2025 20:33:42 User data loaded from data\users.txt
+09-11-2025 20:33:42 Logined successfully as root
+09-11-2025 20:33:43 User data loaded from data\users.txt
+09-11-2025 20:33:43 User data loaded from data\users.txt
+09-11-2025 20:33:43 User data loaded from data\users.txt
+09-11-2025 20:33:43 User data loaded from data\users.txt
+09-11-2025 20:33:43 User data loaded from data\users.txt
+09-11-2025 20:33:44 Loaded 4 questions from data/questions.docx
+09-11-2025 20:33:46 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 20:33:46 Exam Text - User: root (Log out)
+09-11-2025 20:33:46 User data loaded from data\users.txt
+09-11-2025 20:33:46 User data loaded from data\users.txt
+09-11-2025 20:33:46 User data saved to data\users.txt
+09-11-2025 20:33:47 User data loaded from data\users.txt
+09-11-2025 20:33:47 User data loaded from data\users.txt
+09-11-2025 20:33:47 User data loaded from data\users.txt
+09-11-2025 20:33:47 User data loaded from data\users.txt
+09-11-2025 20:33:47 User data loaded from data\users.txt
+09-11-2025 20:33:53 Logout - User: root (log out)
+09-11-2025 20:34:02 User data loaded from data\users.txt
+09-11-2025 20:34:02 User data loaded from data\users.txt
+09-11-2025 20:34:02 User data loaded from data\users.txt
+09-11-2025 20:34:02 Loaded 4 questions from data/questions.docx
+09-11-2025 20:34:02 Login - User: river (logined successfully)
+09-11-2025 20:34:05 Exam Text - User: river CHEAT ON THE EXAM!! Reason: Windows key detected
+09-11-2025 20:34:05 Exam Text - User: river (Log out)
+09-11-2025 20:34:05 User data loaded from data\users.txt
+09-11-2025 20:34:05 User data loaded from data\users.txt
+09-11-2025 20:34:05 User data saved to data\users.txt
+09-11-2025 20:34:37 User data loaded from data\users.txt
+09-11-2025 20:34:37 Logined successfully as root
+09-11-2025 20:34:38 User data loaded from data\users.txt
+09-11-2025 20:34:38 User data loaded from data\users.txt
+09-11-2025 20:34:38 User data loaded from data\users.txt
+09-11-2025 20:34:38 User data loaded from data\users.txt
+09-11-2025 20:34:38 User data loaded from data\users.txt
+09-11-2025 20:34:41 Loaded 4 questions from data/questions.docx
+09-11-2025 20:34:44 Exam Text - User: root CHEAT ON THE EXAM!! Reason: Alt + Tab detected
+09-11-2025 20:34:44 Exam Text - User: root (Log out)
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data saved to data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:44 User data loaded from data\users.txt
+09-11-2025 20:34:56 Loaded 4 questions from data/questions.docx
+09-11-2025 20:34:59 Exam Text - User: root CHEAT ON THE EXAM!! Reason: ESC key detected
+09-11-2025 20:34:59 Exam Text - User: root (Log out)
+09-11-2025 20:34:59 User data loaded from data\users.txt
+09-11-2025 20:34:59 User data loaded from data\users.txt
+09-11-2025 20:34:59 User data saved to data\users.txt
+09-11-2025 20:35:00 User data loaded from data\users.txt
+09-11-2025 20:35:00 User data loaded from data\users.txt
+09-11-2025 20:35:00 User data loaded from data\users.txt
+09-11-2025 20:35:00 User data loaded from data\users.txt
+09-11-2025 20:35:00 User data loaded from data\users.txt
+09-11-2025 20:35:22 Logout - User: root (log out)
+09-11-2025 20:35:54 Exit app

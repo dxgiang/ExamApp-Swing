@@ -6,9 +6,8 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import static java.awt.Toolkit.getDefaultToolkit;
 
-import javax.swing.JOptionPane;
-
 import main.java.com.example.exam.ExamTestLogic;
+import main.java.com.example.ui.CheatNotificationUI;
 import main.java.com.example.ui.ExamTestUI;
 
 public class AntiCheat implements WindowFocusListener, KeyListener {
@@ -106,7 +105,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     private void enforceCheatPenalty(String reason) {
         if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { // Double check status
             cheatingApplied = true;
-            JOptionPane.showMessageDialog(examTestUI, "You're caught cheating on the exam! Reason: " + reason);
+            new CheatNotificationUI(reason);
             System.out.println(
                     examTestLogic.upTime() + " " + examTestUI.getTitle() + " CHEAT ON THE EXAM!! Reason: " + reason);
             System.out.println(examTestLogic.upTime() + " " + examTestUI.getTitle() + " (Log out)");
