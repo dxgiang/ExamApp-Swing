@@ -16,9 +16,9 @@ public class SwingApp {
             System.out.println("The Window look and feel do not support on your OS (" + OS_NAME + ").");
         }
         
-        DataProcess loginSystem = new DataProcess();
-        SwingAppUI ui = new SwingAppUI(loginSystem);
-        new SwingAppController(ui, loginSystem);
+        DataProcess data = new DataProcess();
+        SwingAppUI ui = new SwingAppUI(data);
+        new SwingAppController(ui, data);
         ui.setVisible(true);
     }
 }

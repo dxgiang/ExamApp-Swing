@@ -261,6 +261,12 @@ public class SwingAppController implements ActionListener {
         ExamTestLogic currentExamLogic = currentExamTestUI.logic;
         JOptionPane.showMessageDialog(ui, "LOGIN SUCCESSFULLY. User: " + username);
         System.out.println(upTime() + " Login - User: " + username + " (logined successfully)");
+        for (User u : data.getUserList()) {
+            if (u.getUser().equals(username)) {
+                u.setStatus("~");
+                data.addUser(u, false);
+            }
+        }
         countWrong = 0;
         ui.user.setText("");
         ui.pass.setText("");
@@ -394,18 +400,20 @@ public class SwingAppController implements ActionListener {
             JOptionPane.showMessageDialog(ui, "PLEASE ENTER CHARACTERS");
             return;
         }
-        String password = JOptionPane.showInputDialog(ui, "Enter password:");
-        if (password == null || password.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(ui, "PLEASE ENTER CHARACTERS");
-            return;
-        }
-
+        
         for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS! Updating user details.");
                 return;
             }
         }
+
+        String password = JOptionPane.showInputDialog(ui, "Enter password:");
+        if (password == null || password.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(ui, "PLEASE ENTER CHARACTERS");
+            return;
+        }
+
         
         data.addUser(new User(username, password, 0.0, null), true);
         ui.printListButton.doClick();
@@ -471,7 +479,7 @@ public class SwingAppController implements ActionListener {
         SwingWorker<Void, Void> loadingWorker = new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
-                Thread.sleep(1500);
+                Thread.sleep(500);
                 return null;
             }
 

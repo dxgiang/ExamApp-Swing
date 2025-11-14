@@ -58,10 +58,10 @@ public class DataProcess extends JFrame {
 			}
 
 		} catch (Exception e) {
-			System.err.println(upTime() + " Lỗi nghiêm trọng khi thực hiện thao tác tệp đồng bộ: " + e.getMessage());
+			System.err.println(upTime() + " Fatal error while performing file synchronization operation: " + e.getMessage());
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, "Lỗi đồng bộ dữ liệu nghiêm trọng. Vui lòng khởi động lại ứng dụng.",
-					"Lỗi dữ liệu", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Fatal data sync error. Please restart the application.",
+					"Data error", JOptionPane.ERROR_MESSAGE);
 		}
 		return result;
 	}
@@ -195,8 +195,7 @@ public class DataProcess extends JFrame {
 					String status = parts[3].equals("null") ? null : parts[3];
 					list.add(new User(username, password, score, status));
 				}
-			}
-			System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
+			} System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
 		} catch (IOException e) {
 			System.err.println(upTime() + " No existing user data file found or error loading: " + USER_DATA_FILE + " ("
 					+ e.getMessage() + ")");

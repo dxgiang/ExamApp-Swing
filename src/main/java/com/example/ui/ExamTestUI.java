@@ -30,7 +30,6 @@ public class ExamTestUI extends JFrame {
         this.logic = new ExamTestLogic(this);
         this.userName = "";
         this.completed = false;
-        
         setTitle("Exam Text - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown"));
         setSize(500, 300);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -67,6 +66,7 @@ public class ExamTestUI extends JFrame {
         panelStart.add(labelNote, BorderLayout.SOUTH);
         panelStart.add(start, BorderLayout.LINE_END);
         panelStart.setBackground(Color.GREEN);
+        logic.setStatus("~");
         getContentPane().add(panelStart);
 
         // UI EXAM TEST

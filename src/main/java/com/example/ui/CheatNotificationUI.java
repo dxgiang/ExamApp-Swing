@@ -1,5 +1,6 @@
 package main.java.com.example.ui;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,6 +25,8 @@ public class CheatNotificationUI extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
+        ImageIcon icon = new ImageIcon(getClass().getResource("/main/resources/common/icon.jpg"));
+        setIconImage(icon.getImage());
         setLayout(new BorderLayout());
         JPanel panelReason = new JPanel(new GridLayout(4,1));
         JLabel labelCatch = new JLabel(" You're caught cheating on the exam!");

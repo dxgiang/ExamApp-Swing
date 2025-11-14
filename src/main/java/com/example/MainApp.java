@@ -29,7 +29,7 @@ public class MainApp {
             String logFilePath = LOG_DIRECTORY + File.separator + SINGLE_LOG_FILE_NAME;
 
             PrintStream fileOut = new PrintStream(new FileOutputStream(logFilePath, true));
-            fileOut.printf("\n\n--- Start New Session: %s ---\n", timestamp);
+            fileOut.printf("\n\n---------------------------------------------------------------\n", timestamp);
             System.setOut(fileOut);
             System.setErr(fileOut);
             

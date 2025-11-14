@@ -32,7 +32,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { 
+        if (examTestUI.isStarted() == true && ((examTestLogic.getStatus() == null || examTestLogic.getStatus() == "~") && !cheatingApplied && !examTestUI.isCompleted())) { 
             int keyCode = e.getKeyCode();
             
             if (keyCode == KeyEvent.VK_WINDOWS) {
@@ -61,7 +61,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { 
+        if (examTestUI.isStarted() == true && ((examTestLogic.getStatus() == null || examTestLogic.getStatus() == "~") && !cheatingApplied && !examTestUI.isCompleted())) { 
             int keyCode = e.getKeyCode();
             if (keyCode == KeyEvent.VK_WINDOWS) {
                 windowsPressed = false;
@@ -87,7 +87,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
 
     @Override
     public void windowLostFocus(WindowEvent e) {
-        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) {
+        if (examTestUI.isStarted() == true && ((examTestLogic.getStatus() == null || examTestLogic.getStatus() == "~") && !cheatingApplied && !examTestUI.isCompleted())) {
             if (windowsPressed) {
                 enforceCheatPenalty("Windows key detected");
             } else if (escapePressed) {
@@ -103,7 +103,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     }
 
     private void enforceCheatPenalty(String reason) {
-        if (examTestUI.isStarted() == true && (examTestLogic.getStatus() == null && !cheatingApplied && !examTestUI.isCompleted())) { // Double check status
+        if (examTestUI.isStarted() == true && ((examTestLogic.getStatus() == null || examTestLogic.getStatus() == "~") && !cheatingApplied && !examTestUI.isCompleted())) { // Double check status
             cheatingApplied = true;
             new CheatNotificationUI(reason);
             System.out.println(
