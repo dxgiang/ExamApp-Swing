@@ -1,6 +1,7 @@
 package main.java.com.example.auth;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 import java.time.LocalDateTime;
@@ -58,7 +59,8 @@ public class DataProcess extends JFrame {
 			}
 
 		} catch (Exception e) {
-			System.err.println(upTime() + " Fatal error while performing file synchronization operation: " + e.getMessage());
+			System.err.println(
+					upTime() + " Fatal error while performing file synchronization operation: " + e.getMessage());
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, "Fatal data sync error. Please restart the application.",
 					"Data error", JOptionPane.ERROR_MESSAGE);
@@ -170,6 +172,14 @@ public class DataProcess extends JFrame {
 		}
 
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_DATA_FILE))) {
+			list.sort(new Comparator<User>() {
+
+				@Override
+				public int compare(User arg0, User arg1) {
+					return Integer.compare(arg0.getId(), arg1.getId());
+				}
+
+			});
 			for (User user : list) {
 				writer.write(user.getId() + "," + user.getUser() + "," + user.getPass() + "," + user.getScore() + ","
 						+ (user.getStatus() != null ? user.getStatus() : "null"));
@@ -196,7 +206,8 @@ public class DataProcess extends JFrame {
 					String status = parts[4].equals("null") ? null : parts[4];
 					list.add(new User(id, username, password, score, status));
 				}
-			} System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
+			}
+			System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
 		} catch (IOException e) {
 			System.err.println(upTime() + " No existing user data file found or error loading: " + USER_DATA_FILE + " ("
 					+ e.getMessage() + ")");
@@ -247,24 +258,25 @@ public class DataProcess extends JFrame {
 
 	public int returnNewID() {
 		return performAtomicOperation(list -> {
-			int maxID = 0;
-			int missingID = 0;
-			boolean missingFound = false;
-			for(int i = 0; i < list.size(); i++) {
-				if(list.get(i).getId() > maxID) {
-					maxID = list.get(i).getId();
+			list.sort(new Comparator<User>() {
+
+				@Override
+				public int compare(User arg0, User arg1) {
+					return Integer.compare(arg0.getId(), arg1.getId());
 				}
-				if (list.get(i + 1).getId() - list.get(i).getId() > 1) {
-					missingID = list.get(i + 1).getId() - 1;
-					missingFound = true;
-					break;
+			});
+			if (list.isEmpty()) {
+				return 1;
+			}
+			for (int i = 0; i < list.size() - 1; i++) {
+				int currentId = list.get(i).getId();
+				int nextId = list.get(i + 1).getId();
+
+				if (nextId - currentId > 1) {
+					return currentId + 1;
 				}
 			}
-			if(missingFound) {
-				return missingID;
-			} else {
-				return maxID + 1;
-			}
+			return list.get(list.size() - 1).getId() + 1;
 		}, true);
 	}
 
