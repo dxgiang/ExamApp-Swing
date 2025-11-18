@@ -1,0 +1,1121 @@
+
+
+---------------------------------------------------------------
+18-11-2025 20:05:03 Redirected console output to data/\app_log.txt
+18-11-2025 20:05:13 User data loaded from data\users.txt
+18-11-2025 20:05:13 Logined successfully as root
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:14 User data loaded from data\users.txt
+18-11-2025 20:05:34 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:08:06 Redirected console output to data/\app_log.txt
+18-11-2025 20:08:10 User data loaded from data\users.txt
+18-11-2025 20:08:10 Logined successfully as root
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:11 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:12 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:14 User data loaded from data\users.txt
+18-11-2025 20:08:20 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:08:29 Redirected console output to data/\app_log.txt
+18-11-2025 20:08:34 User data loaded from data\users.txt
+18-11-2025 20:08:34 Logined successfully as root
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:35 User data loaded from data\users.txt
+18-11-2025 20:08:40 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:12:30 Redirected console output to data/\app_log.txt
+18-11-2025 20:12:35 User data loaded from data\users.txt
+18-11-2025 20:12:35 Logined successfully as root
+18-11-2025 20:12:36 User data loaded from data\users.txt
+18-11-2025 20:12:36 User data loaded from data\users.txt
+18-11-2025 20:12:36 User data loaded from data\users.txt
+18-11-2025 20:12:36 User data loaded from data\users.txt
+18-11-2025 20:12:36 User data loaded from data\users.txt
+18-11-2025 20:12:53 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:19:50 Redirected console output to data/\app_log.txt
+18-11-2025 20:19:54 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:54 Logined successfully as root
+18-11-2025 20:19:55 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:55 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:55 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:55 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:55 Error parsing user data from file: data\users.txt (For input string: "user1")
+18-11-2025 20:19:57 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:20:33 Redirected console output to data/\app_log.txt
+18-11-2025 20:20:37 User data loaded from data\users.txt
+18-11-2025 20:20:37 User data loaded from data\users.txt
+18-11-2025 20:20:41 User data loaded from data\users.txt
+18-11-2025 20:20:41 User data loaded from data\users.txt
+18-11-2025 20:20:43 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:21:40 Redirected console output to data/\app_log.txt
+18-11-2025 20:21:44 User data loaded from data\users.txt
+18-11-2025 20:21:44 User data loaded from data\users.txt
+18-11-2025 20:21:47 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:22:05 Redirected console output to data/\app_log.txt
+18-11-2025 20:22:08 User data loaded from data\users.txt
+18-11-2025 20:22:08 Logined successfully as root
+18-11-2025 20:22:10 User data loaded from data\users.txt
+18-11-2025 20:22:10 User data loaded from data\users.txt
+18-11-2025 20:22:10 User data loaded from data\users.txt
+18-11-2025 20:22:10 User data loaded from data\users.txt
+18-11-2025 20:22:10 User data loaded from data\users.txt
+18-11-2025 20:22:15 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:22:39 Redirected console output to data/\app_log.txt
+18-11-2025 20:22:43 User data loaded from data\users.txt
+18-11-2025 20:22:43 Logined successfully as root
+18-11-2025 20:22:44 User data loaded from data\users.txt
+18-11-2025 20:22:44 User data loaded from data\users.txt
+18-11-2025 20:22:44 User data loaded from data\users.txt
+18-11-2025 20:22:44 User data loaded from data\users.txt
+18-11-2025 20:22:44 User data loaded from data\users.txt
+18-11-2025 20:22:48 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:23:19 Redirected console output to data/\app_log.txt
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:24 Logined successfully as root
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:24 User data loaded from data\users.txt
+18-11-2025 20:23:55 User data loaded from data\users.txt
+18-11-2025 20:23:55 User data loaded from data\users.txt
+18-11-2025 20:23:55 User data loaded from data\users.txt
+18-11-2025 20:23:55 User data loaded from data\users.txt
+18-11-2025 20:23:55 User data loaded from data\users.txt
+18-11-2025 20:23:57 Logout - User: root (log out)
+18-11-2025 20:24:11 User data loaded from data\users.txt
+18-11-2025 20:24:11 User data loaded from data\users.txt
+18-11-2025 20:24:11 User data loaded from data\users.txt
+18-11-2025 20:24:11 User data saved to data\users.txt
+18-11-2025 20:24:11 Register - User: newUser (registered successfully)
+18-11-2025 20:24:16 User data loaded from data\users.txt
+18-11-2025 20:24:16 User data loaded from data\users.txt
+18-11-2025 20:24:20 User data loaded from data\users.txt
+18-11-2025 20:24:20 User data loaded from data\users.txt
+18-11-2025 20:24:24 User data loaded from data\users.txt
+18-11-2025 20:24:24 User data loaded from data\users.txt
+18-11-2025 20:24:25 User data loaded from data\users.txt
+18-11-2025 20:24:25 User data loaded from data\users.txt
+18-11-2025 20:24:25 User data loaded from data\users.txt
+18-11-2025 20:24:25 User data loaded from data\users.txt
+18-11-2025 20:24:26 User data loaded from data\users.txt
+18-11-2025 20:24:26 User data loaded from data\users.txt
+18-11-2025 20:24:26 User data loaded from data\users.txt
+18-11-2025 20:24:26 User data loaded from data\users.txt
+18-11-2025 20:24:29 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:26:31 Redirected console output to data/\app_log.txt
+18-11-2025 20:26:35 User data loaded from data\users.txt
+18-11-2025 20:26:35 Logined successfully as root
+18-11-2025 20:26:37 User data loaded from data\users.txt
+18-11-2025 20:26:37 User data loaded from data\users.txt
+18-11-2025 20:26:37 User data loaded from data\users.txt
+18-11-2025 20:26:37 User data loaded from data\users.txt
+18-11-2025 20:26:37 User data loaded from data\users.txt
+18-11-2025 20:26:42 Logout - User: root (log out)
+18-11-2025 20:26:51 User data loaded from data\users.txt
+18-11-2025 20:26:51 User data loaded from data\users.txt
+18-11-2025 20:26:51 User data loaded from data\users.txt
+18-11-2025 20:26:51 User data saved to data\users.txt
+18-11-2025 20:26:51 Register - User: hehe (registered successfully)
+18-11-2025 20:26:55 User data loaded from data\users.txt
+18-11-2025 20:26:55 Logined successfully as root
+18-11-2025 20:26:56 User data loaded from data\users.txt
+18-11-2025 20:26:56 User data loaded from data\users.txt
+18-11-2025 20:26:56 User data loaded from data\users.txt
+18-11-2025 20:26:56 User data loaded from data\users.txt
+18-11-2025 20:26:56 User data loaded from data\users.txt
+18-11-2025 20:27:05 Logout - User: root (log out)
+18-11-2025 20:27:08 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:33:28 Redirected console output to data/\app_log.txt
+18-11-2025 20:33:30 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:33:44 Redirected console output to data/\app_log.txt
+18-11-2025 20:33:48 User data loaded from data\users.txt
+18-11-2025 20:33:48 Logined successfully as root
+18-11-2025 20:33:49 User data loaded from data\users.txt
+18-11-2025 20:33:49 User data loaded from data\users.txt
+18-11-2025 20:33:49 User data loaded from data\users.txt
+18-11-2025 20:33:49 User data loaded from data\users.txt
+18-11-2025 20:33:49 User data loaded from data\users.txt
+18-11-2025 20:33:54 User data loaded from data\users.txt
+18-11-2025 20:33:56 User data loaded from data\users.txt
+18-11-2025 20:33:56 Fatal error while performing file synchronization operation: Index 8 out of bounds for length 8
+java.lang.IndexOutOfBoundsException: Index 8 out of bounds for length 8
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:34:00 User data loaded from data\users.txt
+18-11-2025 20:34:01 User data loaded from data\users.txt
+18-11-2025 20:34:01 Fatal error while performing file synchronization operation: Index 8 out of bounds for length 8
+java.lang.IndexOutOfBoundsException: Index 8 out of bounds for length 8
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:34:06 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:35:13 Redirected console output to data/\app_log.txt
+18-11-2025 20:35:17 User data loaded from data\users.txt
+18-11-2025 20:35:17 Logined successfully as root
+18-11-2025 20:35:18 User data loaded from data\users.txt
+18-11-2025 20:35:18 User data loaded from data\users.txt
+18-11-2025 20:35:18 User data loaded from data\users.txt
+18-11-2025 20:35:18 User data loaded from data\users.txt
+18-11-2025 20:35:18 User data loaded from data\users.txt
+18-11-2025 20:35:22 User data loaded from data\users.txt
+18-11-2025 20:35:24 User data loaded from data\users.txt
+18-11-2025 20:35:24 Fatal error while performing file synchronization operation: Index 8 out of bounds for length 8
+java.lang.IndexOutOfBoundsException: Index 8 out of bounds for length 8
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:35:39 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:35:53 Redirected console output to data/\app_log.txt
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:35:57 Logined successfully as root
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:35:57 User data loaded from data\users.txt
+18-11-2025 20:36:01 User data loaded from data\users.txt
+18-11-2025 20:36:02 User data loaded from data\users.txt
+18-11-2025 20:36:02 User data loaded from data\users.txt
+18-11-2025 20:36:02 User data saved to data\users.txt
+18-11-2025 20:36:03 Add User - User: hahaha (Added user successfully)
+18-11-2025 20:36:04 User data loaded from data\users.txt
+18-11-2025 20:36:04 User data loaded from data\users.txt
+18-11-2025 20:36:04 User data loaded from data\users.txt
+18-11-2025 20:36:04 User data loaded from data\users.txt
+18-11-2025 20:36:04 User data loaded from data\users.txt
+18-11-2025 20:36:08 Logout - User: root (log out)
+18-11-2025 20:36:10 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:37:01 Redirected console output to data/\app_log.txt
+18-11-2025 20:37:05 User data loaded from data\users.txt
+18-11-2025 20:37:05 Logined successfully as root
+18-11-2025 20:37:06 User data loaded from data\users.txt
+18-11-2025 20:37:06 User data loaded from data\users.txt
+18-11-2025 20:37:06 User data loaded from data\users.txt
+18-11-2025 20:37:06 User data loaded from data\users.txt
+18-11-2025 20:37:06 User data loaded from data\users.txt
+18-11-2025 20:37:13 User data loaded from data\users.txt
+18-11-2025 20:37:14 User data loaded from data\users.txt
+18-11-2025 20:37:14 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:37:16 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:37:28 Redirected console output to data/\app_log.txt
+18-11-2025 20:37:32 User data loaded from data\users.txt
+18-11-2025 20:37:32 Logined successfully as root
+18-11-2025 20:37:33 User data loaded from data\users.txt
+18-11-2025 20:37:33 User data loaded from data\users.txt
+18-11-2025 20:37:33 User data loaded from data\users.txt
+18-11-2025 20:37:33 User data loaded from data\users.txt
+18-11-2025 20:37:33 User data loaded from data\users.txt
+18-11-2025 20:37:36 User data loaded from data\users.txt
+18-11-2025 20:37:38 User data loaded from data\users.txt
+18-11-2025 20:37:38 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:37:40 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:38:21 Redirected console output to data/\app_log.txt
+18-11-2025 20:38:26 User data loaded from data\users.txt
+18-11-2025 20:38:26 Logined successfully as root
+18-11-2025 20:38:27 User data loaded from data\users.txt
+18-11-2025 20:38:27 User data loaded from data\users.txt
+18-11-2025 20:38:27 User data loaded from data\users.txt
+18-11-2025 20:38:27 User data loaded from data\users.txt
+18-11-2025 20:38:27 User data loaded from data\users.txt
+18-11-2025 20:38:31 User data loaded from data\users.txt
+18-11-2025 20:38:33 User data loaded from data\users.txt
+18-11-2025 20:38:33 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:38:35 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:39:04 Redirected console output to data/\app_log.txt
+18-11-2025 20:39:08 User data loaded from data\users.txt
+18-11-2025 20:39:08 Logined successfully as root
+18-11-2025 20:39:09 User data loaded from data\users.txt
+18-11-2025 20:39:09 User data loaded from data\users.txt
+18-11-2025 20:39:09 User data loaded from data\users.txt
+18-11-2025 20:39:09 User data loaded from data\users.txt
+18-11-2025 20:39:09 User data loaded from data\users.txt
+18-11-2025 20:39:11 User data loaded from data\users.txt
+18-11-2025 20:39:12 User data loaded from data\users.txt
+18-11-2025 20:39:12 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:255)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:39:15 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:41:38 Redirected console output to data/\app_log.txt
+18-11-2025 20:41:42 User data loaded from data\users.txt
+18-11-2025 20:41:42 Logined successfully as root
+18-11-2025 20:41:43 User data loaded from data\users.txt
+18-11-2025 20:41:43 User data loaded from data\users.txt
+18-11-2025 20:41:43 User data loaded from data\users.txt
+18-11-2025 20:41:43 User data loaded from data\users.txt
+18-11-2025 20:41:43 User data loaded from data\users.txt
+18-11-2025 20:41:47 User data loaded from data\users.txt
+18-11-2025 20:41:48 User data loaded from data\users.txt
+18-11-2025 20:41:48 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:257)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:41:51 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:42:12 Redirected console output to data/\app_log.txt
+18-11-2025 20:42:16 User data loaded from data\users.txt
+18-11-2025 20:42:16 Logined successfully as root
+18-11-2025 20:42:17 User data loaded from data\users.txt
+18-11-2025 20:42:17 User data loaded from data\users.txt
+18-11-2025 20:42:17 User data loaded from data\users.txt
+18-11-2025 20:42:17 User data loaded from data\users.txt
+18-11-2025 20:42:17 User data loaded from data\users.txt
+18-11-2025 20:42:27 User data loaded from data\users.txt
+18-11-2025 20:42:28 User data loaded from data\users.txt
+18-11-2025 20:42:28 Fatal error while performing file synchronization operation: Index 9 out of bounds for length 9
+java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)
+	at java.base/java.util.Objects.checkIndex(Unknown Source)
+	at java.base/java.util.ArrayList.get(Unknown Source)
+	at main.java.com.example.auth.DataProcess.lambda$9(DataProcess.java:257)
+	at main.java.com.example.auth.DataProcess.performAtomicOperation(DataProcess.java:54)
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "main.java.com.example.auth.DataProcess.performAtomicOperation(java.util.function.Function, boolean)" is null
+	at main.java.com.example.auth.DataProcess.returnNewID(DataProcess.java:249)
+	at main.java.com.example.controller.SwingAppController.handleAddUser(SwingAppController.java:428)
+	at main.java.com.example.controller.SwingAppController.actionPerformed(SwingAppController.java:112)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+18-11-2025 20:42:30 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:42:51 Redirected console output to data/\app_log.txt
+18-11-2025 20:42:54 Exit app
+
+
+---------------------------------------------------------------
+18-11-2025 20:42:58 Redirected console output to data/\app_log.txt
+18-11-2025 20:43:02 User data loaded from data\users.txt
+18-11-2025 20:43:02 Logined successfully as root
+18-11-2025 20:43:03 User data loaded from data\users.txt
+18-11-2025 20:43:03 User data loaded from data\users.txt
+18-11-2025 20:43:03 User data loaded from data\users.txt
+18-11-2025 20:43:03 User data loaded from data\users.txt
+18-11-2025 20:43:03 User data loaded from data\users.txt
+18-11-2025 20:43:06 User data loaded from data\users.txt
+18-11-2025 20:43:07 User data loaded from data\users.txt
+18-11-2025 20:43:07 User data loaded from data\users.txt
+18-11-2025 20:43:07 User data saved to data\users.txt
+18-11-2025 20:43:07 Add User - User: kkk (Added user successfully)
+18-11-2025 20:43:08 User data loaded from data\users.txt
+18-11-2025 20:43:08 User data loaded from data\users.txt
+18-11-2025 20:43:08 User data loaded from data\users.txt
+18-11-2025 20:43:08 User data loaded from data\users.txt
+18-11-2025 20:43:08 User data loaded from data\users.txt
+18-11-2025 20:43:25 Exit app

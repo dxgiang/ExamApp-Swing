@@ -35,7 +35,7 @@ public class DataProcess extends JFrame {
 		File dataFile = new File(USER_DATA_FILE);
 		if (!dataFile.exists()) {
 			List<User> initialList = new ArrayList<>();
-			initialList.add(new User("root", "admin", 0.0, null));
+			initialList.add(new User(000, "root", "admin", 0.0, null));
 			saveUsersToFile(initialList);
 			System.out.println(upTime() + " Initial user data file created.");
 		}
@@ -171,7 +171,7 @@ public class DataProcess extends JFrame {
 
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_DATA_FILE))) {
 			for (User user : list) {
-				writer.write(user.getUser() + "," + user.getPass() + "," + user.getScore() + ","
+				writer.write(user.getId() + "," + user.getUser() + "," + user.getPass() + "," + user.getScore() + ","
 						+ (user.getStatus() != null ? user.getStatus() : "null"));
 				writer.newLine();
 			}
@@ -188,24 +188,25 @@ public class DataProcess extends JFrame {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				String[] parts = line.split(",");
-				if (parts.length == 4) {
-					String username = parts[0];
-					String password = parts[1];
-					double score = Double.parseDouble(parts[2]);
-					String status = parts[3].equals("null") ? null : parts[3];
-					list.add(new User(username, password, score, status));
+				if (parts.length == 5) {
+					int id = Integer.parseInt(parts[0]);
+					String username = parts[1];
+					String password = parts[2];
+					double score = Double.parseDouble(parts[3]);
+					String status = parts[4].equals("null") ? null : parts[4];
+					list.add(new User(id, username, password, score, status));
 				}
 			} System.out.println(upTime() + " User data loaded from " + USER_DATA_FILE);
 		} catch (IOException e) {
 			System.err.println(upTime() + " No existing user data file found or error loading: " + USER_DATA_FILE + " ("
 					+ e.getMessage() + ")");
 			list.clear();
-			list.add(new User("root", "admin", 0.0, null));
+			list.add(new User(000, "root", "admin", 0.0, null));
 		} catch (NumberFormatException e) {
 			System.err.println(
 					upTime() + " Error parsing user data from file: " + USER_DATA_FILE + " (" + e.getMessage() + ")");
 			list.clear();
-			list.add(new User("root", "admin", 0.0, null));
+			list.add(new User(000, "root", "admin", 0.0, null));
 		}
 		return list;
 	}
@@ -241,6 +242,29 @@ public class DataProcess extends JFrame {
 				}
 			}
 			return count;
+		}, true);
+	}
+
+	public int returnNewID() {
+		return performAtomicOperation(list -> {
+			int maxID = 0;
+			int missingID = 0;
+			boolean missingFound = false;
+			for(int i = 0; i < list.size(); i++) {
+				if(list.get(i).getId() > maxID) {
+					maxID = list.get(i).getId();
+				}
+				if (list.get(i + 1).getId() - list.get(i).getId() > 1) {
+					missingID = list.get(i + 1).getId() - 1;
+					missingFound = true;
+					break;
+				}
+			}
+			if(missingFound) {
+				return missingID;
+			} else {
+				return maxID + 1;
+			}
 		}, true);
 	}
 

@@ -1,6 +1,7 @@
 package main.java.com.example.auth;
 
 public class User {
+	private int id;
 	private String user;
 	private String pass;
 	private double score;
@@ -10,12 +11,21 @@ public class User {
 		super();
 	}
 
-	public User(String user, String pass, double score, String status) {
+	public User(int id, String user, String pass, double score, String status) {
 		super();
+		this.id = id;
 		this.user = user;
 		this.pass = pass;
 		this.score = score;
 		this.status = status;
+	}
+
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getStatus() {

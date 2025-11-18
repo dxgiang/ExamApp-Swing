@@ -8,6 +8,8 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -352,7 +354,7 @@ public class SwingAppController implements ActionListener {
             }
         }
         
-        data.addUser(new User(username, password, 0.0, null), false);
+        data.addUser(new User(data.returnNewID(), username, password, 0.0, null), false);
         System.out.println(upTime() + " Register - User: " + username + " (registered successfully)");
         JOptionPane.showMessageDialog(ui, "REGISTER SUCCESSFULLY");
         
@@ -384,10 +386,18 @@ public class SwingAppController implements ActionListener {
                 updateAnalysisLabel();
                 ui.revalidate();
                 ui.repaint();
-                
+                List<User> listUsers = data.getUserList();
                 ui.tableModel.setRowCount(0);
-                for (User u : data.getUserList()) {
-                    ui.tableModel.addRow(new Object[] { u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
+                listUsers.sort(new Comparator<User>() {
+
+                    @Override
+                    public int compare(User u1, User u2) {
+                        return Integer.compare(u1.getId(), u2.getId());
+                    }
+                    
+                });
+                for (User u : listUsers) {
+                    ui.tableModel.addRow(new Object[] { u.getId(), u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
                 }
             }
         };
@@ -415,7 +425,7 @@ public class SwingAppController implements ActionListener {
         }
 
         
-        data.addUser(new User(username, password, 0.0, null), true);
+        data.addUser(new User(data.returnNewID(), username, password, 0.0, null), true);
         ui.printListButton.doClick();
     }
 

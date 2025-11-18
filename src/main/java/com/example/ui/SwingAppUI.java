@@ -221,7 +221,7 @@ public class SwingAppUI extends JFrame {
         registerPanel.setBackground(Color.white);
 
         // --- UI MANAGEMENT ---
-        String[] columnNames = { "Username", "Password", "Score", "Status" };
+        String[] columnNames = { "Id", "Username", "Password", "Score", "Status" };
         tableModel = new DefaultTableModel(columnNames, 0);
         userTable = new JTable(tableModel);
         userTable.setEnabled(true);
