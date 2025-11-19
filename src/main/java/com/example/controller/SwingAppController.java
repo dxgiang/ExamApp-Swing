@@ -22,6 +22,7 @@ import main.java.com.example.auth.DataProcess;
 import main.java.com.example.auth.User;
 import main.java.com.example.exam.ExamTestLogic;
 import main.java.com.example.ui.ExamTestUI;
+import main.java.com.example.ui.RuleUI;
 import main.java.com.example.ui.SwingApp;
 import main.java.com.example.ui.SwingAppUI;
 
@@ -66,7 +67,7 @@ public class SwingAppController implements ActionListener {
         ui.itemLogin.addActionListener(e -> handleMenuItemLogin());
         ui.itemRegister.addActionListener(e -> handleMenuItemRegister());
         ui.itemExit.addActionListener(e -> handleMenuItemExit());
-        ui.itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(ui, "Developed by dxgiang."));
+        ui.itemRule.addActionListener(e -> new RuleUI().setVisible(true));
         
         ui.itemPrintList.addActionListener(e -> ui.printListButton.doClick());
         ui.itemAddUser.addActionListener(e -> ui.addUserButton.doClick());

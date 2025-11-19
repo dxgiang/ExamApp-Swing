@@ -16,6 +16,7 @@ public class ExamTestLogic {
     // Attributes
     private ExamTestUI ui;
     private int index = 0;
+    private String user;
     private double score = 0;
     private String status = null;
     private List<Question> listQuestion;
@@ -27,6 +28,10 @@ public class ExamTestLogic {
         this.ui = ui;
         listQuestion = new ArrayList<Question>();
         loadQuestionsFromWord(DATA_DIRECTORY);
+    }
+
+    public String getUser() {
+        return user;
     }
 
     public double getScore() {

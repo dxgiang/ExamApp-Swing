@@ -38,7 +38,7 @@ public class SwingAppUI extends JFrame {
             delUserButton, showAppButton, unlockButton, lockButton, logoutButton,
             hidePassButton, hideRePassButton, hideRegPassButton;
     public JMenuItem itemPrintList, itemAddUser, itemDelUser, itemShowApp, itemUnlock, itemLock, itemLogout,
-            itemLogin, itemRegister, itemExit, itemAbout, itemEditQues, itemEditUser, itemCheckLog;
+            itemLogin, itemRegister, itemExit, itemRule, itemEditQues, itemEditUser, itemCheckLog;
     public JMenuItem itemNonRoot = new JMenuItem("You can not access this!"), itemNonRootClone = new JMenuItem("You can not access this!");
     public JTable userTable;
     public DefaultTableModel tableModel;
@@ -381,12 +381,12 @@ public class SwingAppUI extends JFrame {
         menuOption.add(itemRegister);
         menuOption.add(itemExit);
 
-        itemAbout = new JMenuItem("About");
-        ImageIcon iconAbout = new ImageIcon(getClass().getResource("/main/resources/common/about.png"));
-        itemAbout.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.ALT_MASK));
-        iconAbout = new ImageIcon(iconAbout.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
-        itemAbout.setIcon(iconAbout);
-        menuHelp.add(itemAbout);
+        itemRule = new JMenuItem("Rules");
+        ImageIcon iconRule = new ImageIcon(getClass().getResource("/main/resources/common/about.png"));
+        itemRule.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.ALT_MASK));
+        iconRule = new ImageIcon(iconRule.getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+        itemRule.setIcon(iconRule);
+        menuHelp.add(itemRule);
 
         itemNonRootClone.setEnabled(false);
         menuSettings.add(itemNonRootClone);

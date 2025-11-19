@@ -16,7 +16,7 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 
 ---
 
-## 🛠️ Features
+## Features
 
 1. **User Authentication**
    - Secure login/register flow
@@ -30,14 +30,14 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 
 ---
 
-## 🧩 Prerequisites
+## Prerequisites
 
 - Java JDK 8 or higher
 - Git (for cloning)
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ```bash
 git clone https://github.com/dxgiang/ExamApp-Swing

@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RuleUI",
+            "request": "launch",
+            "mainClass": "main.java.com.example.ui.RuleUI",
+            "projectName": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
             "name": "CheatNotificationUI",
             "request": "launch",
             "mainClass": "main.java.com.example.ui.CheatNotificationUI",

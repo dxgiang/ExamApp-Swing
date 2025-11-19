@@ -16,20 +16,22 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class CheatNotificationUI extends JFrame{
+    private String user;
     private String reason;
     public JButton buttonExit;
-    public CheatNotificationUI(String reason) {
+    public CheatNotificationUI(String user, String reason) {
+        this.user = user;
         this.reason = reason;
         setTitle("CHEAT DETECTED");
         setSize(550,200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
         ImageIcon icon = new ImageIcon(getClass().getResource("/main/resources/common/icon.jpg"));
         setIconImage(icon.getImage());
         setLayout(new BorderLayout());
         JPanel panelReason = new JPanel(new GridLayout(4,1));
-        JLabel labelCatch = new JLabel(" You're caught cheating on the exam!");
+        JLabel labelCatch = new JLabel(" User: " + getUser() +". You're caught cheating on the exam!");
         labelCatch.setFont(new Font("Arial", 1, 15));
         panelReason.add(labelCatch);
         JLabel reasonLabel = new JLabel(" Reason:" + getReason());
@@ -61,8 +63,13 @@ public class CheatNotificationUI extends JFrame{
         setVisible(true);
     }
     public static void main(String[] args) {
-        new CheatNotificationUI("CHEAT REASON");
+        new CheatNotificationUI("userxmpl","CHEAT REASON");
     }
+
+    public String getUser() {
+        return user;
+    }
+
     public String getReason() {
         return reason;
     }

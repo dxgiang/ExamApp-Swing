@@ -105,7 +105,7 @@ public class AntiCheat implements WindowFocusListener, KeyListener {
     private void enforceCheatPenalty(String reason) {
         if (examTestUI.isStarted() == true && ((examTestLogic.getStatus() == null || examTestLogic.getStatus() == "~") && !cheatingApplied && !examTestUI.isCompleted())) { // Double check status
             cheatingApplied = true;
-            new CheatNotificationUI(reason);
+            new CheatNotificationUI(examTestUI.getUserName(),reason);
             System.out.println(
                     examTestLogic.upTime() + " " + examTestUI.getTitle() + " CHEAT ON THE EXAM!! Reason: " + reason);
             System.out.println(examTestLogic.upTime() + " " + examTestUI.getTitle() + " (Log out)");
