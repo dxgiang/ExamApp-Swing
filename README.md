@@ -43,6 +43,53 @@ A simple desktop exam application built with Java Swing. Designed as a learning 
 git clone https://github.com/dxgiang/ExamApp-Swing
 cd ExamApp-Swing
 ```
+
+## File Tree
+```bash
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── example
+    │           ├── MainApp.java
+    │           ├── anticheat
+    │           │   └── AntiCheat.java
+    │           ├── auth
+    │           │   ├── DataProcess.java
+    │           │   └── User.java
+    │           ├── controller
+    │           │   └── SwingAppController.java
+    │           ├── exam
+    │           │   ├── ExamTestLogic.java
+    │           │   └── Question.java
+    │           └── ui
+    │               ├── CheatNotificationUI.java
+    │               ├── ExamTestUI.java
+    │               ├── RuleUI.java
+    │               ├── SwingApp.java
+    │               └── SwingAppUI.java
+    └── resources
+        ├── auth
+        │   ├── add.png
+        │   ├── delete.png
+        │   ├── lock.png
+        │   ├── printlist.png
+        │   └── unlock.png
+        ├── common
+        │   ├── about.png
+        │   └── icon.jpg
+        ├── exam
+        │   └── showapp.png
+        └── ui
+            ├── exit.png
+            ├── loading.gif
+            ├── log.png
+            ├── login.png
+            ├── logout.png
+            ├── question.png
+            ├── register.png
+            └── user.png
+```
 ---
 ## Diagram
 Click [here](https://www.mermaidchart.com/d/6598724a-e615-4ba3-9f90-4200e8ae23c7) to see the diagram
