@@ -2,6 +2,7 @@ package main.java.com.example.ui;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,6 +16,8 @@ public class RuleUI extends JFrame{
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
+        ImageIcon icon = new ImageIcon(getClass().getResource("/main/resources/common/icon.jpg"));
+        setIconImage(icon.getImage());
         JPanel panelRule = new JPanel();
         JLabel rule = new JLabel();
         rule.setText("<html><body style='width: 570px; padding: 8;'>"

@@ -54,7 +54,7 @@ public class ExamTestLogic {
         return listQuestion;
     }
 
-    
+    // Process chosen answer
     public void processQuestion(int chosen) {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
@@ -66,6 +66,7 @@ public class ExamTestLogic {
         }
     }
 
+    // Display current question
     public void showQuestion() {
         if (index < listQuestion.size()) {
             Question ch = listQuestion.get(index);
@@ -75,6 +76,7 @@ public class ExamTestLogic {
         }
     }
     
+    // Get current uptime
     public String upTime() {
         dt = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -82,6 +84,7 @@ public class ExamTestLogic {
         return dtfor;
     }
 
+    // Load questions from Word file
     private void loadQuestionsFromWord(String filePath) {
         try (FileInputStream fis = new FileInputStream(filePath); 
              XWPFDocument document = new XWPFDocument(fis)) {
@@ -117,6 +120,7 @@ public class ExamTestLogic {
         }
     }
 
+    // Get data file path
     public static String getDataFilePath() {
         return DATA_DIRECTORY;
     }

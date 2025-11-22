@@ -6,10 +6,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
@@ -25,7 +32,21 @@ public class CheatNotificationUI extends JFrame{
         setTitle("CHEAT DETECTED");
         setSize(550,200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null);
+        Point mouseLocation = MouseInfo.getPointerInfo().getLocation();
+        GraphicsConfiguration targetConfig = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0]
+                .getDefaultConfiguration();
+        for(GraphicsDevice gd : GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()) {
+            if(gd.getDefaultConfiguration().getBounds().contains(mouseLocation)) {
+                targetConfig = gd.getDefaultConfiguration();
+                break;
+            }
+        }
+        Rectangle bounds = targetConfig.getBounds();
+        int frameWidth = 550;
+        int frameHeight = 200;
+        int x = bounds.x + (bounds.width - frameWidth) / 2;
+        int y = bounds.y + (bounds.height - frameHeight) / 2;
+        setLocation(x, y);
         setResizable(false);
         ImageIcon icon = new ImageIcon(getClass().getResource("/main/resources/common/icon.jpg"));
         setIconImage(icon.getImage());

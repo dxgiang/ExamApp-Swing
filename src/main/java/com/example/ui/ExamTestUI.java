@@ -2,7 +2,13 @@ package main.java.com.example.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JButton;
@@ -33,7 +39,17 @@ public class ExamTestUI extends JFrame {
         setTitle("Exam Text - User: " + (userName != null && !userName.isEmpty() ? userName : "Unknown"));
         setSize(500, 300);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        setLocationRelativeTo(null);
+        Point mouseLocation = MouseInfo.getPointerInfo().getLocation();
+        GraphicsConfiguration targetConfig = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0]
+                .getDefaultConfiguration();
+        for(GraphicsDevice gd : GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()) {
+            if(gd.getDefaultConfiguration().getBounds().contains(mouseLocation)) {
+                targetConfig = gd.getDefaultConfiguration();
+                break;
+            }
+        }
+        Rectangle bounds = targetConfig.getBounds();
+        setLocation(bounds.x, bounds.y);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setResizable(false);

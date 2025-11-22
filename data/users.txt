@@ -4,6 +4,6 @@
 3,useradd,passadd,0.0,null
 4,userreg,passreg,0.0,null
 5,river,0000,0.0,null
-7,giang,0077,0.0,CHEAT
+7,giang,0077,0.0,null
 8,hehe,123,0.0,null
 9,hahaha,1111,0.0,null

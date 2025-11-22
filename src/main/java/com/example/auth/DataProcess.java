@@ -42,6 +42,7 @@ public class DataProcess extends JFrame {
 		}
 	}
 
+	// Perform atomic operation with file locking
 	private <R> R performAtomicOperation(Function<List<User>, R> operation, boolean isReadOnly) {
 		File lockFile = new File(LOCK_FILE);
 		R result = null;
@@ -68,6 +69,7 @@ public class DataProcess extends JFrame {
 		return result;
 	}
 
+	// Add or update user
 	public void addUser(User userAdd, boolean showMes) {
 		performAtomicOperation(list -> {
 			for (int i = 0; i < list.size(); i++) {
@@ -87,6 +89,7 @@ public class DataProcess extends JFrame {
 		}
 	}
 
+	// Authenticate user
 	public boolean authenticate(String username, String password) {
 		return performAtomicOperation(list -> {
 			for (User user : list) {
@@ -98,6 +101,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	// Check wrong password
 	public boolean wrongPass(String username, String password) {
 		return performAtomicOperation(list -> {
 			for (User user : list) {
@@ -109,6 +113,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	// Print user list
 	public void printList() {
 		System.out.println("user \t password");
 		List<User> userList = getUserList();
@@ -117,10 +122,12 @@ public class DataProcess extends JFrame {
 		}
 	}
 
+	// Get user list
 	public List<User> getUserList() {
 		return performAtomicOperation(ArrayList::new, true);
 	}
 
+	// Delete user account
 	public void deleteUser(String username) {
 		int result = performAtomicOperation(list -> {
 			for (int i = 0; i < list.size(); i++) {
@@ -147,6 +154,7 @@ public class DataProcess extends JFrame {
 		}
 	}
 
+	// Lock user account
 	public boolean lockUser(String username) {
 		return performAtomicOperation(list -> {
 			for (User user : list) {
@@ -158,6 +166,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	// Get current uptime
 	public String upTime() {
 		dt = LocalDateTime.now();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -165,6 +174,7 @@ public class DataProcess extends JFrame {
 		return dtfor;
 	}
 
+	// Save users to file
 	private void saveUsersToFile(List<User> list) {
 		File dataDir = new File(DATA_DIRECTORY);
 		if (!dataDir.exists()) {
@@ -192,6 +202,7 @@ public class DataProcess extends JFrame {
 		}
 	}
 
+	// Load users from file
 	private List<User> loadUsersFromFile() {
 		List<User> list = new ArrayList<>();
 		try (BufferedReader reader = new BufferedReader(new FileReader(USER_DATA_FILE))) {
@@ -222,6 +233,7 @@ public class DataProcess extends JFrame {
 		return list;
 	}
 
+	// Check if account is completed
 	public boolean isAccountLocked(String username) {
 		return performAtomicOperation(list -> {
 			for (User user : list) {
@@ -233,6 +245,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	// Check if account is completed (PASS or FAIL)
 	public boolean isAccountCompleted(String username) {
 		return performAtomicOperation(list -> {
 			for (User user : list) {
@@ -244,6 +257,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	// Count users by status
 	private int countByStatus(String status) {
 		return performAtomicOperation(list -> {
 			int count = 0;
@@ -256,6 +270,7 @@ public class DataProcess extends JFrame {
 		}, true);
 	}
 
+	//Return new ID
 	public int returnNewID() {
 		return performAtomicOperation(list -> {
 			list.sort(new Comparator<User>() {

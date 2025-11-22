@@ -33,6 +33,8 @@ public class SwingAppController implements ActionListener {
     private int countWrong = 0;
     private int countWrong2 = 0;
     private LocalDateTime dt;
+    private SwingWorker<Void, Void> autoWorker;
+    private int msDelay;
 
     // Constructor
     public SwingAppController(SwingAppUI ui, DataProcess data) {
@@ -68,7 +70,7 @@ public class SwingAppController implements ActionListener {
         ui.itemRegister.addActionListener(e -> handleMenuItemRegister());
         ui.itemExit.addActionListener(e -> handleMenuItemExit());
         ui.itemRule.addActionListener(e -> new RuleUI().setVisible(true));
-        
+
         ui.itemPrintList.addActionListener(e -> ui.printListButton.doClick());
         ui.itemAddUser.addActionListener(e -> ui.addUserButton.doClick());
         ui.itemDelUser.addActionListener(e -> ui.delUserButton.doClick());
@@ -88,7 +90,7 @@ public class SwingAppController implements ActionListener {
             @Override
             public void windowClosing(WindowEvent e) {
                 System.out.println(upTime() + " Exit app");
-                System.setOut(SwingApp.originalOut); 
+                System.setOut(SwingApp.originalOut);
                 System.setErr(SwingApp.originalErr);
                 System.exit(0);
             }
@@ -98,17 +100,18 @@ public class SwingAppController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        
+
         if (source == ui.registerButton) {
             handleRegisterTransition();
         } else if (source == ui.loginInReGButton) {
             handleLoginTransition();
         } else if (source == ui.loginButton || source == ui.pass || source == ui.user) {
             handleLoginAttempt();
-        } else if (source == ui.createUserButton || source == ui.regpass || source == ui.reguser || source == ui.repass) {
+        } else if (source == ui.createUserButton || source == ui.regpass || source == ui.reguser
+                || source == ui.repass) {
             handleCreateUser();
         } else if (source == ui.printListButton) {
-            handlePrintList();
+            handlePrintList(msDelay);
         } else if (source == ui.addUserButton) {
             handleAddUser();
         } else if (source == ui.delUserButton) {
@@ -124,6 +127,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Handle Login Menu Item
     private void handleMenuItemLogin() {
         if (ui.isRoot) {
             ui.logoutButton.doClick();
@@ -136,6 +140,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Handle Register Menu Item
     private void handleMenuItemRegister() {
         if (ui.isRoot) {
             ui.logoutButton.doClick();
@@ -148,12 +153,14 @@ public class SwingAppController implements ActionListener {
             ui.setTitle("Register");
         }
     }
-    
+
+    // Handle Exit Menu Item
     private void handleMenuItemExit() {
         System.out.println(upTime() + " Exit app");
         System.exit(0);
     }
-    
+
+    // Clear Management Menu
     private void clearManagementMenu() {
         ui.menuUser.remove(ui.itemPrintList);
         ui.menuUser.remove(ui.itemAddUser);
@@ -169,6 +176,7 @@ public class SwingAppController implements ActionListener {
         ui.menuSettings.add(ui.itemNonRootClone);
     }
 
+    // Toggle Password Visibility
     private void togglePasswordVisibility(JPasswordField field, JButton button) {
         if (button.getText().equals("⦿")) {
             button.setText("⦾");
@@ -179,6 +187,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Register Transition
     private void handleRegisterTransition() {
         ui.getContentPane().remove(ui.loginPanel);
         ui.getContentPane().add(ui.registerPanel);
@@ -190,6 +199,7 @@ public class SwingAppController implements ActionListener {
         ui.repaint();
     }
 
+    // Login Transition
     private void handleLoginTransition() {
         ui.getContentPane().remove(ui.registerPanel);
         ui.getContentPane().add(ui.loginPanel);
@@ -200,6 +210,7 @@ public class SwingAppController implements ActionListener {
         ui.repaint();
     }
 
+    // Handle Login Attempt
     private void handleLoginAttempt() {
         String username = ui.user.getText();
         String password = new String(ui.pass.getPassword());
@@ -215,8 +226,9 @@ public class SwingAppController implements ActionListener {
                     ui.pass.setText("");
                     ui.user.requestFocus();
                     return;
-                } else if(data.isAccountCompleted(username)) {
-                    JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS COMPLETED THE EXAM! PLEASE CONTACT ADMIN TO UNLOCK!");
+                } else if (data.isAccountCompleted(username)) {
+                    JOptionPane.showMessageDialog(ui,
+                            "YOUR ACCOUNT HAS COMPLETED THE EXAM! PLEASE CONTACT ADMIN TO UNLOCK!");
                     System.out.println(upTime() + " Login - User: " + username + " Fail! (account completed)");
                     ui.user.setText("");
                     ui.pass.setText("");
@@ -230,15 +242,17 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Handle Root Login
     private void handleRootLogin(String username) {
+        msDelay = 500;
         System.out.println(upTime() + " Logined successfully as root");
         JOptionPane.showMessageDialog(ui, "LOGIN AS ROOT");
         ui.isRoot = true;
         countWrong = 0;
-        
+
         ui.getContentPane().remove(ui.loginPanel);
         ui.getContentPane().remove(ui.registerPanel);
-        
+
         ui.menuUser.remove(ui.itemNonRoot);
         ui.menuSettings.remove(ui.itemNonRootClone);
         ui.menuUser.add(ui.itemPrintList);
@@ -251,16 +265,22 @@ public class SwingAppController implements ActionListener {
         ui.menuSettings.add(ui.itemEditQues);
         ui.menuSettings.add(ui.itemEditUser);
         ui.menuSettings.add(ui.itemCheckLog);
-        
+
         ui.setTitle("Management");
         ui.getContentPane().add(ui.panelMN);
         ui.printListButton.doClick();
         ui.revalidate();
         ui.repaint();
+        if (ui.getTitle().equals("Management")) {
+            autoPrintList();
+        } else {
+            return;
+        }
     }
 
+    // Handle Regular User Login
     private void handleRegularUserLogin(String username) {
-        ExamTestUI currentExamTestUI = new ExamTestUI(); 
+        ExamTestUI currentExamTestUI = new ExamTestUI();
         ExamTestLogic currentExamLogic = currentExamTestUI.logic;
         JOptionPane.showMessageDialog(ui, "LOGIN SUCCESSFULLY. User: " + username);
         System.out.println(upTime() + " Login - User: " + username + " (logined successfully)");
@@ -286,7 +306,7 @@ public class SwingAppController implements ActionListener {
                             if (u.getUser().equals(username)) {
                                 u.setScore(currentExamLogic.getScore());
                                 u.setStatus(currentExamLogic.getStatus());
-                                data.addUser(u, false); 
+                                data.addUser(u, false);
                                 break;
                             }
                         }
@@ -298,19 +318,23 @@ public class SwingAppController implements ActionListener {
         });
     }
 
+    // Handle Failed Login
     private void handleFailedLogin(String username, String password) {
         if (data.wrongPass(username, password)) {
             JOptionPane.showMessageDialog(ui, "WRONG PASSWORD");
-            System.out.println(upTime() + " Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
+            System.out.println(
+                    upTime() + " Login - User: " + username + " Fail! (wrong password " + (countWrong + 1) + "/3)");
             countWrong++;
-            
+
             if (countWrong == 3) {
-                JOptionPane.showMessageDialog(ui, "YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
-                System.out.println(upTime() + " Login - User: " + username + " Fail! (freeze 5 seconds, " + (countWrong2 + 1) + "/3)");
+                JOptionPane.showMessageDialog(ui,
+                        "YOU HAVE ENTERED WRONG PASSWORD 3 TIMES. APPLICATION WILL FREEZE FEW SECOND!");
+                System.out.println(upTime() + " Login - User: " + username + " Fail! (freeze 5 seconds, "
+                        + (countWrong2 + 1) + "/3)");
                 wait(5000);
                 countWrong = 0;
                 countWrong2++;
-                if(countWrong2 == 3) {
+                if (countWrong2 == 3) {
                     handleAccountLockout(username);
                 }
             }
@@ -319,6 +343,7 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Handle Account Lockout
     private void handleAccountLockout(String username) {
         System.out.println(upTime() + " Login - User: " + username + " Fail! (account locked)");
         JOptionPane.showMessageDialog(ui, "YOUR ACCOUNT HAS BEEN LOCKED! PLEASE CONTACT ADMIN!");
@@ -335,6 +360,7 @@ public class SwingAppController implements ActionListener {
         countWrong2 = 0;
     }
 
+    // Create User
     private void handleCreateUser() {
         String username = ui.reguser.getText();
         String password = new String(ui.regpass.getPassword());
@@ -354,18 +380,20 @@ public class SwingAppController implements ActionListener {
                 return;
             }
         }
-        
+
         data.addUser(new User(data.returnNewID(), username, password, 0.0, null), false);
         System.out.println(upTime() + " Register - User: " + username + " (registered successfully)");
         JOptionPane.showMessageDialog(ui, "REGISTER SUCCESSFULLY");
-        
+
         handleLoginTransition();
     }
 
-    private void handlePrintList() {
+    // Print List
+    private void handlePrintList(int ms) {
+        msDelay = ms;
         ui.printListButton.setText("Reload");
-        ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif")); 
-        ui.labelLoading.setIcon(iconloading); 
+        ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif"));
+        ui.labelLoading.setIcon(iconloading);
         ui.panelLoading.setVisible(true);
 
         ui.getContentPane().remove(ui.panelMN);
@@ -376,7 +404,7 @@ public class SwingAppController implements ActionListener {
         SwingWorker<Void, Void> worker = new SwingWorker<>() {
             @Override
             protected Void doInBackground() throws Exception {
-                Thread.sleep(500);
+                Thread.sleep(msDelay);
                 return null;
             }
 
@@ -395,23 +423,43 @@ public class SwingAppController implements ActionListener {
                     public int compare(User u1, User u2) {
                         return Integer.compare(u1.getId(), u2.getId());
                     }
-                    
+
                 });
                 for (User u : listUsers) {
-                    ui.tableModel.addRow(new Object[] { u.getId(), u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
+                    ui.tableModel
+                            .addRow(new Object[] { u.getId(), u.getUser(), u.getPass(), u.getScore(), u.getStatus() });
                 }
             }
         };
         worker.execute();
     }
 
+    // Auto printList 10 seconds
+    private void autoPrintList() {
+        msDelay = 00;
+        autoWorker = new SwingWorker<>() {
+            @Override
+            protected Void doInBackground() throws Exception {
+                while (!isCancelled()) {
+                    Thread.sleep(10000);
+                    if (!isCancelled()) {
+                        ui.printListButton.doClick();
+                    }
+                }
+                return null;
+            }
+        };
+        autoWorker.execute();
+    }
+
+    // Add User
     private void handleAddUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username:");
         if (username == null || username.trim().isEmpty()) {
             JOptionPane.showMessageDialog(ui, "PLEASE ENTER CHARACTERS");
             return;
         }
-        
+
         for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 JOptionPane.showMessageDialog(ui, "USERNAME ALREADY EXISTS! Updating user details.");
@@ -425,11 +473,11 @@ public class SwingAppController implements ActionListener {
             return;
         }
 
-        
         data.addUser(new User(data.returnNewID(), username, password, 0.0, null), true);
         ui.printListButton.doClick();
     }
 
+    // Delete User
     private void handleDeleteUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username to delete:");
         if (username != null && !username.trim().isEmpty()) {
@@ -440,10 +488,11 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Show Exam App
     private void handleShowApp() {
         ExamTestUI tempExamUI = new ExamTestUI();
         ExamTestLogic tempExamLogic = tempExamUI.logic;
-        
+
         tempExamUI.setUserName("root");
         tempExamUI.setTitle("Exam Text - User: root");
         tempExamUI.setVisible(true);
@@ -456,7 +505,7 @@ public class SwingAppController implements ActionListener {
                     protected Void doInBackground() throws Exception {
                         for (User u : data.getUserList()) {
                             if (u.getUser().equals("root")) {
-                                u.setScore(tempExamLogic.getScore()); 
+                                u.setScore(tempExamLogic.getScore());
                                 u.setStatus(tempExamLogic.getStatus());
                                 data.addUser(u, false);
                                 break;
@@ -464,8 +513,9 @@ public class SwingAppController implements ActionListener {
                         }
                         return null;
                     }
+
                     protected void done() {
-                            ui.printListButton.doClick();
+                        ui.printListButton.doClick();
                     }
                 };
                 worker.execute();
@@ -473,13 +523,18 @@ public class SwingAppController implements ActionListener {
         });
     }
 
+    // Logout
     private void handleLogout() {
         System.out.println(upTime() + " Logout - User: root (log out)");
         JOptionPane.showMessageDialog(ui, "LOGOUT SUCCESSFULLY");
         ui.isRoot = false;
-        
+
+        if (autoWorker != null && !autoWorker.isDone()) {
+            autoWorker.cancel(true);
+            System.out.println(upTime() + " Auto-refresh worker cancelled.");
+        }
         ui.getContentPane().remove(ui.panelMN);
-        
+
         ImageIcon iconloading = new ImageIcon(ui.getClass().getResource("/main/resources/ui/loading.gif"));
         ui.labelLoading.setIcon(iconloading);
         ui.panelLoading.setVisible(true);
@@ -509,11 +564,13 @@ public class SwingAppController implements ActionListener {
         loadingWorker.execute();
     }
 
+    // Unlock User
     private void handleUnlockUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username to unlock:");
         boolean userFound = false;
-        if (username == null || username.trim().isEmpty()) return;
-        
+        if (username == null || username.trim().isEmpty())
+            return;
+
         for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
                 userFound = true;
@@ -537,10 +594,12 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Lock User
     private void handleLockUser() {
         String username = JOptionPane.showInputDialog(ui, "Enter username to lock:");
         boolean userFound = false;
-        if (username == null || username.trim().isEmpty()) return;
+        if (username == null || username.trim().isEmpty())
+            return;
 
         for (User u : data.getUserList()) {
             if (u.getUser().equals(username)) {
@@ -569,14 +628,17 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Update Analysis Label
     public void updateAnalysisLabel() {
         int locked = data.countLocked();
         int passed = data.countPassed();
         int failed = data.countFailed();
         int cheated = data.countCheated();
-        ui.labelAnalysis.setText("Locked: " + locked + ", Passed: " + passed + ", Failed: " + failed + ", Cheated: " + cheated);
+        ui.labelAnalysis
+                .setText("Locked: " + locked + ", Passed: " + passed + ", Failed: " + failed + ", Cheated: " + cheated);
     }
 
+    // Utility wait method
     public void wait(int ms) {
         try {
             Thread.sleep(ms);
@@ -585,13 +647,15 @@ public class SwingAppController implements ActionListener {
         }
     }
 
+    // Get current date time
     public String upTime() {
         dt = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String dtfor = dt.format(format);
         return dtfor;
     }
-    
+
+    // Open file method
     public void openFile(String filePath) {
         try {
             File file = new File(filePath);
