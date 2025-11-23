@@ -151,8 +151,8 @@ public class ExamTestUI extends JFrame {
 
     public void showResult(double score) {
         this.completed = true;
-        JOptionPane.showMessageDialog(this, "You're " + String.format("%.2f", score) + "/10.0.");
-        
+        ScoreUI scoreUI = new ScoreUI(score);
+        scoreUI.setVisible(true);
         String status = (score >= 5) ? "PASS" : "FAIL";
         logic.setStatus(status);
 

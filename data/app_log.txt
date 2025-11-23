@@ -1,0 +1,40 @@
+
+
+---------------------------------------------------------------
+23-11-2025 11:32:18 Redirected console output to data/\app_log.txt
+23-11-2025 11:32:23 User data loaded from data\users.txt
+23-11-2025 11:32:23 User data loaded from data\users.txt
+23-11-2025 11:32:23 User data loaded from data\users.txt
+23-11-2025 11:32:24 Loaded 4 questions from data/questions.docx
+23-11-2025 11:32:24 Login - User: giang (logined successfully)
+23-11-2025 11:32:24 User data loaded from data\users.txt
+23-11-2025 11:32:24 User data loaded from data\users.txt
+23-11-2025 11:32:24 User data saved to data\users.txt
+23-11-2025 11:32:27 Exam Text - User: giang PASS! Score: 10.00/10.0
+23-11-2025 11:32:27 Exam Text - User: giang (Log out)
+23-11-2025 11:32:27 User data loaded from data\users.txt
+23-11-2025 11:32:27 User data loaded from data\users.txt
+23-11-2025 11:32:27 User data saved to data\users.txt
+23-11-2025 11:32:33 User data loaded from data\users.txt
+23-11-2025 11:32:33 User data loaded from data\users.txt
+23-11-2025 11:32:33 User data loaded from data\users.txt
+23-11-2025 11:32:33 Loaded 4 questions from data/questions.docx
+23-11-2025 11:32:34 Login - User: river (logined successfully)
+23-11-2025 11:32:34 User data loaded from data\users.txt
+23-11-2025 11:32:34 User data loaded from data\users.txt
+23-11-2025 11:32:34 User data saved to data\users.txt
+23-11-2025 11:32:37 Exam Text - User: river FAIL! Score: 2.50/10.0
+23-11-2025 11:32:37 Exam Text - User: river (Log out)
+23-11-2025 11:32:37 User data loaded from data\users.txt
+23-11-2025 11:32:37 User data loaded from data\users.txt
+23-11-2025 11:32:37 User data saved to data\users.txt
+23-11-2025 11:32:43 User data loaded from data\users.txt
+23-11-2025 11:32:43 Logined successfully as root
+23-11-2025 11:32:44 User data loaded from data\users.txt
+23-11-2025 11:32:44 User data loaded from data\users.txt
+23-11-2025 11:32:44 User data loaded from data\users.txt
+23-11-2025 11:32:44 User data loaded from data\users.txt
+23-11-2025 11:32:44 User data loaded from data\users.txt
+23-11-2025 11:32:48 Logout - User: root (log out)
+23-11-2025 11:32:49 Auto-refresh worker cancelled.
+23-11-2025 11:32:51 Exit app
